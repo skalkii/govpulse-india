@@ -27,9 +27,77 @@ export function lookupDistrictByPincode(pincode: string): string | null {
   return pincodes.prefix_to_district[prefix] ?? null;
 }
 
+const DIRECTIONALS = ["north", "south", "east", "west", "central", "greater", "old", "new", "north east", "north west", "south east", "south west"];
+
+// Common rename / spelling aliases. Pincode dataset → GHI dataset key.
+const ALIASES: Record<string, string> = {
+  gurgaon: "Gurugram",
+  bangalore: "Bengaluru Urban",
+  bengaluru: "Bengaluru Urban",
+  bombay: "Mumbai",
+  calcutta: "Kolkata",
+  madras: "Chennai",
+  kachchh: "Bhuj",
+  mysore: "Mysuru",
+  belgaum: "Bengaluru Urban",
+  kanpur: "Kanpur Nagar",
+  cuddapah: "Cuddapah",
+  poona: "Pune",
+};
+
+function normalize(s: string): string {
+  return s
+    .toLowerCase()
+    .replace(/\([^)]*\)/g, "")     // drop "(hp)", "(cgh)", etc.
+    .replace(/[^a-z]+/g, " ")
+    .trim();
+}
+
+function variants(district: string): string[] {
+  const out = new Set<string>();
+  out.add(district);
+  const norm = normalize(district);
+  out.add(norm);
+  // Alias map (e.g. Gurgaon → Gurugram)
+  const aliased = ALIASES[norm];
+  if (aliased) {
+    out.add(aliased);
+    out.add(normalize(aliased));
+  }
+  // Strip leading directional words: "South West Delhi" → "Delhi"
+  let stripped = norm;
+  let changed = true;
+  while (changed) {
+    changed = false;
+    for (const d of DIRECTIONALS) {
+      if (stripped.startsWith(d + " ")) {
+        stripped = stripped.slice(d.length + 1);
+        changed = true;
+      }
+    }
+  }
+  out.add(stripped);
+  // Add "Urban" variant: "Bengaluru" → "Bengaluru Urban"
+  out.add(stripped + " urban");
+  return [...out];
+}
+
 export function getGhi(district: string): number | null {
-  const v = ghi[district];
-  return typeof v === "number" ? v : null;
+  // Build a normalized index of GHI dataset for fuzzy lookup.
+  for (const variant of variants(district)) {
+    // Direct match first
+    const direct = ghi[variant];
+    if (typeof direct === "number") return direct;
+    // Normalized scan
+    for (const key of Object.keys(ghi)) {
+      if (key === "_meta") continue;
+      if (normalize(key) === variant) {
+        const v = ghi[key];
+        if (typeof v === "number") return v;
+      }
+    }
+  }
+  return null;
 }
 
 export function listDistricts(): string[] {
