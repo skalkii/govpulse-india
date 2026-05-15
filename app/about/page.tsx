@@ -12,7 +12,7 @@ import { getDict } from "@/lib/i18n/server";
 
 export const metadata = { title: "About" };
 
-const REPO_URL = "https://github.com/kalkii/govpulse-india";
+const REPO_URL = "https://github.com/skalkii/govpulse-india";
 const FEEDBACK_EMAIL = "skalkiipwork@gmail.com";
 
 const sources = [
