@@ -29,10 +29,11 @@ const modules = [
 
 export default function Home() {
   return (
-    <div className="space-y-12">
-      <section className="space-y-3">
-        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
-          Public data, made useful.
+    <div className="space-y-14">
+      <section className="space-y-4">
+        <h1 className="font-heading text-4xl leading-[1.05] tracking-tight sm:text-6xl">
+          Public data,{" "}
+          <span className="italic text-primary">made useful</span>.
         </h1>
         <p className="max-w-2xl text-base text-muted-foreground sm:text-lg">
           Free tools built on India&apos;s open government data. No login, no

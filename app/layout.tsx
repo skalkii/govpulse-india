@@ -40,8 +40,10 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <header className="border-b">
             <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3 sm:px-6">
-              <Link href="/" className="font-semibold tracking-tight">
-                GovPulse <span className="text-muted-foreground">India</span>
+              <Link href="/" className="flex items-baseline gap-1.5 font-heading text-lg tracking-tight">
+                <span className="inline-block size-2 rounded-full bg-primary" aria-hidden />
+                <span>GovPulse</span>
+                <span className="text-muted-foreground italic text-base">India</span>
               </Link>
               <nav className="flex items-center gap-3 text-sm text-muted-foreground">
                 <Link href="/about" className="hover:text-foreground">About</Link>
