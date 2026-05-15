@@ -63,7 +63,7 @@ export default async function RootLayout({
     >
       <body className="flex min-h-full flex-col bg-background text-foreground">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <header className="border-b">
+          <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/65">
             <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
               <Link href="/" className="flex items-baseline gap-1.5 font-heading text-lg tracking-tight">
                 <span className="inline-block size-2 rounded-full bg-primary" aria-hidden />

@@ -51,6 +51,7 @@
 
 /* Light theme — Claude-inspired warm cream + coral accent */
 :root {
+  color-scheme: light;
   --background: oklch(0.985 0.008 75);
   --foreground: oklch(0.20 0.015 50);
   --card: oklch(1 0 0);
@@ -87,6 +88,7 @@
 
 /* Dark theme — warm near-black + brightened coral */
 .dark {
+  color-scheme: dark;
   --background: oklch(0.17 0.012 50);
   --foreground: oklch(0.96 0.008 75);
   --card: oklch(0.22 0.015 50);
@@ -137,5 +139,22 @@
   }
   h1 {
     font-weight: 400;
+  }
+
+  /* Native select consistency: chevron, padding, theme-aware popup. */
+  select {
+    background-image:
+      linear-gradient(45deg, transparent 50%, currentColor 50%),
+      linear-gradient(135deg, currentColor 50%, transparent 50%);
+    background-position:
+      calc(100% - 14px) 50%,
+      calc(100% - 9px) 50%;
+    background-size:
+      5px 5px,
+      5px 5px;
+    background-repeat: no-repeat;
+    -webkit-appearance: none;
+    appearance: none;
+    padding-right: 1.75rem;
   }
 }
