@@ -6,7 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "build-data:rainfall": "tsx scripts/build-rainfall-baseline.ts",
+    "build-data:tolls": "tsx scripts/build-toll-rates.ts",
+    "build-data:blackspots": "tsx scripts/build-blackspots.ts",
+    "build-data:solar": "tsx scripts/build-solar-ghi.ts",
+    "build-data:pincode": "tsx scripts/build-pincode-lookup.ts"
   },
   "dependencies": {
     "@base-ui/react": "^1.4.1",
