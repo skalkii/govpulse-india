@@ -1,242 +1,5178 @@
 {
   "_meta": {
-    "kind": "starter",
-    "note": "Hand-curated long-period averages (LPA) for popular districts, derived from publicly published IMD references. SDs estimated as ~18% of mean (typical Indian monsoon CoV). Replace with the output of `pnpm build-data:rainfall --input <csv>` once an IMD district CSV is sourced.",
-    "source": "IMD long-period averages, 1971-2020 normal period",
-    "generated": "2026-05-15"
+    "kind": "generated",
+    "source": "data.gov.in resource 6c05cd1b-ed59-40c2-bc31-e314f39c6971 (Daily District-wise Rainfall Data)",
+    "generated": "2026-05-15",
+    "districts": 732
   },
-  "Mumbai": {
-    "mean_annual": 2167,
-    "sd_annual": 390,
-    "mean_jjas": 2123,
-    "sd_jjas": 382,
-    "years_n": 50,
-    "lat": 19.08,
-    "lng": 72.88
+  "Marigaon": {
+    "mean_annual": 633,
+    "sd_annual": 385,
+    "mean_jjas": 427,
+    "sd_jjas": 251,
+    "years_n": 8
   },
-  "Bengaluru Urban": {
-    "mean_annual": 924,
-    "sd_annual": 166,
+  "Nagaon": {
+    "mean_annual": 865,
+    "sd_annual": 530,
+    "mean_jjas": 535,
+    "sd_jjas": 311,
+    "years_n": 8
+  },
+  "Nalbari": {
+    "mean_annual": 1058,
+    "sd_annual": 585,
+    "mean_jjas": 713,
+    "sd_jjas": 366,
+    "years_n": 8
+  },
+  "Sivasagar": {
+    "mean_annual": 906,
+    "sd_annual": 567,
+    "mean_jjas": 595,
+    "sd_jjas": 371,
+    "years_n": 8
+  },
+  "Sonitpur": {
+    "mean_annual": 1004,
+    "sd_annual": 508,
+    "mean_jjas": 662,
+    "sd_jjas": 308,
+    "years_n": 8
+  },
+  "South Salmara Mancachar": {
+    "mean_annual": 1446,
+    "sd_annual": 969,
+    "mean_jjas": 952,
+    "sd_jjas": 598,
+    "years_n": 8
+  },
+  "Dima Hasao": {
+    "mean_annual": 752,
+    "sd_annual": 396,
+    "mean_jjas": 434,
+    "sd_jjas": 261,
+    "years_n": 8
+  },
+  "Goalpara": {
+    "mean_annual": 1274,
+    "sd_annual": 678,
+    "mean_jjas": 826,
+    "sd_jjas": 451,
+    "years_n": 8
+  },
+  "Golaghat": {
+    "mean_annual": 758,
+    "sd_annual": 380,
+    "mean_jjas": 498,
+    "sd_jjas": 234,
+    "years_n": 8
+  },
+  "Hailakandi": {
+    "mean_annual": 1290,
+    "sd_annual": 736,
+    "mean_jjas": 864,
+    "sd_jjas": 513,
+    "years_n": 8
+  },
+  "Hojai": {
+    "mean_annual": 715,
+    "sd_annual": 395,
+    "mean_jjas": 477,
+    "sd_jjas": 272,
+    "years_n": 8
+  },
+  "Jorhat": {
+    "mean_annual": 855,
+    "sd_annual": 492,
+    "mean_jjas": 568,
+    "sd_jjas": 345,
+    "years_n": 8
+  },
+  "Kamrup": {
+    "mean_annual": 989,
+    "sd_annual": 530,
+    "mean_jjas": 612,
+    "sd_jjas": 290,
+    "years_n": 8
+  },
+  "Papum Pare": {
+    "mean_annual": 1106,
+    "sd_annual": 526,
+    "mean_jjas": 732,
+    "sd_jjas": 439,
+    "years_n": 8
+  },
+  "Shi Yomi": {
+    "mean_annual": 1236,
+    "sd_annual": 674,
+    "mean_jjas": 590,
+    "sd_jjas": 328,
+    "years_n": 8
+  },
+  "Siang": {
+    "mean_annual": 1031,
+    "sd_annual": 512,
+    "mean_jjas": 566,
+    "sd_jjas": 345,
+    "years_n": 8
+  },
+  "Tawang": {
+    "mean_annual": 453,
+    "sd_annual": 239,
+    "mean_jjas": 280,
+    "sd_jjas": 177,
+    "years_n": 8
+  },
+  "Tirap": {
+    "mean_annual": 1006,
+    "sd_annual": 682,
+    "mean_jjas": 663,
+    "sd_jjas": 449,
+    "years_n": 8
+  },
+  "Upper Siang": {
+    "mean_annual": 1187,
+    "sd_annual": 553,
+    "mean_jjas": 616,
+    "sd_jjas": 295,
+    "years_n": 8
+  },
+  "Barpeta": {
+    "mean_annual": 1156,
+    "sd_annual": 633,
+    "mean_jjas": 728,
+    "sd_jjas": 451,
+    "years_n": 8
+  },
+  "Biswanath": {
+    "mean_annual": 934,
+    "sd_annual": 513,
+    "mean_jjas": 625,
+    "sd_jjas": 337,
+    "years_n": 8
+  },
+  "Bongaigaon": {
+    "mean_annual": 1394,
+    "sd_annual": 731,
+    "mean_jjas": 913,
+    "sd_jjas": 522,
+    "years_n": 8
+  },
+  "Cachar": {
+    "mean_annual": 1096,
+    "sd_annual": 542,
+    "mean_jjas": 734,
+    "sd_jjas": 403,
+    "years_n": 8
+  },
+  "Charaideo": {
+    "mean_annual": 1134,
+    "sd_annual": 752,
+    "mean_jjas": 766,
+    "sd_jjas": 479,
+    "years_n": 8
+  },
+  "Chirang": {
+    "mean_annual": 1394,
+    "sd_annual": 738,
+    "mean_jjas": 997,
+    "sd_jjas": 539,
+    "years_n": 8
+  },
+  "Upper Subansiri": {
+    "mean_annual": 829,
+    "sd_annual": 380,
+    "mean_jjas": 449,
+    "sd_jjas": 247,
+    "years_n": 8
+  },
+  "West Kameng": {
+    "mean_annual": 704,
+    "sd_annual": 345,
+    "mean_jjas": 481,
+    "sd_jjas": 260,
+    "years_n": 8
+  },
+  "West Siang": {
+    "mean_annual": 929,
+    "sd_annual": 494,
+    "mean_jjas": 551,
+    "sd_jjas": 367,
+    "years_n": 8
+  },
+  "Baksa": {
+    "mean_annual": 1003,
+    "sd_annual": 564,
+    "mean_jjas": 650,
+    "sd_jjas": 350,
+    "years_n": 8
+  },
+  "Darrang": {
+    "mean_annual": 845,
+    "sd_annual": 542,
+    "mean_jjas": 553,
+    "sd_jjas": 357,
+    "years_n": 8
+  },
+  "Dhemaji": {
+    "mean_annual": 1133,
+    "sd_annual": 452,
+    "mean_jjas": 709,
+    "sd_jjas": 334,
+    "years_n": 8
+  },
+  "Dhubri": {
+    "mean_annual": 1607,
+    "sd_annual": 866,
+    "mean_jjas": 1074,
+    "sd_jjas": 514,
+    "years_n": 8
+  },
+  "Dibrugarh": {
+    "mean_annual": 922,
+    "sd_annual": 458,
+    "mean_jjas": 609,
+    "sd_jjas": 314,
+    "years_n": 8
+  },
+  "Lower Siang": {
+    "mean_annual": 1089,
+    "sd_annual": 599,
+    "mean_jjas": 710,
+    "sd_jjas": 460,
+    "years_n": 8
+  },
+  "Lower Subansiri": {
+    "mean_annual": 1045,
+    "sd_annual": 615,
+    "mean_jjas": 689,
+    "sd_jjas": 438,
+    "years_n": 8
+  },
+  "Namsai": {
+    "mean_annual": 1063,
+    "sd_annual": 704,
+    "mean_jjas": 570,
+    "sd_jjas": 433,
+    "years_n": 8
+  },
+  "Pakke Kessang": {
+    "mean_annual": 1088,
+    "sd_annual": 555,
+    "mean_jjas": 765,
+    "sd_jjas": 414,
+    "years_n": 8
+  },
+  "Longding": {
+    "mean_annual": 1035,
+    "sd_annual": 763,
+    "mean_jjas": 716,
+    "sd_jjas": 517,
+    "years_n": 8
+  },
+  "Lower Dibang Valley": {
+    "mean_annual": 1280,
+    "sd_annual": 662,
+    "mean_jjas": 806,
+    "sd_jjas": 489,
+    "years_n": 8
+  },
+  "Munger": {
+    "mean_annual": 723,
+    "sd_annual": 465,
+    "mean_jjas": 565,
+    "sd_jjas": 371,
+    "years_n": 8
+  },
+  "Muzaffarpur": {
+    "mean_annual": 676,
+    "sd_annual": 521,
     "mean_jjas": 559,
-    "sd_jjas": 100,
-    "years_n": 50,
-    "lat": 12.97,
-    "lng": 77.59
+    "sd_jjas": 429,
+    "years_n": 8
   },
-  "Delhi": {
-    "mean_annual": 774,
-    "sd_annual": 139,
-    "mean_jjas": 648,
-    "sd_jjas": 117,
-    "years_n": 50,
-    "lat": 28.61,
-    "lng": 77.23
+  "Nalanda": {
+    "mean_annual": 566,
+    "sd_annual": 383,
+    "mean_jjas": 468,
+    "sd_jjas": 333,
+    "years_n": 8
   },
-  "Chennai": {
-    "mean_annual": 1400,
-    "sd_annual": 252,
-    "mean_jjas": 350,
-    "sd_jjas": 63,
-    "years_n": 50,
-    "lat": 13.08,
-    "lng": 80.27
+  "Nawada": {
+    "mean_annual": 630,
+    "sd_annual": 442,
+    "mean_jjas": 481,
+    "sd_jjas": 326,
+    "years_n": 8
   },
-  "Kolkata": {
-    "mean_annual": 1675,
-    "sd_annual": 302,
-    "mean_jjas": 1350,
-    "sd_jjas": 243,
-    "years_n": 50,
-    "lat": 22.57,
-    "lng": 88.36
-  },
-  "Hyderabad": {
-    "mean_annual": 800,
-    "sd_annual": 144,
-    "mean_jjas": 620,
-    "sd_jjas": 112,
-    "years_n": 50,
-    "lat": 17.39,
-    "lng": 78.49
-  },
-  "Pune": {
-    "mean_annual": 722,
-    "sd_annual": 130,
-    "mean_jjas": 580,
-    "sd_jjas": 104,
-    "years_n": 50,
-    "lat": 18.52,
-    "lng": 73.86
-  },
-  "Ahmedabad": {
-    "mean_annual": 800,
-    "sd_annual": 144,
-    "mean_jjas": 780,
-    "sd_jjas": 140,
-    "years_n": 50,
-    "lat": 23.02,
-    "lng": 72.57
-  },
-  "Jaipur": {
-    "mean_annual": 530,
-    "sd_annual": 95,
-    "mean_jjas": 450,
-    "sd_jjas": 81,
-    "years_n": 50,
-    "lat": 26.91,
-    "lng": 75.79
-  },
-  "Lucknow": {
-    "mean_annual": 950,
-    "sd_annual": 171,
-    "mean_jjas": 870,
-    "sd_jjas": 157,
-    "years_n": 50,
-    "lat": 26.85,
-    "lng": 80.95
+  "Pashchim Champaran": {
+    "mean_annual": 843,
+    "sd_annual": 617,
+    "mean_jjas": 645,
+    "sd_jjas": 479,
+    "years_n": 8
   },
   "Patna": {
-    "mean_annual": 1100,
-    "sd_annual": 198,
-    "mean_jjas": 990,
-    "sd_jjas": 178,
-    "years_n": 50,
+    "mean_annual": 683,
+    "sd_annual": 540,
+    "mean_jjas": 582,
+    "sd_jjas": 484,
+    "years_n": 8,
     "lat": 25.61,
     "lng": 85.14
   },
-  "Bhopal": {
-    "mean_annual": 1200,
-    "sd_annual": 216,
-    "mean_jjas": 1050,
-    "sd_jjas": 189,
-    "years_n": 50,
-    "lat": 23.26,
-    "lng": 77.41
+  "Purbi Champaran": {
+    "mean_annual": 642,
+    "sd_annual": 479,
+    "mean_jjas": 504,
+    "sd_jjas": 387,
+    "years_n": 8
   },
-  "Indore": {
-    "mean_annual": 950,
-    "sd_annual": 171,
-    "mean_jjas": 890,
-    "sd_jjas": 160,
-    "years_n": 50,
-    "lat": 22.72,
-    "lng": 75.86
+  "Gaya": {
+    "mean_annual": 628,
+    "sd_annual": 474,
+    "mean_jjas": 540,
+    "sd_jjas": 426,
+    "years_n": 8
   },
-  "Ernakulam": {
-    "mean_annual": 3000,
+  "Gopalganj": {
+    "mean_annual": 701,
+    "sd_annual": 571,
+    "mean_jjas": 556,
+    "sd_jjas": 421,
+    "years_n": 8
+  },
+  "Jamui": {
+    "mean_annual": 724,
+    "sd_annual": 489,
+    "mean_jjas": 552,
+    "sd_jjas": 354,
+    "years_n": 8
+  },
+  "Jehanabad": {
+    "mean_annual": 727,
+    "sd_annual": 582,
+    "mean_jjas": 562,
+    "sd_jjas": 445,
+    "years_n": 8
+  },
+  "Kaimur (Bhabua)": {
+    "mean_annual": 531,
+    "sd_annual": 354,
+    "mean_jjas": 427,
+    "sd_jjas": 286,
+    "years_n": 8
+  },
+  "Katihar": {
+    "mean_annual": 751,
+    "sd_annual": 554,
+    "mean_jjas": 573,
+    "sd_jjas": 421,
+    "years_n": 8
+  },
+  "Khagaria": {
+    "mean_annual": 734,
+    "sd_annual": 518,
+    "mean_jjas": 568,
+    "sd_jjas": 415,
+    "years_n": 8
+  },
+  "West Karbi Anglong": {
+    "mean_annual": 835,
+    "sd_annual": 452,
+    "mean_jjas": 555,
+    "sd_jjas": 298,
+    "years_n": 8
+  },
+  "Araria": {
+    "mean_annual": 876,
+    "sd_annual": 489,
+    "mean_jjas": 672,
+    "sd_jjas": 352,
+    "years_n": 8
+  },
+  "Arwal": {
+    "mean_annual": 671,
+    "sd_annual": 535,
+    "mean_jjas": 516,
+    "sd_jjas": 392,
+    "years_n": 8
+  },
+  "Aurangabad": {
+    "mean_annual": 901,
+    "sd_annual": 671,
+    "mean_jjas": 751,
+    "sd_jjas": 570,
+    "years_n": 8
+  },
+  "Banka": {
+    "mean_annual": 673,
+    "sd_annual": 477,
+    "mean_jjas": 545,
+    "sd_jjas": 394,
+    "years_n": 8
+  },
+  "Begusarai": {
+    "mean_annual": 706,
+    "sd_annual": 492,
+    "mean_jjas": 558,
+    "sd_jjas": 392,
+    "years_n": 8
+  },
+  "Bhagalpur": {
+    "mean_annual": 678,
+    "sd_annual": 463,
+    "mean_jjas": 529,
+    "sd_jjas": 392,
+    "years_n": 8
+  },
+  "Bhojpur": {
+    "mean_annual": 594,
+    "sd_annual": 448,
+    "mean_jjas": 472,
+    "sd_jjas": 354,
+    "years_n": 8
+  },
+  "Buxar": {
+    "mean_annual": 565,
+    "sd_annual": 403,
+    "mean_jjas": 457,
+    "sd_jjas": 310,
+    "years_n": 8
+  },
+  "Darbhanga": {
+    "mean_annual": 778,
+    "sd_annual": 603,
+    "mean_jjas": 590,
+    "sd_jjas": 432,
+    "years_n": 8
+  },
+  "Purnia": {
+    "mean_annual": 808,
+    "sd_annual": 464,
+    "mean_jjas": 634,
+    "sd_jjas": 403,
+    "years_n": 8
+  },
+  "Rohtas": {
+    "mean_annual": 573,
+    "sd_annual": 430,
+    "mean_jjas": 490,
+    "sd_jjas": 397,
+    "years_n": 8
+  },
+  "Saharsa": {
+    "mean_annual": 641,
+    "sd_annual": 429,
+    "mean_jjas": 518,
+    "sd_jjas": 378,
+    "years_n": 8
+  },
+  "Samastipur": {
+    "mean_annual": 606,
+    "sd_annual": 477,
+    "mean_jjas": 501,
+    "sd_jjas": 428,
+    "years_n": 8
+  },
+  "Saran": {
+    "mean_annual": 520,
+    "sd_annual": 365,
+    "mean_jjas": 439,
+    "sd_jjas": 309,
+    "years_n": 8
+  },
+  "Kishanganj": {
+    "mean_annual": 1095,
+    "sd_annual": 667,
+    "mean_jjas": 908,
+    "sd_jjas": 588,
+    "years_n": 8
+  },
+  "Lakhisarai": {
+    "mean_annual": 667,
+    "sd_annual": 493,
+    "mean_jjas": 503,
+    "sd_jjas": 375,
+    "years_n": 8
+  },
+  "Madhepura": {
+    "mean_annual": 796,
+    "sd_annual": 600,
+    "mean_jjas": 621,
+    "sd_jjas": 464,
+    "years_n": 8
+  },
+  "Madhubani": {
+    "mean_annual": 822,
+    "sd_annual": 624,
+    "mean_jjas": 656,
+    "sd_jjas": 503,
+    "years_n": 8
+  },
+  "Tinsukia": {
+    "mean_annual": 1073,
+    "sd_annual": 588,
+    "mean_jjas": 659,
+    "sd_jjas": 393,
+    "years_n": 8
+  },
+  "Udalguri": {
+    "mean_annual": 1005,
+    "sd_annual": 584,
+    "mean_jjas": 611,
+    "sd_jjas": 356,
+    "years_n": 8
+  },
+  "North": {
+    "mean_annual": 747,
+    "sd_annual": 722,
+    "mean_jjas": 518,
+    "sd_jjas": 535,
+    "years_n": 8
+  },
+  "North East": {
+    "mean_annual": 1226,
+    "sd_annual": 1140,
+    "mean_jjas": 901,
+    "sd_jjas": 884,
+    "years_n": 8
+  },
+  "North West": {
+    "mean_annual": 732,
+    "sd_annual": 617,
+    "mean_jjas": 585,
+    "sd_jjas": 519,
+    "years_n": 8
+  },
+  "Shahdara": {
+    "mean_annual": 1411,
+    "sd_annual": 1315,
+    "mean_jjas": 1173,
+    "sd_jjas": 1101,
+    "years_n": 8
+  },
+  "South": {
+    "mean_annual": 646,
+    "sd_annual": 564,
+    "mean_jjas": 490,
+    "sd_jjas": 456,
+    "years_n": 8
+  },
+  "South East": {
+    "mean_annual": 632,
+    "sd_annual": 494,
+    "mean_jjas": 481,
+    "sd_jjas": 398,
+    "years_n": 8
+  },
+  "South West": {
+    "mean_annual": 525,
+    "sd_annual": 341,
+    "mean_jjas": 393,
+    "sd_jjas": 298,
+    "years_n": 8
+  },
+  "Daman": {
+    "mean_annual": 1884,
+    "sd_annual": 1867,
+    "mean_jjas": 1705,
+    "sd_jjas": 1611,
+    "years_n": 8
+  },
+  "Diu": {
+    "mean_annual": 1037,
+    "sd_annual": 964,
+    "mean_jjas": 926,
+    "sd_jjas": 883,
+    "years_n": 8
+  },
+  "Central": {
+    "mean_annual": 744,
+    "sd_annual": 481,
+    "mean_jjas": 549,
+    "sd_jjas": 386,
+    "years_n": 8
+  },
+  "East": {
+    "mean_annual": 912,
+    "sd_annual": 760,
+    "mean_jjas": 656,
+    "sd_jjas": 506,
+    "years_n": 8
+  },
+  "New Delhi": {
+    "mean_annual": 686,
+    "sd_annual": 500,
+    "mean_jjas": 498,
+    "sd_jjas": 360,
+    "years_n": 8,
+    "lat": 28.61,
+    "lng": 77.23
+  },
+  "Dantewada": {
+    "mean_annual": 792,
+    "sd_annual": 499,
+    "mean_jjas": 636,
+    "sd_jjas": 420,
+    "years_n": 8
+  },
+  "Dhamtari": {
+    "mean_annual": 755,
+    "sd_annual": 492,
+    "mean_jjas": 638,
+    "sd_jjas": 433,
+    "years_n": 8
+  },
+  "Raigad": {
+    "mean_annual": 1653,
+    "sd_annual": 1195,
+    "mean_jjas": 1506,
+    "sd_jjas": 1110,
+    "years_n": 8
+  },
+  "Ratnagiri": {
+    "mean_annual": 1648,
+    "sd_annual": 1034,
+    "mean_jjas": 1459,
+    "sd_jjas": 950,
+    "years_n": 8
+  },
+  "Buldhana": {
+    "mean_annual": 482,
+    "sd_annual": 271,
+    "mean_jjas": 409,
+    "sd_jjas": 244,
+    "years_n": 8
+  },
+  "Chandrapur": {
+    "mean_annual": 657,
+    "sd_annual": 384,
+    "mean_jjas": 547,
+    "sd_jjas": 341,
+    "years_n": 8
+  },
+  "Dhule": {
+    "mean_annual": 424,
+    "sd_annual": 252,
+    "mean_jjas": 349,
+    "sd_jjas": 205,
+    "years_n": 8
+  },
+  "Gadchiroli": {
+    "mean_annual": 834,
+    "sd_annual": 418,
+    "mean_jjas": 707,
+    "sd_jjas": 338,
+    "years_n": 8
+  },
+  "Hingoli": {
+    "mean_annual": 502,
+    "sd_annual": 297,
+    "mean_jjas": 425,
+    "sd_jjas": 239,
+    "years_n": 8
+  },
+  "Jalgaon": {
+    "mean_annual": 502,
+    "sd_annual": 347,
+    "mean_jjas": 435,
+    "sd_jjas": 299,
+    "years_n": 8
+  },
+  "Jalna": {
+    "mean_annual": 472,
+    "sd_annual": 284,
+    "mean_jjas": 402,
+    "sd_jjas": 248,
+    "years_n": 8
+  },
+  "Kolhapur": {
+    "mean_annual": 930,
+    "sd_annual": 581,
+    "mean_jjas": 756,
+    "sd_jjas": 529,
+    "years_n": 8
+  },
+  "Latur": {
+    "mean_annual": 533,
+    "sd_annual": 279,
+    "mean_jjas": 382,
+    "sd_jjas": 222,
+    "years_n": 8
+  },
+  "Mumbai Suburban": {
+    "mean_annual": 2026,
+    "sd_annual": 1477,
+    "mean_jjas": 1828,
+    "sd_jjas": 1389,
+    "years_n": 8,
+    "lat": 19.15,
+    "lng": 72.95
+  },
+  "Singrauli": {
+    "mean_annual": 604,
+    "sd_annual": 387,
+    "mean_jjas": 518,
+    "sd_jjas": 335,
+    "years_n": 8
+  },
+  "Bishnupur": {
+    "mean_annual": 791,
+    "sd_annual": 589,
+    "mean_jjas": 519,
+    "sd_jjas": 435,
+    "years_n": 8
+  },
+  "Chandel": {
+    "mean_annual": 601,
+    "sd_annual": 402,
+    "mean_jjas": 426,
+    "sd_jjas": 320,
+    "years_n": 8
+  },
+  "Churachandpur": {
+    "mean_annual": 600,
+    "sd_annual": 394,
+    "mean_jjas": 378,
+    "sd_jjas": 250,
+    "years_n": 8
+  },
+  "Imphal East": {
+    "mean_annual": 732,
+    "sd_annual": 495,
+    "mean_jjas": 447,
+    "sd_jjas": 307,
+    "years_n": 8
+  },
+  "Sangli": {
+    "mean_annual": 436,
+    "sd_annual": 367,
+    "mean_jjas": 280,
+    "sd_jjas": 248,
+    "years_n": 8
+  },
+  "Satara": {
+    "mean_annual": 610,
+    "sd_annual": 430,
+    "mean_jjas": 427,
+    "sd_jjas": 352,
+    "years_n": 8
+  },
+  "Kangpokpi": {
+    "mean_annual": 665,
+    "sd_annual": 449,
+    "mean_jjas": 415,
+    "sd_jjas": 248,
+    "years_n": 8
+  },
+  "Noney": {
+    "mean_annual": 663,
+    "sd_annual": 315,
+    "mean_jjas": 437,
+    "sd_jjas": 192,
+    "years_n": 8
+  },
+  "Pherzawl": {
+    "mean_annual": 863,
     "sd_annual": 540,
-    "mean_jjas": 2200,
-    "sd_jjas": 396,
-    "years_n": 50,
-    "lat": 9.93,
-    "lng": 76.27
+    "mean_jjas": 558,
+    "sd_jjas": 354,
+    "years_n": 8
   },
-  "Thiruvananthapuram": {
-    "mean_annual": 1830,
+  "Solapur": {
+    "mean_annual": 387,
+    "sd_annual": 272,
+    "mean_jjas": 281,
+    "sd_jjas": 201,
+    "years_n": 8
+  },
+  "Thane": {
+    "mean_annual": 1317,
+    "sd_annual": 937,
+    "mean_jjas": 1212,
+    "sd_jjas": 871,
+    "years_n": 8
+  },
+  "Wardha": {
+    "mean_annual": 556,
     "sd_annual": 329,
-    "mean_jjas": 780,
-    "sd_jjas": 140,
-    "years_n": 50,
-    "lat": 8.52,
-    "lng": 76.94
+    "mean_jjas": 479,
+    "sd_jjas": 292,
+    "years_n": 8
   },
-  "Coimbatore": {
-    "mean_annual": 700,
-    "sd_annual": 126,
-    "mean_jjas": 250,
-    "sd_jjas": 45,
-    "years_n": 50,
-    "lat": 11.02,
-    "lng": 76.96
+  "Durg": {
+    "mean_annual": 693,
+    "sd_annual": 363,
+    "mean_jjas": 571,
+    "sd_jjas": 278,
+    "years_n": 8
   },
-  "Mysuru": {
-    "mean_annual": 800,
-    "sd_annual": 144,
-    "mean_jjas": 570,
-    "sd_jjas": 103,
-    "years_n": 50,
-    "lat": 12.3,
-    "lng": 76.64
+  "Gariyaband": {
+    "mean_annual": 682,
+    "sd_annual": 449,
+    "mean_jjas": 554,
+    "sd_jjas": 352,
+    "years_n": 8
   },
-  "Visakhapatnam": {
-    "mean_annual": 1100,
-    "sd_annual": 198,
-    "mean_jjas": 600,
-    "sd_jjas": 108,
-    "years_n": 50,
-    "lat": 17.69,
-    "lng": 83.22
+  "Gaurella Pendra Marwahi": {
+    "mean_annual": 771,
+    "sd_annual": 528,
+    "mean_jjas": 603,
+    "sd_jjas": 443,
+    "years_n": 8
   },
-  "Bhubaneswar": {
-    "mean_annual": 1500,
-    "sd_annual": 270,
-    "mean_jjas": 1180,
-    "sd_jjas": 212,
-    "years_n": 50,
-    "lat": 20.3,
-    "lng": 85.83
+  "Janjgir-Champa": {
+    "mean_annual": 710,
+    "sd_annual": 475,
+    "mean_jjas": 605,
+    "sd_jjas": 395,
+    "years_n": 8
   },
-  "Kamrup Metropolitan": {
-    "mean_annual": 1700,
-    "sd_annual": 306,
-    "mean_jjas": 1400,
-    "sd_jjas": 252,
-    "years_n": 50,
-    "lat": 26.18,
-    "lng": 91.65
+  "Jashpur": {
+    "mean_annual": 714,
+    "sd_annual": 478,
+    "mean_jjas": 548,
+    "sd_jjas": 342,
+    "years_n": 8
   },
-  "Dehradun": {
-    "mean_annual": 2200,
-    "sd_annual": 396,
-    "mean_jjas": 1800,
-    "sd_jjas": 324,
-    "years_n": 50,
-    "lat": 30.32,
-    "lng": 78.03
+  "Korea": {
+    "mean_annual": 724,
+    "sd_annual": 519,
+    "mean_jjas": 627,
+    "sd_jjas": 464,
+    "years_n": 8
   },
-  "Shimla": {
-    "mean_annual": 1300,
-    "sd_annual": 234,
-    "mean_jjas": 720,
-    "sd_jjas": 130,
-    "years_n": 50,
-    "lat": 31.1,
-    "lng": 77.17
+  "Mahasamund": {
+    "mean_annual": 676,
+    "sd_annual": 491,
+    "mean_jjas": 555,
+    "sd_jjas": 415,
+    "years_n": 8
   },
-  "Srinagar": {
-    "mean_annual": 720,
-    "sd_annual": 130,
-    "mean_jjas": 220,
-    "sd_jjas": 40,
-    "years_n": 50,
-    "lat": 34.08,
-    "lng": 74.8
+  "Mungeli": {
+    "mean_annual": 867,
+    "sd_annual": 590,
+    "mean_jjas": 743,
+    "sd_jjas": 496,
+    "years_n": 8
+  },
+  "Narayanpur": {
+    "mean_annual": 855,
+    "sd_annual": 664,
+    "mean_jjas": 683,
+    "sd_jjas": 517,
+    "years_n": 8
+  },
+  "Raigarh": {
+    "mean_annual": 694,
+    "sd_annual": 375,
+    "mean_jjas": 515,
+    "sd_jjas": 265,
+    "years_n": 8
+  },
+  "Raipur": {
+    "mean_annual": 666,
+    "sd_annual": 457,
+    "mean_jjas": 524,
+    "sd_jjas": 374,
+    "years_n": 8
+  },
+  "Rajnandgaon": {
+    "mean_annual": 652,
+    "sd_annual": 392,
+    "mean_jjas": 550,
+    "sd_jjas": 330,
+    "years_n": 8
+  },
+  "Baloda Bazar": {
+    "mean_annual": 688,
+    "sd_annual": 425,
+    "mean_jjas": 579,
+    "sd_jjas": 374,
+    "years_n": 8
+  },
+  "Balrampur": {
+    "mean_annual": 1137,
+    "sd_annual": 510,
+    "mean_jjas": 922,
+    "sd_jjas": 401,
+    "years_n": 8
+  },
+  "Bastar": {
+    "mean_annual": 842,
+    "sd_annual": 539,
+    "mean_jjas": 644,
+    "sd_jjas": 444,
+    "years_n": 8
+  },
+  "Bemetara": {
+    "mean_annual": 730,
+    "sd_annual": 440,
+    "mean_jjas": 602,
+    "sd_jjas": 305,
+    "years_n": 8
+  },
+  "Bijapur": {
+    "mean_annual": 802,
+    "sd_annual": 462,
+    "mean_jjas": 645,
+    "sd_jjas": 397,
+    "years_n": 8
+  },
+  "Bilapur": {
+    "mean_annual": 477,
+    "sd_annual": 341,
+    "mean_jjas": 402,
+    "sd_jjas": 284,
+    "years_n": 8
+  },
+  "Sukma": {
+    "mean_annual": 931,
+    "sd_annual": 568,
+    "mean_jjas": 716,
+    "sd_jjas": 459,
+    "years_n": 8
+  },
+  "Surajpur": {
+    "mean_annual": 643,
+    "sd_annual": 365,
+    "mean_jjas": 499,
+    "sd_jjas": 270,
+    "years_n": 8
+  },
+  "Surguja": {
+    "mean_annual": 704,
+    "sd_annual": 457,
+    "mean_jjas": 553,
+    "sd_jjas": 359,
+    "years_n": 8
+  },
+  "Dadra And Nagar Haveli": {
+    "mean_annual": 1599,
+    "sd_annual": 1192,
+    "mean_jjas": 1498,
+    "sd_jjas": 1104,
+    "years_n": 8
+  },
+  "Supaul": {
+    "mean_annual": 852,
+    "sd_annual": 506,
+    "mean_jjas": 694,
+    "sd_jjas": 449,
+    "years_n": 8
+  },
+  "Vaishali": {
+    "mean_annual": 718,
+    "sd_annual": 494,
+    "mean_jjas": 589,
+    "sd_jjas": 406,
+    "years_n": 8
   },
   "Chandigarh": {
-    "mean_annual": 1100,
-    "sd_annual": 198,
-    "mean_jjas": 870,
-    "sd_jjas": 157,
-    "years_n": 50,
+    "mean_annual": 612,
+    "sd_annual": 356,
+    "mean_jjas": 443,
+    "sd_jjas": 294,
+    "years_n": 8,
     "lat": 30.73,
     "lng": 76.78
   },
+  "Balod": {
+    "mean_annual": 737,
+    "sd_annual": 489,
+    "mean_jjas": 625,
+    "sd_jjas": 411,
+    "years_n": 8
+  },
+  "Sheikhpura": {
+    "mean_annual": 690,
+    "sd_annual": 490,
+    "mean_jjas": 574,
+    "sd_jjas": 422,
+    "years_n": 8
+  },
+  "Sheohar": {
+    "mean_annual": 669,
+    "sd_annual": 558,
+    "mean_jjas": 554,
+    "sd_jjas": 477,
+    "years_n": 8
+  },
+  "Sitamarhi": {
+    "mean_annual": 636,
+    "sd_annual": 468,
+    "mean_jjas": 512,
+    "sd_jjas": 378,
+    "years_n": 8
+  },
+  "Siwan": {
+    "mean_annual": 583,
+    "sd_annual": 462,
+    "mean_jjas": 493,
+    "sd_jjas": 420,
+    "years_n": 8
+  },
+  "Kabirdham": {
+    "mean_annual": 588,
+    "sd_annual": 369,
+    "mean_jjas": 489,
+    "sd_jjas": 286,
+    "years_n": 8
+  },
+  "Kanker": {
+    "mean_annual": 753,
+    "sd_annual": 436,
+    "mean_jjas": 624,
+    "sd_jjas": 368,
+    "years_n": 8
+  },
+  "Kondagaon": {
+    "mean_annual": 736,
+    "sd_annual": 403,
+    "mean_jjas": 571,
+    "sd_jjas": 315,
+    "years_n": 8
+  },
+  "Korba": {
+    "mean_annual": 683,
+    "sd_annual": 504,
+    "mean_jjas": 577,
+    "sd_jjas": 389,
+    "years_n": 8
+  },
+  "Ambala": {
+    "mean_annual": 532,
+    "sd_annual": 320,
+    "mean_jjas": 367,
+    "sd_jjas": 232,
+    "years_n": 8
+  },
+  "Bhiwani": {
+    "mean_annual": 239,
+    "sd_annual": 151,
+    "mean_jjas": 170,
+    "sd_jjas": 113,
+    "years_n": 8
+  },
+  "Charki Dadri": {
+    "mean_annual": 366,
+    "sd_annual": 239,
+    "mean_jjas": 290,
+    "sd_jjas": 200,
+    "years_n": 8
+  },
+  "Faridabad": {
+    "mean_annual": 398,
+    "sd_annual": 249,
+    "mean_jjas": 261,
+    "sd_jjas": 163,
+    "years_n": 8
+  },
+  "Fatehabad": {
+    "mean_annual": 211,
+    "sd_annual": 136,
+    "mean_jjas": 151,
+    "sd_jjas": 116,
+    "years_n": 8
+  },
+  "Gurugram": {
+    "mean_annual": 360,
+    "sd_annual": 251,
+    "mean_jjas": 237,
+    "sd_jjas": 140,
+    "years_n": 8
+  },
+  "Serchhip": {
+    "mean_annual": 732,
+    "sd_annual": 436,
+    "mean_jjas": 515,
+    "sd_jjas": 346,
+    "years_n": 8
+  },
+  "Dimapur": {
+    "mean_annual": 658,
+    "sd_annual": 371,
+    "mean_jjas": 462,
+    "sd_jjas": 303,
+    "years_n": 8
+  },
+  "Kiphire": {
+    "mean_annual": 540,
+    "sd_annual": 352,
+    "mean_jjas": 346,
+    "sd_jjas": 263,
+    "years_n": 8
+  },
+  "Wokha": {
+    "mean_annual": 616,
+    "sd_annual": 312,
+    "mean_jjas": 405,
+    "sd_jjas": 237,
+    "years_n": 8
+  },
+  "Zunheboto": {
+    "mean_annual": 654,
+    "sd_annual": 286,
+    "mean_jjas": 453,
+    "sd_jjas": 220,
+    "years_n": 8
+  },
+  "Anugul": {
+    "mean_annual": 702,
+    "sd_annual": 426,
+    "mean_jjas": 497,
+    "sd_jjas": 253,
+    "years_n": 8
+  },
+  "Mokokchung": {
+    "mean_annual": 760,
+    "sd_annual": 296,
+    "mean_jjas": 491,
+    "sd_jjas": 221,
+    "years_n": 8
+  },
+  "Mon": {
+    "mean_annual": 751,
+    "sd_annual": 382,
+    "mean_jjas": 504,
+    "sd_jjas": 250,
+    "years_n": 8
+  },
+  "Peren": {
+    "mean_annual": 580,
+    "sd_annual": 348,
+    "mean_jjas": 384,
+    "sd_jjas": 273,
+    "years_n": 8
+  },
+  "Phek": {
+    "mean_annual": 467,
+    "sd_annual": 300,
+    "mean_jjas": 327,
+    "sd_jjas": 259,
+    "years_n": 8
+  },
+  "Tuensang": {
+    "mean_annual": 591,
+    "sd_annual": 233,
+    "mean_jjas": 436,
+    "sd_jjas": 185,
+    "years_n": 8
+  },
+  "Kohima": {
+    "mean_annual": 577,
+    "sd_annual": 323,
+    "mean_jjas": 385,
+    "sd_jjas": 249,
+    "years_n": 8
+  },
+  "Longleng": {
+    "mean_annual": 779,
+    "sd_annual": 411,
+    "mean_jjas": 533,
+    "sd_jjas": 279,
+    "years_n": 8
+  },
+  "Baleshwar": {
+    "mean_annual": 675,
+    "sd_annual": 469,
+    "mean_jjas": 394,
+    "sd_jjas": 242,
+    "years_n": 8
+  },
+  "Bargarh": {
+    "mean_annual": 594,
+    "sd_annual": 377,
+    "mean_jjas": 471,
+    "sd_jjas": 280,
+    "years_n": 8
+  },
+  "Bhadrak": {
+    "mean_annual": 670,
+    "sd_annual": 455,
+    "mean_jjas": 431,
+    "sd_jjas": 301,
+    "years_n": 8
+  },
+  "Balangir": {
+    "mean_annual": 695,
+    "sd_annual": 448,
+    "mean_jjas": 556,
+    "sd_jjas": 354,
+    "years_n": 8
+  },
+  "Boudh": {
+    "mean_annual": 747,
+    "sd_annual": 566,
+    "mean_jjas": 524,
+    "sd_jjas": 337,
+    "years_n": 8
+  },
+  "Koraput": {
+    "mean_annual": 678,
+    "sd_annual": 293,
+    "mean_jjas": 504,
+    "sd_jjas": 230,
+    "years_n": 8
+  },
+  "Malkangiri": {
+    "mean_annual": 661,
+    "sd_annual": 337,
+    "mean_jjas": 510,
+    "sd_jjas": 288,
+    "years_n": 8
+  },
+  "Hisar": {
+    "mean_annual": 265,
+    "sd_annual": 126,
+    "mean_jjas": 193,
+    "sd_jjas": 97,
+    "years_n": 8
+  },
+  "Mahesana": {
+    "mean_annual": 354,
+    "sd_annual": 186,
+    "mean_jjas": 318,
+    "sd_jjas": 167,
+    "years_n": 8
+  },
+  "Mahisagar": {
+    "mean_annual": 493,
+    "sd_annual": 399,
+    "mean_jjas": 464,
+    "sd_jjas": 381,
+    "years_n": 8
+  },
+  "Morbi": {
+    "mean_annual": 358,
+    "sd_annual": 234,
+    "mean_jjas": 329,
+    "sd_jjas": 222,
+    "years_n": 8
+  },
+  "Narmada": {
+    "mean_annual": 628,
+    "sd_annual": 410,
+    "mean_jjas": 584,
+    "sd_jjas": 381,
+    "years_n": 8
+  },
+  "Navsari": {
+    "mean_annual": 878,
+    "sd_annual": 624,
+    "mean_jjas": 800,
+    "sd_jjas": 583,
+    "years_n": 8
+  },
+  "Panch Mahals": {
+    "mean_annual": 449,
+    "sd_annual": 270,
+    "mean_jjas": 425,
+    "sd_jjas": 259,
+    "years_n": 8
+  },
+  "West": {
+    "mean_annual": 769,
+    "sd_annual": 597,
+    "mean_jjas": 545,
+    "sd_jjas": 398,
+    "years_n": 8
+  },
+  "North Goa": {
+    "mean_annual": 1668,
+    "sd_annual": 1066,
+    "mean_jjas": 1445,
+    "sd_jjas": 947,
+    "years_n": 8
+  },
+  "South Goa": {
+    "mean_annual": 1809,
+    "sd_annual": 1127,
+    "mean_jjas": 1456,
+    "sd_jjas": 919,
+    "years_n": 8
+  },
+  "Ahmadabad": {
+    "mean_annual": 411,
+    "sd_annual": 174,
+    "mean_jjas": 370,
+    "sd_jjas": 142,
+    "years_n": 8
+  },
+  "Amreli": {
+    "mean_annual": 429,
+    "sd_annual": 329,
+    "mean_jjas": 389,
+    "sd_jjas": 314,
+    "years_n": 8
+  },
+  "Gandhinagar": {
+    "mean_annual": 401,
+    "sd_annual": 255,
+    "mean_jjas": 374,
+    "sd_jjas": 239,
+    "years_n": 8
+  },
+  "Gir Somnath": {
+    "mean_annual": 585,
+    "sd_annual": 316,
+    "mean_jjas": 532,
+    "sd_jjas": 306,
+    "years_n": 8
+  },
+  "Jamnagar": {
+    "mean_annual": 331,
+    "sd_annual": 233,
+    "mean_jjas": 308,
+    "sd_jjas": 211,
+    "years_n": 8
+  },
+  "Junagadh": {
+    "mean_annual": 581,
+    "sd_annual": 272,
+    "mean_jjas": 547,
+    "sd_jjas": 257,
+    "years_n": 8
+  },
+  "Kachchh": {
+    "mean_annual": 237,
+    "sd_annual": 167,
+    "mean_jjas": 217,
+    "sd_jjas": 156,
+    "years_n": 8
+  },
+  "Kheda": {
+    "mean_annual": 440,
+    "sd_annual": 322,
+    "mean_jjas": 379,
+    "sd_jjas": 314,
+    "years_n": 8
+  },
+  "Botad": {
+    "mean_annual": 461,
+    "sd_annual": 358,
+    "mean_jjas": 417,
+    "sd_jjas": 335,
+    "years_n": 8
+  },
+  "Chhotaudepur": {
+    "mean_annual": 531,
+    "sd_annual": 478,
+    "mean_jjas": 487,
+    "sd_jjas": 436,
+    "years_n": 8
+  },
+  "Dang": {
+    "mean_annual": 665,
+    "sd_annual": 320,
+    "mean_jjas": 606,
+    "sd_jjas": 297,
+    "years_n": 8
+  },
+  "Devbhumi Dwarka": {
+    "mean_annual": 437,
+    "sd_annual": 316,
+    "mean_jjas": 413,
+    "sd_jjas": 300,
+    "years_n": 8
+  },
+  "Dohad": {
+    "mean_annual": 418,
+    "sd_annual": 358,
+    "mean_jjas": 383,
+    "sd_jjas": 336,
+    "years_n": 8
+  },
+  "Anand": {
+    "mean_annual": 418,
+    "sd_annual": 324,
+    "mean_jjas": 388,
+    "sd_jjas": 316,
+    "years_n": 8
+  },
+  "Arvalli": {
+    "mean_annual": 447,
+    "sd_annual": 302,
+    "mean_jjas": 403,
+    "sd_jjas": 283,
+    "years_n": 8
+  },
+  "Banas Kantha": {
+    "mean_annual": 288,
+    "sd_annual": 245,
+    "mean_jjas": 259,
+    "sd_jjas": 222,
+    "years_n": 8
+  },
+  "Bharuch": {
+    "mean_annual": 449,
+    "sd_annual": 380,
+    "mean_jjas": 407,
+    "sd_jjas": 354,
+    "years_n": 8
+  },
+  "Bhavnagar": {
+    "mean_annual": 320,
+    "sd_annual": 176,
+    "mean_jjas": 294,
+    "sd_jjas": 167,
+    "years_n": 8
+  },
+  "Patan": {
+    "mean_annual": 288,
+    "sd_annual": 232,
+    "mean_jjas": 267,
+    "sd_jjas": 225,
+    "years_n": 8
+  },
+  "Porbandar": {
+    "mean_annual": 428,
+    "sd_annual": 341,
+    "mean_jjas": 413,
+    "sd_jjas": 335,
+    "years_n": 8
+  },
+  "Rajkot": {
+    "mean_annual": 456,
+    "sd_annual": 297,
+    "mean_jjas": 423,
+    "sd_jjas": 287,
+    "years_n": 8
+  },
+  "Sabar Kantha": {
+    "mean_annual": 461,
+    "sd_annual": 277,
+    "mean_jjas": 412,
+    "sd_jjas": 235,
+    "years_n": 8
+  },
+  "Surat": {
+    "mean_annual": 728,
+    "sd_annual": 399,
+    "mean_jjas": 658,
+    "sd_jjas": 381,
+    "years_n": 8,
+    "lat": 21.17,
+    "lng": 72.83
+  },
+  "Surendranagar": {
+    "mean_annual": 291,
+    "sd_annual": 176,
+    "mean_jjas": 262,
+    "sd_jjas": 158,
+    "years_n": 8
+  },
+  "Tapi": {
+    "mean_annual": 629,
+    "sd_annual": 407,
+    "mean_jjas": 588,
+    "sd_jjas": 390,
+    "years_n": 8
+  },
+  "Vadodara": {
+    "mean_annual": 460,
+    "sd_annual": 277,
+    "mean_jjas": 410,
+    "sd_jjas": 281,
+    "years_n": 8
+  },
+  "Valsad": {
+    "mean_annual": 1110,
+    "sd_annual": 667,
+    "mean_jjas": 1031,
+    "sd_jjas": 604,
+    "years_n": 8
+  },
+  "Gondia": {
+    "mean_annual": 633,
+    "sd_annual": 301,
+    "mean_jjas": 546,
+    "sd_jjas": 283,
+    "years_n": 8
+  },
+  "Washim": {
+    "mean_annual": 539,
+    "sd_annual": 273,
+    "mean_jjas": 456,
+    "sd_jjas": 233,
+    "years_n": 8
+  },
+  "Senapati": {
+    "mean_annual": 723,
+    "sd_annual": 384,
+    "mean_jjas": 452,
+    "sd_jjas": 283,
+    "years_n": 8
+  },
+  "Tamenglong": {
+    "mean_annual": 670,
+    "sd_annual": 274,
+    "mean_jjas": 402,
+    "sd_jjas": 204,
+    "years_n": 8
+  },
+  "Tengnoupal": {
+    "mean_annual": 604,
+    "sd_annual": 421,
+    "mean_jjas": 434,
+    "sd_jjas": 351,
+    "years_n": 8
+  },
+  "Imphal West": {
+    "mean_annual": 699,
+    "sd_annual": 506,
+    "mean_jjas": 419,
+    "sd_jjas": 281,
+    "years_n": 8
+  },
+  "Jiribam": {
+    "mean_annual": 1139,
+    "sd_annual": 659,
+    "mean_jjas": 706,
+    "sd_jjas": 440,
+    "years_n": 8
+  },
+  "Kakching": {
+    "mean_annual": 772,
+    "sd_annual": 541,
+    "mean_jjas": 503,
+    "sd_jjas": 377,
+    "years_n": 8
+  },
+  "Kamjong": {
+    "mean_annual": 545,
+    "sd_annual": 297,
+    "mean_jjas": 363,
+    "sd_jjas": 246,
+    "years_n": 8
+  },
+  "Yavatmal": {
+    "mean_annual": 591,
+    "sd_annual": 302,
+    "mean_jjas": 521,
+    "sd_jjas": 272,
+    "years_n": 8
+  },
+  "Sindhudurg": {
+    "mean_annual": 1646,
+    "sd_annual": 1084,
+    "mean_jjas": 1413,
+    "sd_jjas": 941,
+    "years_n": 8
+  },
+  "North Garo Hills": {
+    "mean_annual": 1290,
+    "sd_annual": 947,
+    "mean_jjas": 739,
+    "sd_jjas": 509,
+    "years_n": 8
+  },
+  "Ri Bhoi": {
+    "mean_annual": 953,
+    "sd_annual": 669,
+    "mean_jjas": 596,
+    "sd_jjas": 370,
+    "years_n": 8
+  },
+  "South Garo Hills": {
+    "mean_annual": 1949,
+    "sd_annual": 1196,
+    "mean_jjas": 1399,
+    "sd_jjas": 882,
+    "years_n": 8
+  },
+  "South West Garo Hills": {
+    "mean_annual": 1309,
+    "sd_annual": 930,
+    "mean_jjas": 915,
+    "sd_jjas": 644,
+    "years_n": 8
+  },
+  "South West Khasi Hills": {
+    "mean_annual": 3049,
+    "sd_annual": 2001,
+    "mean_jjas": 2247,
+    "sd_jjas": 1415,
+    "years_n": 8
+  },
+  "West Garo Hills": {
+    "mean_annual": 1042,
+    "sd_annual": 792,
+    "mean_jjas": 684,
+    "sd_jjas": 504,
+    "years_n": 8
+  },
+  "West Khasi Hills": {
+    "mean_annual": 1667,
+    "sd_annual": 993,
+    "mean_jjas": 1171,
+    "sd_jjas": 720,
+    "years_n": 8
+  },
+  "Aizawl": {
+    "mean_annual": 815,
+    "sd_annual": 405,
+    "mean_jjas": 561,
+    "sd_jjas": 299,
+    "years_n": 8
+  },
+  "Champhai": {
+    "mean_annual": 610,
+    "sd_annual": 391,
+    "mean_jjas": 417,
+    "sd_jjas": 258,
+    "years_n": 8
+  },
+  "Lunglei": {
+    "mean_annual": 806,
+    "sd_annual": 383,
+    "mean_jjas": 555,
+    "sd_jjas": 225,
+    "years_n": 8
+  },
+  "Mamit": {
+    "mean_annual": 866,
+    "sd_annual": 339,
+    "mean_jjas": 569,
+    "sd_jjas": 242,
+    "years_n": 8
+  },
+  "Saiha": {
+    "mean_annual": 790,
+    "sd_annual": 453,
+    "mean_jjas": 516,
+    "sd_jjas": 311,
+    "years_n": 8
+  },
+  "Thoubal": {
+    "mean_annual": 537,
+    "sd_annual": 346,
+    "mean_jjas": 333,
+    "sd_jjas": 191,
+    "years_n": 8
+  },
+  "Ukhrul": {
+    "mean_annual": 591,
+    "sd_annual": 311,
+    "mean_jjas": 374,
+    "sd_jjas": 280,
+    "years_n": 8
+  },
+  "East Garo Hills": {
+    "mean_annual": 1517,
+    "sd_annual": 808,
+    "mean_jjas": 961,
+    "sd_jjas": 468,
+    "years_n": 8
+  },
+  "East Jaintia Hills": {
+    "mean_annual": 1070,
+    "sd_annual": 591,
+    "mean_jjas": 628,
+    "sd_jjas": 350,
+    "years_n": 8
+  },
+  "East Khasi Hills": {
+    "mean_annual": 1618,
+    "sd_annual": 851,
+    "mean_jjas": 1126,
+    "sd_jjas": 628,
+    "years_n": 8
+  },
+  "Kolasib": {
+    "mean_annual": 938,
+    "sd_annual": 437,
+    "mean_jjas": 646,
+    "sd_jjas": 314,
+    "years_n": 8
+  },
+  "Lawngtlai": {
+    "mean_annual": 831,
+    "sd_annual": 460,
+    "mean_jjas": 586,
+    "sd_jjas": 373,
+    "years_n": 8
+  },
+  "West Jaintia Hills": {
+    "mean_annual": 873,
+    "sd_annual": 401,
+    "mean_jjas": 498,
+    "sd_jjas": 251,
+    "years_n": 8
+  },
+  "Nashik": {
+    "mean_annual": 632,
+    "sd_annual": 418,
+    "mean_jjas": 542,
+    "sd_jjas": 357,
+    "years_n": 8
+  },
+  "Osmanabad": {
+    "mean_annual": 509,
+    "sd_annual": 307,
+    "mean_jjas": 374,
+    "sd_jjas": 241,
+    "years_n": 8
+  },
+  "Palghar": {
+    "mean_annual": 1304,
+    "sd_annual": 782,
+    "mean_jjas": 1212,
+    "sd_jjas": 741,
+    "years_n": 8
+  },
+  "Parbhani": {
+    "mean_annual": 499,
+    "sd_annual": 278,
+    "mean_jjas": 416,
+    "sd_jjas": 243,
+    "years_n": 8
+  },
+  "Nanded": {
+    "mean_annual": 541,
+    "sd_annual": 315,
+    "mean_jjas": 465,
+    "sd_jjas": 253,
+    "years_n": 8
+  },
+  "Nandurbar": {
+    "mean_annual": 543,
+    "sd_annual": 447,
+    "mean_jjas": 492,
+    "sd_jjas": 405,
+    "years_n": 8
+  },
   "Nagpur": {
-    "mean_annual": 1200,
-    "sd_annual": 216,
-    "mean_jjas": 1000,
-    "sd_jjas": 180,
-    "years_n": 50,
+    "mean_annual": 642,
+    "sd_annual": 358,
+    "mean_jjas": 552,
+    "sd_jjas": 327,
+    "years_n": 8,
     "lat": 21.15,
     "lng": 79.09
   },
-  "Surat": {
-    "mean_annual": 1200,
+  "Pune": {
+    "mean_annual": 576,
+    "sd_annual": 410,
+    "mean_jjas": 449,
+    "sd_jjas": 309,
+    "years_n": 8,
+    "lat": 18.52,
+    "lng": 73.86
+  },
+  "Paschim Bardhaman": {
+    "mean_annual": 630,
+    "sd_annual": 417,
+    "mean_jjas": 402,
+    "sd_jjas": 284,
+    "years_n": 8
+  },
+  "Purba Bardhaman": {
+    "mean_annual": 582,
+    "sd_annual": 407,
+    "mean_jjas": 378,
+    "sd_jjas": 281,
+    "years_n": 8
+  },
+  "Purulia": {
+    "mean_annual": 615,
+    "sd_annual": 395,
+    "mean_jjas": 444,
+    "sd_jjas": 269,
+    "years_n": 8
+  },
+  "Dibang Valley": {
+    "mean_annual": 881,
+    "sd_annual": 412,
+    "mean_jjas": 429,
+    "sd_jjas": 270,
+    "years_n": 8
+  },
+  "East Kameng": {
+    "mean_annual": 875,
+    "sd_annual": 436,
+    "mean_jjas": 530,
+    "sd_jjas": 339,
+    "years_n": 8
+  },
+  "East Siang": {
+    "mean_annual": 1379,
+    "sd_annual": 752,
+    "mean_jjas": 934,
+    "sd_jjas": 589,
+    "years_n": 8
+  },
+  "Kamle": {
+    "mean_annual": 1100,
+    "sd_annual": 650,
+    "mean_jjas": 776,
+    "sd_jjas": 514,
+    "years_n": 8
+  },
+  "Nicobars": {
+    "mean_annual": 311,
+    "sd_annual": 473,
+    "mean_jjas": 146,
+    "sd_jjas": 221,
+    "years_n": 8
+  },
+  "North And Middle Andaman": {
+    "mean_annual": 445,
+    "sd_annual": 710,
+    "mean_jjas": 354,
+    "sd_jjas": 572,
+    "years_n": 8
+  },
+  "Anjaw": {
+    "mean_annual": 785,
+    "sd_annual": 571,
+    "mean_jjas": 346,
+    "sd_jjas": 280,
+    "years_n": 8
+  },
+  "Changlang": {
+    "mean_annual": 981,
+    "sd_annual": 712,
+    "mean_jjas": 610,
+    "sd_jjas": 486,
+    "years_n": 8
+  },
+  "Kamrup Metro": {
+    "mean_annual": 819,
+    "sd_annual": 411,
+    "mean_jjas": 535,
+    "sd_jjas": 279,
+    "years_n": 8
+  },
+  "Karbi Anglong": {
+    "mean_annual": 644,
+    "sd_annual": 355,
+    "mean_jjas": 409,
+    "sd_jjas": 219,
+    "years_n": 8
+  },
+  "Karimganj": {
+    "mean_annual": 1360,
+    "sd_annual": 913,
+    "mean_jjas": 861,
+    "sd_jjas": 622,
+    "years_n": 8
+  },
+  "Kokrajhar": {
+    "mean_annual": 1543,
+    "sd_annual": 825,
+    "mean_jjas": 1131,
+    "sd_jjas": 669,
+    "years_n": 8
+  },
+  "Lakhimpur": {
+    "mean_annual": 1138,
+    "sd_annual": 571,
+    "mean_jjas": 809,
+    "sd_jjas": 423,
+    "years_n": 8
+  },
+  "Majuli": {
+    "mean_annual": 954,
+    "sd_annual": 646,
+    "mean_jjas": 641,
+    "sd_jjas": 420,
+    "years_n": 8
+  },
+  "Jayashankar Bhupalapally": {
+    "mean_annual": 632,
+    "sd_annual": 317,
+    "mean_jjas": 555,
+    "sd_jjas": 304,
+    "years_n": 8
+  },
+  "Jogulamba Gadwal": {
+    "mean_annual": 368,
+    "sd_annual": 289,
+    "mean_jjas": 257,
+    "sd_jjas": 214,
+    "years_n": 8
+  },
+  "Kamareddy": {
+    "mean_annual": 447,
+    "sd_annual": 178,
+    "mean_jjas": 356,
+    "sd_jjas": 155,
+    "years_n": 8
+  },
+  "Karimnagar": {
+    "mean_annual": 588,
+    "sd_annual": 289,
+    "mean_jjas": 482,
+    "sd_jjas": 256,
+    "years_n": 8
+  },
+  "Khammam": {
+    "mean_annual": 593,
+    "sd_annual": 307,
+    "mean_jjas": 488,
+    "sd_jjas": 292,
+    "years_n": 8
+  },
+  "Kumuram Bheem Asifabad": {
+    "mean_annual": 552,
+    "sd_annual": 277,
+    "mean_jjas": 468,
+    "sd_jjas": 237,
+    "years_n": 8
+  },
+  "Jagitial": {
+    "mean_annual": 527,
+    "sd_annual": 284,
+    "mean_jjas": 452,
+    "sd_jjas": 252,
+    "years_n": 8
+  },
+  "Jangoan": {
+    "mean_annual": 554,
+    "sd_annual": 314,
+    "mean_jjas": 440,
+    "sd_jjas": 269,
+    "years_n": 8
+  },
+  "Mahabubnagar": {
+    "mean_annual": 407,
+    "sd_annual": 327,
+    "mean_jjas": 282,
+    "sd_jjas": 258,
+    "years_n": 8
+  },
+  "Mancherial": {
+    "mean_annual": 517,
+    "sd_annual": 320,
+    "mean_jjas": 452,
+    "sd_jjas": 283,
+    "years_n": 8
+  },
+  "Medak": {
+    "mean_annual": 551,
+    "sd_annual": 372,
+    "mean_jjas": 439,
+    "sd_jjas": 270,
+    "years_n": 8
+  },
+  "Siddipet": {
+    "mean_annual": 546,
+    "sd_annual": 401,
+    "mean_jjas": 434,
+    "sd_jjas": 317,
+    "years_n": 8
+  },
+  "Suryapet": {
+    "mean_annual": 489,
+    "sd_annual": 298,
+    "mean_jjas": 389,
+    "sd_jjas": 228,
+    "years_n": 8
+  },
+  "Vikarabad": {
+    "mean_annual": 454,
+    "sd_annual": 294,
+    "mean_jjas": 325,
+    "sd_jjas": 201,
+    "years_n": 8
+  },
+  "Wanaparthy": {
+    "mean_annual": 371,
+    "sd_annual": 239,
+    "mean_jjas": 257,
+    "sd_jjas": 192,
+    "years_n": 8
+  },
+  "Warangal Urban": {
+    "mean_annual": 492,
+    "sd_annual": 308,
+    "mean_jjas": 390,
+    "sd_jjas": 263,
+    "years_n": 8
+  },
+  "Yadadri Bhuvanagiri": {
+    "mean_annual": 494,
+    "sd_annual": 273,
+    "mean_jjas": 369,
+    "sd_jjas": 233,
+    "years_n": 8
+  },
+  "Dhalai": {
+    "mean_annual": 893,
+    "sd_annual": 422,
+    "mean_jjas": 572,
+    "sd_jjas": 294,
+    "years_n": 8
+  },
+  "Gomati": {
+    "mean_annual": 980,
+    "sd_annual": 448,
+    "mean_jjas": 629,
+    "sd_jjas": 346,
+    "years_n": 8
+  },
+  "Medchal Malkajgiri": {
+    "mean_annual": 503,
+    "sd_annual": 376,
+    "mean_jjas": 361,
+    "sd_jjas": 275,
+    "years_n": 8
+  },
+  "Mulugu": {
+    "mean_annual": 695,
+    "sd_annual": 329,
+    "mean_jjas": 568,
+    "sd_jjas": 294,
+    "years_n": 8
+  },
+  "Nagarkurnool": {
+    "mean_annual": 427,
+    "sd_annual": 227,
+    "mean_jjas": 292,
+    "sd_jjas": 160,
+    "years_n": 8
+  },
+  "Ranga Reddy": {
+    "mean_annual": 393,
+    "sd_annual": 273,
+    "mean_jjas": 286,
+    "sd_jjas": 216,
+    "years_n": 8
+  },
+  "Sangareddy": {
+    "mean_annual": 433,
+    "sd_annual": 219,
+    "mean_jjas": 354,
+    "sd_jjas": 205,
+    "years_n": 8
+  },
+  "Ramanathapuram": {
+    "mean_annual": 288,
+    "sd_annual": 148,
+    "mean_jjas": 62,
+    "sd_jjas": 38,
+    "years_n": 8
+  },
+  "Ranipet": {
+    "mean_annual": 511,
+    "sd_annual": 404,
+    "mean_jjas": 243,
+    "sd_jjas": 160,
+    "years_n": 8
+  },
+  "Kanchipuram": {
+    "mean_annual": 688,
+    "sd_annual": 542,
+    "mean_jjas": 295,
+    "sd_jjas": 307,
+    "years_n": 8
+  },
+  "Kanniyakumari": {
+    "mean_annual": 563,
+    "sd_annual": 233,
+    "mean_jjas": 153,
+    "sd_jjas": 105,
+    "years_n": 8
+  },
+  "Karur": {
+    "mean_annual": 326,
+    "sd_annual": 193,
+    "mean_jjas": 125,
+    "sd_jjas": 100,
+    "years_n": 8
+  },
+  "Thiruvarur": {
+    "mean_annual": 508,
+    "sd_annual": 227,
+    "mean_jjas": 127,
+    "sd_jjas": 96,
+    "years_n": 8
+  },
+  "Tiruchirappalli": {
+    "mean_annual": 424,
+    "sd_annual": 293,
+    "mean_jjas": 173,
+    "sd_jjas": 175,
+    "years_n": 8
+  },
+  "Tirunelveli": {
+    "mean_annual": 405,
+    "sd_annual": 187,
+    "mean_jjas": 79,
+    "sd_jjas": 60,
+    "years_n": 8
+  },
+  "Adilabad": {
+    "mean_annual": 582,
+    "sd_annual": 282,
+    "mean_jjas": 506,
+    "sd_jjas": 269,
+    "years_n": 8
+  },
+  "Bhadradri Kothagudem": {
+    "mean_annual": 627,
+    "sd_annual": 266,
+    "mean_jjas": 524,
+    "sd_jjas": 253,
+    "years_n": 8
+  },
+  "Hyderabad": {
+    "mean_annual": 535,
+    "sd_annual": 467,
+    "mean_jjas": 407,
+    "sd_jjas": 362,
+    "years_n": 8,
+    "lat": 17.39,
+    "lng": 78.49
+  },
+  "Vellore": {
+    "mean_annual": 541,
+    "sd_annual": 294,
+    "mean_jjas": 285,
+    "sd_jjas": 226,
+    "years_n": 8
+  },
+  "Villupuram": {
+    "mean_annual": 579,
+    "sd_annual": 312,
+    "mean_jjas": 223,
+    "sd_jjas": 176,
+    "years_n": 8
+  },
+  "Virudhunagar": {
+    "mean_annual": 372,
+    "sd_annual": 169,
+    "mean_jjas": 108,
+    "sd_jjas": 65,
+    "years_n": 8
+  },
+  "Mahabubabad": {
+    "mean_annual": 654,
+    "sd_annual": 293,
+    "mean_jjas": 521,
+    "sd_jjas": 254,
+    "years_n": 8
+  },
+  "Tirupathur": {
+    "mean_annual": 492,
+    "sd_annual": 325,
+    "mean_jjas": 284,
+    "sd_jjas": 258,
+    "years_n": 8
+  },
+  "Tiruppur": {
+    "mean_annual": 421,
+    "sd_annual": 224,
+    "mean_jjas": 185,
+    "sd_jjas": 177,
+    "years_n": 8
+  },
+  "Tiruvannamalai": {
+    "mean_annual": 530,
+    "sd_annual": 235,
+    "mean_jjas": 209,
+    "sd_jjas": 136,
+    "years_n": 8
+  },
+  "Tuticorin": {
+    "mean_annual": 242,
+    "sd_annual": 122,
+    "mean_jjas": 67,
+    "sd_jjas": 47,
+    "years_n": 8
+  },
+  "Patiala": {
+    "mean_annual": 312,
+    "sd_annual": 195,
+    "mean_jjas": 221,
+    "sd_jjas": 153,
+    "years_n": 8
+  },
+  "Rupnagar": {
+    "mean_annual": 537,
+    "sd_annual": 268,
+    "mean_jjas": 389,
+    "sd_jjas": 206,
+    "years_n": 8
+  },
+  "S.A.S Nagar": {
+    "mean_annual": 387,
+    "sd_annual": 300,
+    "mean_jjas": 279,
+    "sd_jjas": 242,
+    "years_n": 8
+  },
+  "Tarn Taran": {
+    "mean_annual": 245,
+    "sd_annual": 113,
+    "mean_jjas": 166,
+    "sd_jjas": 74,
+    "years_n": 8
+  },
+  "Ajmer": {
+    "mean_annual": 234,
+    "sd_annual": 116,
+    "mean_jjas": 199,
+    "sd_jjas": 105,
+    "years_n": 8
+  },
+  "Alwar": {
+    "mean_annual": 307,
+    "sd_annual": 190,
+    "mean_jjas": 244,
+    "sd_jjas": 145,
+    "years_n": 8
+  },
+  "Barmer": {
+    "mean_annual": 149,
+    "sd_annual": 60,
+    "mean_jjas": 127,
+    "sd_jjas": 50,
+    "years_n": 8
+  },
+  "Bharatpur": {
+    "mean_annual": 294,
+    "sd_annual": 179,
+    "mean_jjas": 235,
+    "sd_jjas": 143,
+    "years_n": 8
+  },
+  "Bhilwara": {
+    "mean_annual": 322,
+    "sd_annual": 169,
+    "mean_jjas": 276,
+    "sd_jjas": 141,
+    "years_n": 8
+  },
+  "Chittorgarh": {
+    "mean_annual": 469,
+    "sd_annual": 217,
+    "mean_jjas": 409,
+    "sd_jjas": 181,
+    "years_n": 8
+  },
+  "Churu": {
+    "mean_annual": 213,
+    "sd_annual": 124,
+    "mean_jjas": 171,
+    "sd_jjas": 100,
+    "years_n": 8
+  },
+  "Dausa": {
+    "mean_annual": 343,
+    "sd_annual": 178,
+    "mean_jjas": 272,
+    "sd_jjas": 144,
+    "years_n": 8
+  },
+  "Bikaner": {
+    "mean_annual": 173,
+    "sd_annual": 101,
+    "mean_jjas": 128,
+    "sd_jjas": 72,
+    "years_n": 8
+  },
+  "Bundi": {
+    "mean_annual": 384,
+    "sd_annual": 178,
+    "mean_jjas": 337,
+    "sd_jjas": 153,
+    "years_n": 8
+  },
+  "Banswara": {
+    "mean_annual": 432,
+    "sd_annual": 236,
+    "mean_jjas": 398,
+    "sd_jjas": 224,
+    "years_n": 8
+  },
+  "Baran": {
+    "mean_annual": 430,
+    "sd_annual": 169,
+    "mean_jjas": 395,
+    "sd_jjas": 160,
+    "years_n": 8
+  },
+  "Mansa": {
+    "mean_annual": 176,
+    "sd_annual": 157,
+    "mean_jjas": 112,
+    "sd_jjas": 98,
+    "years_n": 8
+  },
+  "Moga": {
+    "mean_annual": 283,
+    "sd_annual": 215,
+    "mean_jjas": 191,
+    "sd_jjas": 149,
+    "years_n": 8
+  },
+  "Pathankot": {
+    "mean_annual": 566,
+    "sd_annual": 317,
+    "mean_jjas": 351,
+    "sd_jjas": 184,
+    "years_n": 8
+  },
+  "Sangrur": {
+    "mean_annual": 260,
+    "sd_annual": 159,
+    "mean_jjas": 179,
+    "sd_jjas": 116,
+    "years_n": 8
+  },
+  "Shahid Bhagat Singh Nagar": {
+    "mean_annual": 427,
+    "sd_annual": 196,
+    "mean_jjas": 286,
+    "sd_jjas": 144,
+    "years_n": 8
+  },
+  "Sri Muktsar Sahib": {
+    "mean_annual": 194,
+    "sd_annual": 99,
+    "mean_jjas": 135,
+    "sd_jjas": 68,
+    "years_n": 8
+  },
+  "Dungarpur": {
+    "mean_annual": 342,
+    "sd_annual": 191,
+    "mean_jjas": 315,
+    "sd_jjas": 180,
+    "years_n": 8
+  },
+  "Ganganagar": {
+    "mean_annual": 113,
+    "sd_annual": 47,
+    "mean_jjas": 74,
+    "sd_jjas": 24,
+    "years_n": 8
+  },
+  "Hanumangarh": {
+    "mean_annual": 176,
+    "sd_annual": 147,
+    "mean_jjas": 122,
+    "sd_jjas": 96,
+    "years_n": 8
+  },
+  "Jaipur": {
+    "mean_annual": 279,
+    "sd_annual": 126,
+    "mean_jjas": 234,
+    "sd_jjas": 111,
+    "years_n": 8,
+    "lat": 26.91,
+    "lng": 75.79
+  },
+  "Jalore": {
+    "mean_annual": 154,
+    "sd_annual": 83,
+    "mean_jjas": 132,
+    "sd_jjas": 70,
+    "years_n": 8
+  },
+  "Jhalawar": {
+    "mean_annual": 465,
+    "sd_annual": 242,
+    "mean_jjas": 437,
+    "sd_jjas": 238,
+    "years_n": 8
+  },
+  "Jhunjhunu": {
+    "mean_annual": 219,
+    "sd_annual": 96,
+    "mean_jjas": 178,
+    "sd_jjas": 73,
+    "years_n": 8
+  },
+  "Jodhpur": {
+    "mean_annual": 164,
+    "sd_annual": 81,
+    "mean_jjas": 147,
+    "sd_jjas": 68,
+    "years_n": 8
+  },
+  "Jaisalmer": {
+    "mean_annual": 103,
+    "sd_annual": 50,
+    "mean_jjas": 81,
+    "sd_jjas": 48,
+    "years_n": 8
+  },
+  "Karauli": {
+    "mean_annual": 345,
+    "sd_annual": 191,
+    "mean_jjas": 301,
+    "sd_jjas": 166,
+    "years_n": 8
+  },
+  "Kota": {
+    "mean_annual": 467,
+    "sd_annual": 252,
+    "mean_jjas": 407,
+    "sd_jjas": 206,
+    "years_n": 8
+  },
+  "Nagaur": {
+    "mean_annual": 235,
+    "sd_annual": 115,
+    "mean_jjas": 189,
+    "sd_jjas": 90,
+    "years_n": 8
+  },
+  "Pali": {
+    "mean_annual": 249,
+    "sd_annual": 115,
+    "mean_jjas": 223,
+    "sd_jjas": 105,
+    "years_n": 8
+  },
+  "Rajsamand": {
+    "mean_annual": 276,
+    "sd_annual": 133,
+    "mean_jjas": 227,
+    "sd_jjas": 117,
+    "years_n": 8
+  },
+  "Sawai Madhopur": {
+    "mean_annual": 384,
+    "sd_annual": 224,
+    "mean_jjas": 331,
+    "sd_jjas": 179,
+    "years_n": 8
+  },
+  "Sikar": {
+    "mean_annual": 264,
+    "sd_annual": 149,
+    "mean_jjas": 223,
+    "sd_jjas": 122,
+    "years_n": 8
+  },
+  "Dholpur": {
+    "mean_annual": 401,
+    "sd_annual": 195,
+    "mean_jjas": 346,
+    "sd_jjas": 167,
+    "years_n": 8
+  },
+  "Pratapgarh": {
+    "mean_annual": 774,
+    "sd_annual": 394,
+    "mean_jjas": 660,
+    "sd_jjas": 344,
+    "years_n": 8
+  },
+  "Sirohi": {
+    "mean_annual": 346,
+    "sd_annual": 120,
+    "mean_jjas": 310,
+    "sd_jjas": 133,
+    "years_n": 8
+  },
+  "Nabarangpur": {
+    "mean_annual": 559,
+    "sd_annual": 364,
+    "mean_jjas": 422,
+    "sd_jjas": 243,
+    "years_n": 8
+  },
+  "Nayagarh": {
+    "mean_annual": 771,
+    "sd_annual": 471,
+    "mean_jjas": 561,
+    "sd_jjas": 326,
+    "years_n": 8
+  },
+  "Nuapada": {
+    "mean_annual": 556,
+    "sd_annual": 365,
+    "mean_jjas": 452,
+    "sd_jjas": 282,
+    "years_n": 8
+  },
+  "Cuttack": {
+    "mean_annual": 774,
+    "sd_annual": 463,
+    "mean_jjas": 533,
+    "sd_jjas": 306,
+    "years_n": 8
+  },
+  "Deogarh": {
+    "mean_annual": 677,
+    "sd_annual": 518,
+    "mean_jjas": 517,
+    "sd_jjas": 360,
+    "years_n": 8
+  },
+  "Jalandhar": {
+    "mean_annual": 332,
+    "sd_annual": 191,
+    "mean_jjas": 202,
+    "sd_jjas": 126,
+    "years_n": 8
+  },
+  "Kapurthala": {
+    "mean_annual": 427,
+    "sd_annual": 302,
+    "mean_jjas": 284,
+    "sd_jjas": 248,
+    "years_n": 8
+  },
+  "Ludhiana": {
+    "mean_annual": 316,
+    "sd_annual": 185,
+    "mean_jjas": 193,
+    "sd_jjas": 116,
+    "years_n": 8
+  },
+  "Puri": {
+    "mean_annual": 580,
+    "sd_annual": 423,
+    "mean_jjas": 421,
+    "sd_jjas": 336,
+    "years_n": 8
+  },
+  "Rayagada": {
+    "mean_annual": 650,
+    "sd_annual": 349,
+    "mean_jjas": 481,
+    "sd_jjas": 270,
+    "years_n": 8
+  },
+  "Sambalpur": {
+    "mean_annual": 608,
+    "sd_annual": 320,
+    "mean_jjas": 491,
+    "sd_jjas": 233,
+    "years_n": 8
+  },
+  "Gurdaspur": {
+    "mean_annual": 356,
     "sd_annual": 216,
-    "mean_jjas": 1100,
-    "sd_jjas": 198,
-    "years_n": 50,
-    "lat": 21.17,
+    "mean_jjas": 225,
+    "sd_jjas": 138,
+    "years_n": 8
+  },
+  "Hoshiarpur": {
+    "mean_annual": 395,
+    "sd_annual": 228,
+    "mean_jjas": 252,
+    "sd_jjas": 184,
+    "years_n": 8
+  },
+  "Bathinda": {
+    "mean_annual": 216,
+    "sd_annual": 138,
+    "mean_jjas": 143,
+    "sd_jjas": 75,
+    "years_n": 8
+  },
+  "Faridkot": {
+    "mean_annual": 212,
+    "sd_annual": 123,
+    "mean_jjas": 153,
+    "sd_jjas": 98,
+    "years_n": 8
+  },
+  "Fatehgarh Sahib": {
+    "mean_annual": 368,
+    "sd_annual": 201,
+    "mean_jjas": 260,
+    "sd_jjas": 129,
+    "years_n": 8
+  },
+  "Fazilka": {
+    "mean_annual": 167,
+    "sd_annual": 181,
+    "mean_jjas": 122,
+    "sd_jjas": 135,
+    "years_n": 8
+  },
+  "Mahe": {
+    "mean_annual": 5489,
+    "sd_annual": 6642,
+    "mean_jjas": 3544,
+    "sd_jjas": 4076,
+    "years_n": 8
+  },
+  "Pondicherry": {
+    "mean_annual": 1050,
+    "sd_annual": 953,
+    "mean_jjas": 342,
+    "sd_jjas": 358,
+    "years_n": 8
+  },
+  "Yanam": {
+    "mean_annual": 1232,
+    "sd_annual": 1223,
+    "mean_jjas": 771,
+    "sd_jjas": 754,
+    "years_n": 8
+  },
+  "East District": {
+    "mean_annual": 1139,
+    "sd_annual": 552,
+    "mean_jjas": 803,
+    "sd_jjas": 377,
+    "years_n": 8
+  },
+  "Dindigul": {
+    "mean_annual": 450,
+    "sd_annual": 287,
+    "mean_jjas": 205,
+    "sd_jjas": 186,
+    "years_n": 8
+  },
+  "Erode": {
+    "mean_annual": 474,
+    "sd_annual": 293,
+    "mean_jjas": 195,
+    "sd_jjas": 157,
+    "years_n": 8
+  },
+  "South District": {
+    "mean_annual": 950,
+    "sd_annual": 457,
+    "mean_jjas": 623,
+    "sd_jjas": 311,
+    "years_n": 8
+  },
+  "West District": {
+    "mean_annual": 975,
+    "sd_annual": 485,
+    "mean_jjas": 603,
+    "sd_jjas": 326,
+    "years_n": 8
+  },
+  "Salem": {
+    "mean_annual": 467,
+    "sd_annual": 249,
+    "mean_jjas": 253,
+    "sd_jjas": 192,
+    "years_n": 8
+  },
+  "Sivaganga": {
+    "mean_annual": 457,
+    "sd_annual": 251,
+    "mean_jjas": 173,
+    "sd_jjas": 127,
+    "years_n": 8
+  },
+  "Tenkasi": {
+    "mean_annual": 452,
+    "sd_annual": 223,
+    "mean_jjas": 108,
+    "sd_jjas": 75,
+    "years_n": 8
+  },
+  "Krishnagiri": {
+    "mean_annual": 498,
+    "sd_annual": 304,
+    "mean_jjas": 243,
+    "sd_jjas": 157,
+    "years_n": 8
+  },
+  "Madurai": {
+    "mean_annual": 463,
+    "sd_annual": 348,
+    "mean_jjas": 178,
+    "sd_jjas": 166,
+    "years_n": 8
+  },
+  "Nagapattinam": {
+    "mean_annual": 467,
+    "sd_annual": 266,
+    "mean_jjas": 131,
+    "sd_jjas": 131,
+    "years_n": 8
+  },
+  "Namakkal": {
+    "mean_annual": 386,
+    "sd_annual": 268,
+    "mean_jjas": 218,
+    "sd_jjas": 191,
+    "years_n": 8
+  },
+  "Perambalur": {
+    "mean_annual": 569,
+    "sd_annual": 405,
+    "mean_jjas": 255,
+    "sd_jjas": 193,
+    "years_n": 8
+  },
+  "The Nilgiris": {
+    "mean_annual": 713,
+    "sd_annual": 284,
+    "mean_jjas": 337,
+    "sd_jjas": 202,
+    "years_n": 8
+  },
+  "Theni": {
+    "mean_annual": 592,
+    "sd_annual": 342,
+    "mean_jjas": 219,
+    "sd_jjas": 160,
+    "years_n": 8
+  },
+  "Thiruvallur": {
+    "mean_annual": 653,
+    "sd_annual": 393,
+    "mean_jjas": 282,
+    "sd_jjas": 249,
+    "years_n": 8
+  },
+  "Thanjavur": {
+    "mean_annual": 566,
+    "sd_annual": 335,
+    "mean_jjas": 176,
+    "sd_jjas": 180,
+    "years_n": 8
+  },
+  "Pudukkottai": {
+    "mean_annual": 378,
+    "sd_annual": 209,
+    "mean_jjas": 142,
+    "sd_jjas": 112,
+    "years_n": 8
+  },
+  "Warangal Rural": {
+    "mean_annual": 649,
+    "sd_annual": 383,
+    "mean_jjas": 541,
+    "sd_jjas": 348,
+    "years_n": 8
+  },
+  "Khowai": {
+    "mean_annual": 948,
+    "sd_annual": 470,
+    "mean_jjas": 555,
+    "sd_jjas": 269,
+    "years_n": 8
+  },
+  "North Tripura": {
+    "mean_annual": 944,
+    "sd_annual": 482,
+    "mean_jjas": 607,
+    "sd_jjas": 303,
+    "years_n": 8
+  },
+  "Nizamabad": {
+    "mean_annual": 591,
+    "sd_annual": 227,
+    "mean_jjas": 531,
+    "sd_jjas": 215,
+    "years_n": 8
+  },
+  "Peddapalli": {
+    "mean_annual": 565,
+    "sd_annual": 296,
+    "mean_jjas": 493,
+    "sd_jjas": 281,
+    "years_n": 8
+  },
+  "Rajanna Sircilla": {
+    "mean_annual": 605,
+    "sd_annual": 331,
+    "mean_jjas": 488,
+    "sd_jjas": 285,
+    "years_n": 8
+  },
+  "Narayanpet": {
+    "mean_annual": 360,
+    "sd_annual": 242,
+    "mean_jjas": 256,
+    "sd_jjas": 176,
+    "years_n": 8
+  },
+  "Nirmal": {
+    "mean_annual": 648,
+    "sd_annual": 298,
+    "mean_jjas": 565,
+    "sd_jjas": 286,
+    "years_n": 8
+  },
+  "Nalgonda": {
+    "mean_annual": 405,
+    "sd_annual": 247,
+    "mean_jjas": 311,
+    "sd_jjas": 208,
+    "years_n": 8
+  },
+  "Baghpat": {
+    "mean_annual": 374,
+    "sd_annual": 216,
+    "mean_jjas": 273,
+    "sd_jjas": 178,
+    "years_n": 8
+  },
+  "Bahraich": {
+    "mean_annual": 493,
+    "sd_annual": 299,
+    "mean_jjas": 402,
+    "sd_jjas": 237,
+    "years_n": 8
+  },
+  "Ballia": {
+    "mean_annual": 407,
+    "sd_annual": 301,
+    "mean_jjas": 345,
+    "sd_jjas": 253,
+    "years_n": 8
+  },
+  "Banda": {
+    "mean_annual": 398,
+    "sd_annual": 245,
+    "mean_jjas": 333,
+    "sd_jjas": 203,
+    "years_n": 8
+  },
+  "Tonk": {
+    "mean_annual": 388,
+    "sd_annual": 166,
+    "mean_jjas": 335,
+    "sd_jjas": 149,
+    "years_n": 8
+  },
+  "Udaipur": {
+    "mean_annual": 354,
+    "sd_annual": 140,
+    "mean_jjas": 295,
+    "sd_jjas": 136,
+    "years_n": 8
+  },
+  "Coimbatore": {
+    "mean_annual": 706,
+    "sd_annual": 365,
+    "mean_jjas": 369,
+    "sd_jjas": 169,
+    "years_n": 8,
+    "lat": 11.02,
+    "lng": 76.96
+  },
+  "Cuddalore": {
+    "mean_annual": 672,
+    "sd_annual": 421,
+    "mean_jjas": 208,
+    "sd_jjas": 133,
+    "years_n": 8
+  },
+  "Dharmapuri": {
+    "mean_annual": 469,
+    "sd_annual": 227,
+    "mean_jjas": 236,
+    "sd_jjas": 166,
+    "years_n": 8
+  },
+  "Chengalpattu": {
+    "mean_annual": 466,
+    "sd_annual": 326,
+    "mean_jjas": 187,
+    "sd_jjas": 186,
+    "years_n": 8
+  },
+  "Chennai": {
+    "mean_annual": 410,
+    "sd_annual": 416,
+    "mean_jjas": 173,
+    "sd_jjas": 236,
+    "years_n": 8,
+    "lat": 13.08,
+    "lng": 80.27
+  },
+  "Kallakurichi": {
+    "mean_annual": 519,
+    "sd_annual": 283,
+    "mean_jjas": 199,
+    "sd_jjas": 145,
+    "years_n": 8
+  },
+  "Ariyalur": {
+    "mean_annual": 630,
+    "sd_annual": 391,
+    "mean_jjas": 196,
+    "sd_jjas": 123,
+    "years_n": 8
+  },
+  "North District": {
+    "mean_annual": 895,
+    "sd_annual": 537,
+    "mean_jjas": 515,
+    "sd_jjas": 348,
+    "years_n": 8
+  },
+  "Mayurbhanj": {
+    "mean_annual": 808,
+    "sd_annual": 446,
+    "mean_jjas": 537,
+    "sd_jjas": 295,
+    "years_n": 8
+  },
+  "Dhenkanal": {
+    "mean_annual": 674,
+    "sd_annual": 398,
+    "mean_jjas": 493,
+    "sd_jjas": 290,
+    "years_n": 8
+  },
+  "Gajapati": {
+    "mean_annual": 607,
+    "sd_annual": 415,
+    "mean_jjas": 362,
+    "sd_jjas": 256,
+    "years_n": 8
+  },
+  "Ganjam": {
+    "mean_annual": 692,
+    "sd_annual": 412,
+    "mean_jjas": 455,
+    "sd_jjas": 240,
+    "years_n": 8
+  },
+  "Jajapur": {
+    "mean_annual": 712,
+    "sd_annual": 444,
+    "mean_jjas": 462,
+    "sd_jjas": 277,
+    "years_n": 8
+  },
+  "Jharsuguda": {
+    "mean_annual": 595,
+    "sd_annual": 362,
+    "mean_jjas": 436,
+    "sd_jjas": 243,
+    "years_n": 8
+  },
+  "Kalahandi": {
+    "mean_annual": 691,
+    "sd_annual": 398,
+    "mean_jjas": 537,
+    "sd_jjas": 279,
+    "years_n": 8
+  },
+  "Kandhamal": {
+    "mean_annual": 692,
+    "sd_annual": 409,
+    "mean_jjas": 483,
+    "sd_jjas": 230,
+    "years_n": 8
+  },
+  "Kendrapara": {
+    "mean_annual": 754,
+    "sd_annual": 574,
+    "mean_jjas": 454,
+    "sd_jjas": 274,
+    "years_n": 8
+  },
+  "Kendujhar": {
+    "mean_annual": 637,
+    "sd_annual": 366,
+    "mean_jjas": 435,
+    "sd_jjas": 248,
+    "years_n": 8
+  },
+  "Jagatsinghapur": {
+    "mean_annual": 781,
+    "sd_annual": 547,
+    "mean_jjas": 488,
+    "sd_jjas": 313,
+    "years_n": 8
+  },
+  "Khordha": {
+    "mean_annual": 693,
+    "sd_annual": 419,
+    "mean_jjas": 469,
+    "sd_jjas": 247,
+    "years_n": 8
+  },
+  "Amritsar": {
+    "mean_annual": 323,
+    "sd_annual": 205,
+    "mean_jjas": 214,
+    "sd_jjas": 149,
+    "years_n": 8
+  },
+  "Sundargarh": {
+    "mean_annual": 682,
+    "sd_annual": 420,
+    "mean_jjas": 518,
+    "sd_jjas": 317,
+    "years_n": 8
+  },
+  "Karaikal": {
+    "mean_annual": 766,
+    "sd_annual": 492,
+    "mean_jjas": 204,
+    "sd_jjas": 238,
+    "years_n": 8
+  },
+  "Barnala": {
+    "mean_annual": 283,
+    "sd_annual": 189,
+    "mean_jjas": 188,
+    "sd_jjas": 122,
+    "years_n": 8
+  },
+  "Firozepur": {
+    "mean_annual": 224,
+    "sd_annual": 163,
+    "mean_jjas": 155,
+    "sd_jjas": 97,
+    "years_n": 8
+  },
+  "Sonepur": {
+    "mean_annual": 762,
+    "sd_annual": 444,
+    "mean_jjas": 600,
+    "sd_jjas": 301,
+    "years_n": 8
+  },
+  "Jhansi": {
+    "mean_annual": 360,
+    "sd_annual": 188,
+    "mean_jjas": 309,
+    "sd_jjas": 155,
+    "years_n": 8
+  },
+  "Kannauj": {
+    "mean_annual": 392,
+    "sd_annual": 237,
+    "mean_jjas": 321,
+    "sd_jjas": 207,
+    "years_n": 8
+  },
+  "Kanpur Dehat": {
+    "mean_annual": 308,
+    "sd_annual": 233,
+    "mean_jjas": 260,
+    "sd_jjas": 207,
+    "years_n": 8
+  },
+  "Hamirpur": {
+    "mean_annual": 944,
+    "sd_annual": 483,
+    "mean_jjas": 751,
+    "sd_jjas": 397,
+    "years_n": 8
+  },
+  "Hapur": {
+    "mean_annual": 355,
+    "sd_annual": 279,
+    "mean_jjas": 272,
+    "sd_jjas": 240,
+    "years_n": 8
+  },
+  "Hardoi": {
+    "mean_annual": 339,
+    "sd_annual": 215,
+    "mean_jjas": 262,
+    "sd_jjas": 165,
+    "years_n": 8
+  },
+  "Hathras": {
+    "mean_annual": 336,
+    "sd_annual": 271,
+    "mean_jjas": 298,
+    "sd_jjas": 260,
+    "years_n": 8
+  },
+  "Ghazipur": {
+    "mean_annual": 385,
+    "sd_annual": 235,
+    "mean_jjas": 345,
+    "sd_jjas": 210,
+    "years_n": 8
+  },
+  "Gonda": {
+    "mean_annual": 528,
+    "sd_annual": 370,
+    "mean_jjas": 457,
+    "sd_jjas": 320,
+    "years_n": 8
+  },
+  "Gorakhpur": {
+    "mean_annual": 573,
+    "sd_annual": 440,
+    "mean_jjas": 486,
+    "sd_jjas": 359,
+    "years_n": 8
+  },
+  "Etawah": {
+    "mean_annual": 309,
+    "sd_annual": 184,
+    "mean_jjas": 244,
+    "sd_jjas": 132,
+    "years_n": 8
+  },
+  "Farrukhabad": {
+    "mean_annual": 314,
+    "sd_annual": 157,
+    "mean_jjas": 265,
+    "sd_jjas": 149,
+    "years_n": 8
+  },
+  "Fatehpur": {
+    "mean_annual": 360,
+    "sd_annual": 210,
+    "mean_jjas": 300,
+    "sd_jjas": 176,
+    "years_n": 8
+  },
+  "Firozabad": {
+    "mean_annual": 401,
+    "sd_annual": 238,
+    "mean_jjas": 342,
+    "sd_jjas": 200,
+    "years_n": 8
+  },
+  "Mau": {
+    "mean_annual": 539,
+    "sd_annual": 396,
+    "mean_jjas": 452,
+    "sd_jjas": 320,
+    "years_n": 8
+  },
+  "Meerut": {
+    "mean_annual": 394,
+    "sd_annual": 226,
+    "mean_jjas": 306,
+    "sd_jjas": 205,
+    "years_n": 8
+  },
+  "Mirzapur": {
+    "mean_annual": 461,
+    "sd_annual": 350,
+    "mean_jjas": 397,
+    "sd_jjas": 300,
+    "years_n": 8
+  },
+  "Moradabad": {
+    "mean_annual": 430,
+    "sd_annual": 217,
+    "mean_jjas": 307,
+    "sd_jjas": 153,
+    "years_n": 8
+  },
+  "Kushi Nagar": {
+    "mean_annual": 546,
+    "sd_annual": 420,
+    "mean_jjas": 452,
+    "sd_jjas": 353,
+    "years_n": 8
+  },
+  "Lalitpur": {
+    "mean_annual": 473,
+    "sd_annual": 207,
+    "mean_jjas": 419,
+    "sd_jjas": 167,
+    "years_n": 8
+  },
+  "Lucknow": {
+    "mean_annual": 525,
+    "sd_annual": 341,
+    "mean_jjas": 452,
+    "sd_jjas": 311,
+    "years_n": 8,
+    "lat": 26.85,
+    "lng": 80.95
+  },
+  "Maharajganj": {
+    "mean_annual": 599,
+    "sd_annual": 425,
+    "mean_jjas": 478,
+    "sd_jjas": 306,
+    "years_n": 8
+  },
+  "Mahoba": {
+    "mean_annual": 392,
+    "sd_annual": 263,
+    "mean_jjas": 346,
+    "sd_jjas": 223,
+    "years_n": 8
+  },
+  "Mainpuri": {
+    "mean_annual": 306,
+    "sd_annual": 192,
+    "mean_jjas": 250,
+    "sd_jjas": 164,
+    "years_n": 8
+  },
+  "Kanpur Nagar": {
+    "mean_annual": 394,
+    "sd_annual": 309,
+    "mean_jjas": 321,
+    "sd_jjas": 252,
+    "years_n": 8
+  },
+  "Kasganj": {
+    "mean_annual": 397,
+    "sd_annual": 225,
+    "mean_jjas": 321,
+    "sd_jjas": 207,
+    "years_n": 8
+  },
+  "Dinajpur Dakshin": {
+    "mean_annual": 454,
+    "sd_annual": 310,
+    "mean_jjas": 354,
+    "sd_jjas": 262,
+    "years_n": 8
+  },
+  "Pauri Garhwal": {
+    "mean_annual": 523,
+    "sd_annual": 272,
+    "mean_jjas": 359,
+    "sd_jjas": 165,
+    "years_n": 8
+  },
+  "Pithoragarh": {
+    "mean_annual": 679,
+    "sd_annual": 363,
+    "mean_jjas": 459,
+    "sd_jjas": 238,
+    "years_n": 8
+  },
+  "Rudra Prayag": {
+    "mean_annual": 607,
+    "sd_annual": 377,
+    "mean_jjas": 421,
+    "sd_jjas": 288,
+    "years_n": 8
+  },
+  "Tehri Garhwal": {
+    "mean_annual": 631,
+    "sd_annual": 318,
+    "mean_jjas": 427,
+    "sd_jjas": 232,
+    "years_n": 8
+  },
+  "Dinajpur Uttar": {
+    "mean_annual": 786,
+    "sd_annual": 485,
+    "mean_jjas": 584,
+    "sd_jjas": 332,
+    "years_n": 8
+  },
+  "Hooghly": {
+    "mean_annual": 741,
+    "sd_annual": 452,
+    "mean_jjas": 473,
+    "sd_jjas": 280,
+    "years_n": 8
+  },
+  "Howrah": {
+    "mean_annual": 796,
+    "sd_annual": 484,
+    "mean_jjas": 534,
+    "sd_jjas": 322,
+    "years_n": 8
+  },
+  "Jalpaiguri": {
+    "mean_annual": 1365,
+    "sd_annual": 621,
+    "mean_jjas": 1041,
+    "sd_jjas": 477,
+    "years_n": 8
+  },
+  "Jhargram": {
+    "mean_annual": 808,
+    "sd_annual": 561,
+    "mean_jjas": 545,
+    "sd_jjas": 341,
+    "years_n": 8
+  },
+  "Udam Singh Nagar": {
+    "mean_annual": 604,
+    "sd_annual": 400,
+    "mean_jjas": 449,
+    "sd_jjas": 299,
+    "years_n": 8
+  },
+  "Uttar Kashi": {
+    "mean_annual": 520,
+    "sd_annual": 322,
+    "mean_jjas": 298,
+    "sd_jjas": 197,
+    "years_n": 8
+  },
+  "24 Paraganas North": {
+    "mean_annual": 668,
+    "sd_annual": 391,
+    "mean_jjas": 478,
+    "sd_jjas": 294,
+    "years_n": 8
+  },
+  "24 Paraganas South": {
+    "mean_annual": 886,
+    "sd_annual": 458,
+    "mean_jjas": 641,
+    "sd_jjas": 383,
+    "years_n": 8
+  },
+  "Alipurduar": {
+    "mean_annual": 1570,
+    "sd_annual": 833,
+    "mean_jjas": 1188,
+    "sd_jjas": 665,
+    "years_n": 8
+  },
+  "Maldah": {
+    "mean_annual": 582,
+    "sd_annual": 304,
+    "mean_jjas": 407,
+    "sd_jjas": 224,
+    "years_n": 8
+  },
+  "Medinipur East": {
+    "mean_annual": 684,
+    "sd_annual": 413,
+    "mean_jjas": 446,
+    "sd_jjas": 280,
+    "years_n": 8
+  },
+  "Medinipur West": {
+    "mean_annual": 704,
+    "sd_annual": 413,
+    "mean_jjas": 460,
+    "sd_jjas": 295,
+    "years_n": 8
+  },
+  "Murshidabad": {
+    "mean_annual": 509,
+    "sd_annual": 383,
+    "mean_jjas": 330,
+    "sd_jjas": 288,
+    "years_n": 8
+  },
+  "South Andamans": {
+    "mean_annual": 587,
+    "sd_annual": 957,
+    "mean_jjas": 418,
+    "sd_jjas": 740,
+    "years_n": 8
+  },
+  "Anantapur": {
+    "mean_annual": 405,
+    "sd_annual": 216,
+    "mean_jjas": 245,
+    "sd_jjas": 175,
+    "years_n": 8
+  },
+  "Rae Bareli": {
+    "mean_annual": 375,
+    "sd_annual": 301,
+    "mean_jjas": 306,
+    "sd_jjas": 267,
+    "years_n": 8
+  },
+  "Rampur": {
+    "mean_annual": 411,
+    "sd_annual": 303,
+    "mean_jjas": 301,
+    "sd_jjas": 263,
+    "years_n": 8
+  },
+  "Siddharth Nagar": {
+    "mean_annual": 516,
+    "sd_annual": 393,
+    "mean_jjas": 426,
+    "sd_jjas": 337,
+    "years_n": 8
+  },
+  "Sitapur": {
+    "mean_annual": 334,
+    "sd_annual": 191,
+    "mean_jjas": 278,
+    "sd_jjas": 165,
+    "years_n": 8
+  },
+  "Sonbhadra": {
+    "mean_annual": 389,
+    "sd_annual": 289,
+    "mean_jjas": 305,
+    "sd_jjas": 235,
+    "years_n": 8
+  },
+  "Sultanpur": {
+    "mean_annual": 384,
+    "sd_annual": 286,
+    "mean_jjas": 317,
+    "sd_jjas": 242,
+    "years_n": 8
+  },
+  "Shamli": {
+    "mean_annual": 315,
+    "sd_annual": 240,
+    "mean_jjas": 213,
+    "sd_jjas": 184,
+    "years_n": 8
+  },
+  "Shravasti": {
+    "mean_annual": 566,
+    "sd_annual": 374,
+    "mean_jjas": 469,
+    "sd_jjas": 304,
+    "years_n": 8
+  },
+  "Sambhal": {
+    "mean_annual": 397,
+    "sd_annual": 219,
+    "mean_jjas": 321,
+    "sd_jjas": 210,
+    "years_n": 8
+  },
+  "Sant Kabeer Nagar": {
+    "mean_annual": 519,
+    "sd_annual": 496,
+    "mean_jjas": 444,
+    "sd_jjas": 390,
+    "years_n": 8
+  },
+  "Shahjahanpur": {
+    "mean_annual": 356,
+    "sd_annual": 219,
+    "mean_jjas": 280,
+    "sd_jjas": 192,
+    "years_n": 8
+  },
+  "Kalimpong": {
+    "mean_annual": 1338,
+    "sd_annual": 507,
+    "mean_jjas": 1046,
+    "sd_jjas": 369,
+    "years_n": 8
+  },
+  "Kolkata": {
+    "mean_annual": 951,
+    "sd_annual": 749,
+    "mean_jjas": 615,
+    "sd_jjas": 507,
+    "years_n": 8,
+    "lat": 22.57,
+    "lng": 88.36
+  },
+  "Bankura": {
+    "mean_annual": 608,
+    "sd_annual": 425,
+    "mean_jjas": 438,
+    "sd_jjas": 303,
+    "years_n": 8
+  },
+  "Birbhum": {
+    "mean_annual": 603,
+    "sd_annual": 435,
+    "mean_jjas": 405,
+    "sd_jjas": 299,
+    "years_n": 8
+  },
+  "Coochbehar": {
+    "mean_annual": 1154,
+    "sd_annual": 672,
+    "mean_jjas": 861,
+    "sd_jjas": 531,
+    "years_n": 8
+  },
+  "Dehradun": {
+    "mean_annual": 698,
+    "sd_annual": 329,
+    "mean_jjas": 498,
+    "sd_jjas": 257,
+    "years_n": 8,
+    "lat": 30.32,
+    "lng": 78.03
+  },
+  "Haridwar": {
+    "mean_annual": 599,
+    "sd_annual": 372,
+    "mean_jjas": 434,
+    "sd_jjas": 289,
+    "years_n": 8
+  },
+  "Nainital": {
+    "mean_annual": 582,
+    "sd_annual": 302,
+    "mean_jjas": 404,
+    "sd_jjas": 197,
+    "years_n": 8
+  },
+  "Darjeeling": {
+    "mean_annual": 1072,
+    "sd_annual": 470,
+    "mean_jjas": 802,
+    "sd_jjas": 343,
+    "years_n": 8
+  },
+  "Amethi": {
+    "mean_annual": 423,
+    "sd_annual": 329,
+    "mean_jjas": 356,
+    "sd_jjas": 273,
+    "years_n": 8
+  },
+  "Amroha": {
+    "mean_annual": 381,
+    "sd_annual": 227,
+    "mean_jjas": 264,
+    "sd_jjas": 167,
+    "years_n": 8
+  },
+  "Auraiya": {
+    "mean_annual": 289,
+    "sd_annual": 220,
+    "mean_jjas": 256,
+    "sd_jjas": 195,
+    "years_n": 8
+  },
+  "Bijnor": {
+    "mean_annual": 437,
+    "sd_annual": 255,
+    "mean_jjas": 317,
+    "sd_jjas": 217,
+    "years_n": 8
+  },
+  "Budaun": {
+    "mean_annual": 339,
+    "sd_annual": 158,
+    "mean_jjas": 264,
+    "sd_jjas": 167,
+    "years_n": 8
+  },
+  "Bulandshahr": {
+    "mean_annual": 305,
+    "sd_annual": 163,
+    "mean_jjas": 207,
+    "sd_jjas": 126,
+    "years_n": 8
+  },
+  "Barabanki": {
+    "mean_annual": 605,
+    "sd_annual": 393,
+    "mean_jjas": 500,
+    "sd_jjas": 322,
+    "years_n": 8
+  },
+  "Bareilly": {
+    "mean_annual": 370,
+    "sd_annual": 254,
+    "mean_jjas": 240,
+    "sd_jjas": 176,
+    "years_n": 8
+  },
+  "Basti": {
+    "mean_annual": 514,
+    "sd_annual": 353,
+    "mean_jjas": 433,
+    "sd_jjas": 265,
+    "years_n": 8
+  },
+  "Bhadohi": {
+    "mean_annual": 474,
+    "sd_annual": 404,
+    "mean_jjas": 409,
+    "sd_jjas": 345,
+    "years_n": 8
+  },
+  "Gautam Buddha Nagar": {
+    "mean_annual": 249,
+    "sd_annual": 154,
+    "mean_jjas": 171,
+    "sd_jjas": 117,
+    "years_n": 8
+  },
+  "Ghaziabad": {
+    "mean_annual": 326,
+    "sd_annual": 246,
+    "mean_jjas": 233,
+    "sd_jjas": 218,
+    "years_n": 8
+  },
+  "Chandauli": {
+    "mean_annual": 442,
+    "sd_annual": 306,
+    "mean_jjas": 376,
+    "sd_jjas": 268,
+    "years_n": 8
+  },
+  "Chitrakoot": {
+    "mean_annual": 422,
+    "sd_annual": 289,
+    "mean_jjas": 340,
+    "sd_jjas": 234,
+    "years_n": 8
+  },
+  "Deoria": {
+    "mean_annual": 442,
+    "sd_annual": 287,
+    "mean_jjas": 348,
+    "sd_jjas": 202,
+    "years_n": 8
+  },
+  "Etah": {
+    "mean_annual": 308,
+    "sd_annual": 163,
+    "mean_jjas": 236,
+    "sd_jjas": 128,
+    "years_n": 8
+  },
+  "Jalaun": {
+    "mean_annual": 361,
+    "sd_annual": 157,
+    "mean_jjas": 301,
+    "sd_jjas": 118,
+    "years_n": 8
+  },
+  "Jaunpur": {
+    "mean_annual": 398,
+    "sd_annual": 268,
+    "mean_jjas": 330,
+    "sd_jjas": 221,
+    "years_n": 8
+  },
+  "Chittoor": {
+    "mean_annual": 681,
+    "sd_annual": 481,
+    "mean_jjas": 371,
+    "sd_jjas": 309,
+    "years_n": 8
+  },
+  "East Godavari": {
+    "mean_annual": 674,
+    "sd_annual": 301,
+    "mean_jjas": 478,
+    "sd_jjas": 234,
+    "years_n": 8
+  },
+  "Guntur": {
+    "mean_annual": 559,
+    "sd_annual": 317,
+    "mean_jjas": 409,
+    "sd_jjas": 248,
+    "years_n": 8
+  },
+  "Krishna": {
+    "mean_annual": 594,
+    "sd_annual": 323,
+    "mean_jjas": 432,
+    "sd_jjas": 262,
+    "years_n": 8
+  },
+  "Kurnool": {
+    "mean_annual": 371,
+    "sd_annual": 242,
+    "mean_jjas": 231,
+    "sd_jjas": 172,
+    "years_n": 8
+  },
+  "Prakasam": {
+    "mean_annual": 460,
+    "sd_annual": 307,
+    "mean_jjas": 262,
+    "sd_jjas": 190,
+    "years_n": 8
+  },
+  "SPSR Nellore": {
+    "mean_annual": 513,
+    "sd_annual": 335,
+    "mean_jjas": 210,
+    "sd_jjas": 173,
+    "years_n": 8
+  },
+  "Srikakulam": {
+    "mean_annual": 582,
+    "sd_annual": 438,
+    "mean_jjas": 350,
+    "sd_jjas": 252,
+    "years_n": 8
+  },
+  "Visakhapatanam": {
+    "mean_annual": 710,
+    "sd_annual": 432,
+    "mean_jjas": 428,
+    "sd_jjas": 282,
+    "years_n": 8
+  },
+  "Vizianagaram": {
+    "mean_annual": 807,
+    "sd_annual": 561,
+    "mean_jjas": 549,
+    "sd_jjas": 375,
+    "years_n": 8
+  },
+  "Nadia": {
+    "mean_annual": 469,
+    "sd_annual": 332,
+    "mean_jjas": 289,
+    "sd_jjas": 241,
+    "years_n": 8
+  },
+  "Muzaffarnagar": {
+    "mean_annual": 456,
+    "sd_annual": 216,
+    "mean_jjas": 319,
+    "sd_jjas": 129,
+    "years_n": 8
+  },
+  "Pilibhit": {
+    "mean_annual": 488,
+    "sd_annual": 286,
+    "mean_jjas": 388,
+    "sd_jjas": 233,
+    "years_n": 8
+  },
+  "Kaushambi": {
+    "mean_annual": 452,
+    "sd_annual": 309,
+    "mean_jjas": 356,
+    "sd_jjas": 236,
+    "years_n": 8
+  },
+  "Kheri": {
+    "mean_annual": 591,
+    "sd_annual": 348,
+    "mean_jjas": 462,
+    "sd_jjas": 282,
+    "years_n": 8
+  },
+  "Mathura": {
+    "mean_annual": 297,
+    "sd_annual": 174,
+    "mean_jjas": 239,
+    "sd_jjas": 138,
+    "years_n": 8
+  },
+  "Saharanpur": {
+    "mean_annual": 503,
+    "sd_annual": 266,
+    "mean_jjas": 400,
+    "sd_jjas": 204,
+    "years_n": 8
+  },
+  "Varanasi": {
+    "mean_annual": 481,
+    "sd_annual": 332,
+    "mean_jjas": 408,
+    "sd_jjas": 280,
+    "years_n": 8
+  },
+  "Almora": {
+    "mean_annual": 510,
+    "sd_annual": 237,
+    "mean_jjas": 369,
+    "sd_jjas": 166,
+    "years_n": 8
+  },
+  "Bageshwar": {
+    "mean_annual": 878,
+    "sd_annual": 389,
+    "mean_jjas": 642,
+    "sd_jjas": 286,
+    "years_n": 8
+  },
+  "Chamoli": {
+    "mean_annual": 583,
+    "sd_annual": 250,
+    "mean_jjas": 380,
+    "sd_jjas": 171,
+    "years_n": 8
+  },
+  "Unnao": {
+    "mean_annual": 331,
+    "sd_annual": 255,
+    "mean_jjas": 279,
+    "sd_jjas": 237,
+    "years_n": 8
+  },
+  "Unakoti": {
+    "mean_annual": 886,
+    "sd_annual": 312,
+    "mean_jjas": 495,
+    "sd_jjas": 203,
+    "years_n": 8
+  },
+  "West Tripura": {
+    "mean_annual": 786,
+    "sd_annual": 383,
+    "mean_jjas": 490,
+    "sd_jjas": 255,
+    "years_n": 8
+  },
+  "Agra": {
+    "mean_annual": 338,
+    "sd_annual": 227,
+    "mean_jjas": 290,
+    "sd_jjas": 197,
+    "years_n": 8
+  },
+  "Ayodhya": {
+    "mean_annual": 481,
+    "sd_annual": 322,
+    "mean_jjas": 389,
+    "sd_jjas": 224,
+    "years_n": 8
+  },
+  "Azamgarh": {
+    "mean_annual": 429,
+    "sd_annual": 287,
+    "mean_jjas": 376,
+    "sd_jjas": 235,
+    "years_n": 8
+  },
+  "Aligarh": {
+    "mean_annual": 372,
+    "sd_annual": 191,
+    "mean_jjas": 289,
+    "sd_jjas": 167,
+    "years_n": 8
+  },
+  "Ambedkar Nagar": {
+    "mean_annual": 409,
+    "sd_annual": 232,
+    "mean_jjas": 334,
+    "sd_jjas": 181,
+    "years_n": 8
+  },
+  "Sepahijala": {
+    "mean_annual": 896,
+    "sd_annual": 496,
+    "mean_jjas": 623,
+    "sd_jjas": 351,
+    "years_n": 8
+  },
+  "South Tripura": {
+    "mean_annual": 744,
+    "sd_annual": 351,
+    "mean_jjas": 492,
+    "sd_jjas": 267,
+    "years_n": 8
+  },
+  "Kra Daadi": {
+    "mean_annual": 852,
+    "sd_annual": 374,
+    "mean_jjas": 487,
+    "sd_jjas": 243,
+    "years_n": 8
+  },
+  "Kurung Kumey": {
+    "mean_annual": 772,
+    "sd_annual": 418,
+    "mean_jjas": 483,
+    "sd_jjas": 270,
+    "years_n": 8
+  },
+  "West Godavari": {
+    "mean_annual": 690,
+    "sd_annual": 473,
+    "mean_jjas": 487,
+    "sd_jjas": 337,
+    "years_n": 8
+  },
+  "Y.S.R.": {
+    "mean_annual": 470,
+    "sd_annual": 340,
+    "mean_jjas": 243,
+    "sd_jjas": 178,
+    "years_n": 8
+  },
+  "Leparada": {
+    "mean_annual": 1099,
+    "sd_annual": 680,
+    "mean_jjas": 691,
+    "sd_jjas": 441,
+    "years_n": 8
+  },
+  "Lohit": {
+    "mean_annual": 1157,
+    "sd_annual": 708,
+    "mean_jjas": 618,
+    "sd_jjas": 420,
+    "years_n": 8
+  },
+  "Champawat": {
+    "mean_annual": 663,
+    "sd_annual": 381,
+    "mean_jjas": 471,
+    "sd_jjas": 275,
+    "years_n": 8
+  },
+  "Prayagraj": {
+    "mean_annual": 402,
+    "sd_annual": 231,
+    "mean_jjas": 356,
+    "sd_jjas": 206,
+    "years_n": 8
+  },
+  "Rewari": {
+    "mean_annual": 428,
+    "sd_annual": 231,
+    "mean_jjas": 342,
+    "sd_jjas": 179,
+    "years_n": 8
+  },
+  "Sirmaur": {
+    "mean_annual": 748,
+    "sd_annual": 387,
+    "mean_jjas": 532,
+    "sd_jjas": 311,
+    "years_n": 8
+  },
+  "Solan": {
+    "mean_annual": 709,
+    "sd_annual": 403,
+    "mean_jjas": 460,
+    "sd_jjas": 281,
+    "years_n": 8
+  },
+  "Una": {
+    "mean_annual": 660,
+    "sd_annual": 367,
+    "mean_jjas": 437,
+    "sd_jjas": 244,
+    "years_n": 8
+  },
+  "Anantnag": {
+    "mean_annual": 582,
+    "sd_annual": 350,
+    "mean_jjas": 165,
+    "sd_jjas": 97,
+    "years_n": 8
+  },
+  "Sonipat": {
+    "mean_annual": 376,
+    "sd_annual": 244,
+    "mean_jjas": 264,
+    "sd_jjas": 210,
+    "years_n": 8
+  },
+  "Yamunanagar": {
+    "mean_annual": 582,
+    "sd_annual": 312,
+    "mean_jjas": 408,
+    "sd_jjas": 244,
+    "years_n": 8
+  },
+  "Bilaspur": {
+    "mean_annual": 952,
+    "sd_annual": 591,
+    "mean_jjas": 672,
+    "sd_jjas": 417,
+    "years_n": 8
+  },
+  "Mandi": {
+    "mean_annual": 739,
+    "sd_annual": 352,
+    "mean_jjas": 465,
+    "sd_jjas": 213,
+    "years_n": 8
+  },
+  "Shimla": {
+    "mean_annual": 637,
+    "sd_annual": 352,
+    "mean_jjas": 385,
+    "sd_jjas": 239,
+    "years_n": 8,
+    "lat": 31.1,
+    "lng": 77.17
+  },
+  "Kangra": {
+    "mean_annual": 887,
+    "sd_annual": 546,
+    "mean_jjas": 578,
+    "sd_jjas": 349,
+    "years_n": 8
+  },
+  "Kinnaur": {
+    "mean_annual": 404,
+    "sd_annual": 280,
+    "mean_jjas": 186,
+    "sd_jjas": 119,
+    "years_n": 8
+  },
+  "Kullu": {
+    "mean_annual": 638,
+    "sd_annual": 417,
+    "mean_jjas": 344,
+    "sd_jjas": 239,
+    "years_n": 8
+  },
+  "Lahul & Spiti": {
+    "mean_annual": 403,
+    "sd_annual": 233,
+    "mean_jjas": 159,
+    "sd_jjas": 101,
+    "years_n": 8
+  },
+  "Rohtak": {
+    "mean_annual": 331,
+    "sd_annual": 203,
+    "mean_jjas": 225,
+    "sd_jjas": 138,
+    "years_n": 8
+  },
+  "Sirsa": {
+    "mean_annual": 264,
+    "sd_annual": 175,
+    "mean_jjas": 185,
+    "sd_jjas": 121,
+    "years_n": 8
+  },
+  "Chamba": {
+    "mean_annual": 699,
+    "sd_annual": 359,
+    "mean_jjas": 400,
+    "sd_jjas": 208,
+    "years_n": 8
+  },
+  "Kupwara": {
+    "mean_annual": 597,
+    "sd_annual": 385,
+    "mean_jjas": 141,
+    "sd_jjas": 108,
+    "years_n": 8
+  },
+  "Mirpur": {
+    "mean_annual": 656,
+    "sd_annual": 439,
+    "mean_jjas": 349,
+    "sd_jjas": 238,
+    "years_n": 8
+  },
+  "Muzaffarabad": {
+    "mean_annual": 661,
+    "sd_annual": 503,
+    "mean_jjas": 187,
+    "sd_jjas": 129,
+    "years_n": 8
+  },
+  "Poonch": {
+    "mean_annual": 687,
+    "sd_annual": 476,
+    "mean_jjas": 233,
+    "sd_jjas": 162,
+    "years_n": 8
+  },
+  "Ramban": {
+    "mean_annual": 718,
+    "sd_annual": 494,
+    "mean_jjas": 256,
+    "sd_jjas": 182,
+    "years_n": 8
+  },
+  "Reasi": {
+    "mean_annual": 858,
+    "sd_annual": 605,
+    "mean_jjas": 369,
+    "sd_jjas": 252,
+    "years_n": 8
+  },
+  "Vidisha": {
+    "mean_annual": 600,
+    "sd_annual": 439,
+    "mean_jjas": 556,
+    "sd_jjas": 427,
+    "years_n": 8
+  },
+  "Ahmednagar": {
+    "mean_annual": 403,
+    "sd_annual": 313,
+    "mean_jjas": 306,
+    "sd_jjas": 249,
+    "years_n": 8
+  },
+  "Satna": {
+    "mean_annual": 550,
+    "sd_annual": 400,
+    "mean_jjas": 472,
+    "sd_jjas": 347,
+    "years_n": 8
+  },
+  "Sehore": {
+    "mean_annual": 705,
+    "sd_annual": 536,
+    "mean_jjas": 634,
+    "sd_jjas": 504,
+    "years_n": 8
+  },
+  "Seoni": {
+    "mean_annual": 627,
+    "sd_annual": 360,
+    "mean_jjas": 536,
+    "sd_jjas": 325,
+    "years_n": 8
+  },
+  "Sheopur": {
+    "mean_annual": 531,
+    "sd_annual": 312,
+    "mean_jjas": 469,
+    "sd_jjas": 270,
+    "years_n": 8
+  },
+  "Shivpuri": {
+    "mean_annual": 599,
+    "sd_annual": 418,
+    "mean_jjas": 511,
+    "sd_jjas": 385,
+    "years_n": 8
+  },
+  "Sidhi": {
+    "mean_annual": 604,
+    "sd_annual": 355,
+    "mean_jjas": 513,
+    "sd_jjas": 306,
+    "years_n": 8
+  },
+  "Amravati": {
+    "mean_annual": 486,
+    "sd_annual": 337,
+    "mean_jjas": 438,
+    "sd_jjas": 312,
+    "years_n": 8
+  },
+  "Beed": {
+    "mean_annual": 477,
+    "sd_annual": 350,
+    "mean_jjas": 375,
+    "sd_jjas": 265,
+    "years_n": 8
+  },
+  "Ratlam": {
+    "mean_annual": 651,
+    "sd_annual": 441,
+    "mean_jjas": 575,
+    "sd_jjas": 430,
+    "years_n": 8
+  },
+  "Rewa": {
+    "mean_annual": 560,
+    "sd_annual": 372,
+    "mean_jjas": 490,
+    "sd_jjas": 338,
+    "years_n": 8
+  },
+  "Sagar": {
+    "mean_annual": 715,
+    "sd_annual": 445,
+    "mean_jjas": 646,
+    "sd_jjas": 432,
+    "years_n": 8
+  },
+  "Akola": {
+    "mean_annual": 463,
+    "sd_annual": 264,
+    "mean_jjas": 388,
+    "sd_jjas": 255,
+    "years_n": 8
+  },
+  "Shahdol": {
+    "mean_annual": 639,
+    "sd_annual": 389,
+    "mean_jjas": 537,
+    "sd_jjas": 327,
+    "years_n": 8
+  },
+  "Shajapur": {
+    "mean_annual": 666,
+    "sd_annual": 552,
+    "mean_jjas": 613,
+    "sd_jjas": 549,
+    "years_n": 8
+  },
+  "Tikamgarh": {
+    "mean_annual": 572,
+    "sd_annual": 403,
+    "mean_jjas": 509,
+    "sd_jjas": 388,
+    "years_n": 8
+  },
+  "Chitradurga": {
+    "mean_annual": 470,
+    "sd_annual": 284,
+    "mean_jjas": 253,
+    "sd_jjas": 178,
+    "years_n": 8
+  },
+  "Dakshina Kannada": {
+    "mean_annual": 1738,
+    "sd_annual": 816,
+    "mean_jjas": 1308,
+    "sd_jjas": 641,
+    "years_n": 8
+  },
+  "Bengaluru Rural": {
+    "mean_annual": 638,
+    "sd_annual": 386,
+    "mean_jjas": 338,
+    "sd_jjas": 202,
+    "years_n": 8
+  },
+  "Bengaluru Urban": {
+    "mean_annual": 613,
+    "sd_annual": 378,
+    "mean_jjas": 306,
+    "sd_jjas": 230,
+    "years_n": 8,
+    "lat": 12.97,
+    "lng": 77.59
+  },
+  "Bidar": {
+    "mean_annual": 590,
+    "sd_annual": 371,
+    "mean_jjas": 456,
+    "sd_jjas": 305,
+    "years_n": 8
+  },
+  "Gadag": {
+    "mean_annual": 473,
+    "sd_annual": 296,
+    "mean_jjas": 267,
+    "sd_jjas": 177,
+    "years_n": 8
+  },
+  "Hassan": {
+    "mean_annual": 692,
+    "sd_annual": 408,
+    "mean_jjas": 343,
+    "sd_jjas": 244,
+    "years_n": 8
+  },
+  "Haveri": {
+    "mean_annual": 578,
+    "sd_annual": 469,
+    "mean_jjas": 346,
+    "sd_jjas": 283,
+    "years_n": 8
+  },
+  "Kalaburagi": {
+    "mean_annual": 444,
+    "sd_annual": 250,
+    "mean_jjas": 334,
+    "sd_jjas": 205,
+    "years_n": 8
+  },
+  "Kodagu": {
+    "mean_annual": 1118,
+    "sd_annual": 568,
+    "mean_jjas": 763,
+    "sd_jjas": 458,
+    "years_n": 8
+  },
+  "Kolar": {
+    "mean_annual": 575,
+    "sd_annual": 343,
+    "mean_jjas": 317,
+    "sd_jjas": 205,
+    "years_n": 8
+  },
+  "Koppal": {
+    "mean_annual": 448,
+    "sd_annual": 383,
+    "mean_jjas": 278,
+    "sd_jjas": 241,
+    "years_n": 8
+  },
+  "Mandya": {
+    "mean_annual": 632,
+    "sd_annual": 291,
+    "mean_jjas": 341,
+    "sd_jjas": 151,
+    "years_n": 8
+  },
+  "Simdega": {
+    "mean_annual": 733,
+    "sd_annual": 559,
+    "mean_jjas": 554,
+    "sd_jjas": 383,
+    "years_n": 8
+  },
+  "West Singhbhum": {
+    "mean_annual": 782,
+    "sd_annual": 571,
+    "mean_jjas": 495,
+    "sd_jjas": 367,
+    "years_n": 8
+  },
+  "Bagalkote": {
+    "mean_annual": 361,
+    "sd_annual": 249,
+    "mean_jjas": 226,
+    "sd_jjas": 174,
+    "years_n": 8
+  },
+  "Davangere": {
+    "mean_annual": 557,
+    "sd_annual": 348,
+    "mean_jjas": 282,
+    "sd_jjas": 184,
+    "years_n": 8
+  },
+  "Dharwad": {
+    "mean_annual": 528,
+    "sd_annual": 400,
+    "mean_jjas": 306,
+    "sd_jjas": 230,
+    "years_n": 8
+  },
+  "Ballari": {
+    "mean_annual": 396,
+    "sd_annual": 216,
+    "mean_jjas": 245,
+    "sd_jjas": 139,
+    "years_n": 8
+  },
+  "Belagavi": {
+    "mean_annual": 542,
+    "sd_annual": 399,
+    "mean_jjas": 362,
+    "sd_jjas": 281,
+    "years_n": 8
+  },
+  "Chamarajanagara": {
+    "mean_annual": 529,
+    "sd_annual": 357,
+    "mean_jjas": 264,
+    "sd_jjas": 204,
+    "years_n": 8
+  },
+  "Chikkaballapura": {
+    "mean_annual": 525,
+    "sd_annual": 313,
+    "mean_jjas": 266,
+    "sd_jjas": 171,
+    "years_n": 8
+  },
+  "Tumakuru": {
+    "mean_annual": 497,
+    "sd_annual": 274,
+    "mean_jjas": 255,
+    "sd_jjas": 159,
+    "years_n": 8
+  },
+  "Udupi": {
+    "mean_annual": 1859,
+    "sd_annual": 1012,
+    "mean_jjas": 1479,
+    "sd_jjas": 821,
+    "years_n": 8
+  },
+  "Pakur": {
+    "mean_annual": 723,
+    "sd_annual": 412,
+    "mean_jjas": 532,
+    "sd_jjas": 306,
+    "years_n": 8
+  },
+  "Palamu": {
+    "mean_annual": 640,
+    "sd_annual": 439,
+    "mean_jjas": 547,
+    "sd_jjas": 378,
+    "years_n": 8
+  },
+  "Gumla": {
+    "mean_annual": 688,
+    "sd_annual": 444,
+    "mean_jjas": 535,
+    "sd_jjas": 334,
+    "years_n": 8
+  },
+  "Hazaribagh": {
+    "mean_annual": 633,
+    "sd_annual": 412,
+    "mean_jjas": 501,
+    "sd_jjas": 335,
+    "years_n": 8
+  },
+  "Jamtara": {
+    "mean_annual": 863,
+    "sd_annual": 585,
+    "mean_jjas": 650,
+    "sd_jjas": 470,
+    "years_n": 8
+  },
+  "Ranchi": {
+    "mean_annual": 689,
+    "sd_annual": 476,
+    "mean_jjas": 540,
+    "sd_jjas": 372,
+    "years_n": 8
+  },
+  "Sahebganj": {
+    "mean_annual": 737,
+    "sd_annual": 494,
+    "mean_jjas": 512,
+    "sd_jjas": 397,
+    "years_n": 8
+  },
+  "Saraikela Kharsawan": {
+    "mean_annual": 870,
+    "sd_annual": 629,
+    "mean_jjas": 613,
+    "sd_jjas": 418,
+    "years_n": 8
+  },
+  "Chatra": {
+    "mean_annual": 692,
+    "sd_annual": 508,
+    "mean_jjas": 565,
+    "sd_jjas": 426,
+    "years_n": 8
+  },
+  "Deoghar": {
+    "mean_annual": 798,
+    "sd_annual": 602,
+    "mean_jjas": 582,
+    "sd_jjas": 433,
+    "years_n": 8
+  },
+  "Dhanbad": {
+    "mean_annual": 818,
+    "sd_annual": 446,
+    "mean_jjas": 555,
+    "sd_jjas": 346,
+    "years_n": 8
+  },
+  "Dumka": {
+    "mean_annual": 819,
+    "sd_annual": 556,
+    "mean_jjas": 583,
+    "sd_jjas": 401,
+    "years_n": 8
+  },
+  "Udhampur": {
+    "mean_annual": 785,
+    "sd_annual": 523,
+    "mean_jjas": 375,
+    "sd_jjas": 211,
+    "years_n": 8
+  },
+  "Bokaro": {
+    "mean_annual": 750,
+    "sd_annual": 466,
+    "mean_jjas": 541,
+    "sd_jjas": 366,
+    "years_n": 8
+  },
+  "East Singhbum": {
+    "mean_annual": 997,
+    "sd_annual": 659,
+    "mean_jjas": 662,
+    "sd_jjas": 427,
+    "years_n": 8
+  },
+  "Garhwa": {
+    "mean_annual": 561,
+    "sd_annual": 406,
+    "mean_jjas": 476,
+    "sd_jjas": 352,
+    "years_n": 8
+  },
+  "Khunti": {
+    "mean_annual": 746,
+    "sd_annual": 496,
+    "mean_jjas": 533,
+    "sd_jjas": 321,
+    "years_n": 8
+  },
+  "Koderma": {
+    "mean_annual": 646,
+    "sd_annual": 471,
+    "mean_jjas": 501,
+    "sd_jjas": 373,
+    "years_n": 8
+  },
+  "Ramgarh": {
+    "mean_annual": 819,
+    "sd_annual": 499,
+    "mean_jjas": 621,
+    "sd_jjas": 358,
+    "years_n": 8
+  },
+  "Giridih": {
+    "mean_annual": 658,
+    "sd_annual": 479,
+    "mean_jjas": 497,
+    "sd_jjas": 351,
+    "years_n": 8
+  },
+  "Godda": {
+    "mean_annual": 728,
+    "sd_annual": 448,
+    "mean_jjas": 562,
+    "sd_jjas": 359,
+    "years_n": 8
+  },
+  "Chikkamagaluru": {
+    "mean_annual": 873,
+    "sd_annual": 458,
+    "mean_jjas": 542,
+    "sd_jjas": 310,
+    "years_n": 8
+  },
+  "Kannur": {
+    "mean_annual": 1493,
+    "sd_annual": 718,
+    "mean_jjas": 1098,
+    "sd_jjas": 546,
+    "years_n": 8
+  },
+  "Kasaragod": {
+    "mean_annual": 1778,
+    "sd_annual": 1076,
+    "mean_jjas": 1288,
+    "sd_jjas": 814,
+    "years_n": 8
+  },
+  "Kollam": {
+    "mean_annual": 1244,
+    "sd_annual": 731,
+    "mean_jjas": 552,
+    "sd_jjas": 351,
+    "years_n": 8
+  },
+  "Kottayam": {
+    "mean_annual": 1738,
+    "sd_annual": 907,
+    "mean_jjas": 941,
+    "sd_jjas": 579,
+    "years_n": 8
+  },
+  "Balaghat": {
+    "mean_annual": 654,
+    "sd_annual": 430,
+    "mean_jjas": 553,
+    "sd_jjas": 362,
+    "years_n": 8
+  },
+  "Barwani": {
+    "mean_annual": 463,
+    "sd_annual": 305,
+    "mean_jjas": 421,
+    "sd_jjas": 290,
+    "years_n": 8
+  },
+  "Betul": {
+    "mean_annual": 700,
+    "sd_annual": 435,
+    "mean_jjas": 599,
+    "sd_jjas": 384,
+    "years_n": 8
+  },
+  "Leh Ladakh": {
+    "mean_annual": 214,
+    "sd_annual": 150,
+    "mean_jjas": 72,
+    "sd_jjas": 61,
+    "years_n": 8
+  },
+  "Lakshadweep District": {
+    "mean_annual": 573,
+    "sd_annual": 987,
+    "mean_jjas": 405,
+    "sd_jjas": 735,
+    "years_n": 8
+  },
+  "Agar Malwa": {
+    "mean_annual": 689,
+    "sd_annual": 739,
+    "mean_jjas": 636,
+    "sd_jjas": 722,
+    "years_n": 8
+  },
+  "Alirajpur": {
+    "mean_annual": 540,
+    "sd_annual": 399,
+    "mean_jjas": 486,
+    "sd_jjas": 377,
+    "years_n": 8
+  },
+  "Wayanad": {
+    "mean_annual": 1035,
+    "sd_annual": 448,
+    "mean_jjas": 657,
+    "sd_jjas": 320,
+    "years_n": 8
+  },
+  "Kargil": {
+    "mean_annual": 359,
+    "sd_annual": 266,
+    "mean_jjas": 130,
+    "sd_jjas": 104,
+    "years_n": 8
+  },
+  "Chhindwara": {
+    "mean_annual": 716,
+    "sd_annual": 461,
+    "mean_jjas": 618,
+    "sd_jjas": 432,
+    "years_n": 8
+  },
+  "Damoh": {
+    "mean_annual": 630,
+    "sd_annual": 527,
+    "mean_jjas": 573,
+    "sd_jjas": 514,
+    "years_n": 8
+  },
+  "Datia": {
+    "mean_annual": 514,
+    "sd_annual": 330,
+    "mean_jjas": 435,
+    "sd_jjas": 292,
+    "years_n": 8
+  },
+  "Dewas": {
+    "mean_annual": 600,
+    "sd_annual": 484,
+    "mean_jjas": 551,
+    "sd_jjas": 457,
+    "years_n": 8
+  },
+  "Bhind": {
+    "mean_annual": 488,
+    "sd_annual": 305,
+    "mean_jjas": 433,
+    "sd_jjas": 281,
+    "years_n": 8
+  },
+  "Bhopal": {
+    "mean_annual": 756,
+    "sd_annual": 655,
+    "mean_jjas": 700,
+    "sd_jjas": 631,
+    "years_n": 8,
+    "lat": 23.26,
+    "lng": 77.41
+  },
+  "Anuppur": {
+    "mean_annual": 733,
+    "sd_annual": 438,
+    "mean_jjas": 628,
+    "sd_jjas": 373,
+    "years_n": 8
+  },
+  "Ashoknagar": {
+    "mean_annual": 643,
+    "sd_annual": 486,
+    "mean_jjas": 553,
+    "sd_jjas": 450,
+    "years_n": 8
+  },
+  "Burhanpur": {
+    "mean_annual": 627,
+    "sd_annual": 415,
+    "mean_jjas": 562,
+    "sd_jjas": 382,
+    "years_n": 8
+  },
+  "Chhatarpur": {
+    "mean_annual": 608,
+    "sd_annual": 331,
+    "mean_jjas": 541,
+    "sd_jjas": 319,
+    "years_n": 8
+  },
+  "Jhabua": {
+    "mean_annual": 562,
+    "sd_annual": 426,
+    "mean_jjas": 510,
+    "sd_jjas": 408,
+    "years_n": 8
+  },
+  "Katni": {
+    "mean_annual": 625,
+    "sd_annual": 516,
+    "mean_jjas": 560,
+    "sd_jjas": 480,
+    "years_n": 8
+  },
+  "Khargone": {
+    "mean_annual": 471,
+    "sd_annual": 353,
+    "mean_jjas": 434,
+    "sd_jjas": 339,
+    "years_n": 8
+  },
+  "Mandla": {
+    "mean_annual": 712,
+    "sd_annual": 473,
+    "mean_jjas": 628,
+    "sd_jjas": 433,
+    "years_n": 8
+  },
+  "Dhar": {
+    "mean_annual": 504,
+    "sd_annual": 307,
+    "mean_jjas": 451,
+    "sd_jjas": 303,
+    "years_n": 8
+  },
+  "Dindori": {
+    "mean_annual": 791,
+    "sd_annual": 606,
+    "mean_jjas": 672,
+    "sd_jjas": 531,
+    "years_n": 8
+  },
+  "Morena": {
+    "mean_annual": 501,
+    "sd_annual": 297,
+    "mean_jjas": 412,
+    "sd_jjas": 252,
+    "years_n": 8
+  },
+  "Narshimapura": {
+    "mean_annual": 500,
+    "sd_annual": 331,
+    "mean_jjas": 451,
+    "sd_jjas": 294,
+    "years_n": 5
+  },
+  "Neemuch": {
+    "mean_annual": 633,
+    "sd_annual": 556,
+    "mean_jjas": 542,
+    "sd_jjas": 506,
+    "years_n": 8
+  },
+  "Niwari": {
+    "mean_annual": 603,
+    "sd_annual": 428,
+    "mean_jjas": 545,
+    "sd_jjas": 412,
+    "years_n": 8
+  },
+  "East Nimar": {
+    "mean_annual": 573,
+    "sd_annual": 297,
+    "mean_jjas": 502,
+    "sd_jjas": 288,
+    "years_n": 8
+  },
+  "Guna": {
+    "mean_annual": 718,
+    "sd_annual": 580,
+    "mean_jjas": 644,
+    "sd_jjas": 534,
+    "years_n": 8
+  },
+  "Gwalior": {
+    "mean_annual": 468,
+    "sd_annual": 256,
+    "mean_jjas": 390,
+    "sd_jjas": 209,
+    "years_n": 8
+  },
+  "Hoshangabad": {
+    "mean_annual": 573,
+    "sd_annual": 336,
+    "mean_jjas": 503,
+    "sd_jjas": 320,
+    "years_n": 8
+  },
+  "Indore": {
+    "mean_annual": 592,
+    "sd_annual": 479,
+    "mean_jjas": 543,
+    "sd_jjas": 467,
+    "years_n": 8,
+    "lat": 22.72,
+    "lng": 75.86
+  },
+  "Jabalpur": {
+    "mean_annual": 598,
+    "sd_annual": 413,
+    "mean_jjas": 527,
+    "sd_jjas": 399,
+    "years_n": 8
+  },
+  "Mandsaur": {
+    "mean_annual": 648,
+    "sd_annual": 591,
+    "mean_jjas": 579,
+    "sd_jjas": 562,
+    "years_n": 8
+  },
+  "Raisen": {
+    "mean_annual": 696,
+    "sd_annual": 522,
+    "mean_jjas": 637,
+    "sd_jjas": 499,
+    "years_n": 8
+  },
+  "Rajgarh": {
+    "mean_annual": 723,
+    "sd_annual": 648,
+    "mean_jjas": 649,
+    "sd_jjas": 596,
+    "years_n": 8
+  },
+  "Harda": {
+    "mean_annual": 684,
+    "sd_annual": 527,
+    "mean_jjas": 619,
+    "sd_jjas": 486,
+    "years_n": 8
+  },
+  "Panna": {
+    "mean_annual": 528,
+    "sd_annual": 317,
+    "mean_jjas": 470,
+    "sd_jjas": 290,
+    "years_n": 8
+  },
+  "Ujjain": {
+    "mean_annual": 617,
+    "sd_annual": 438,
+    "mean_jjas": 554,
+    "sd_jjas": 405,
+    "years_n": 8
+  },
+  "Umaria": {
+    "mean_annual": 649,
+    "sd_annual": 453,
+    "mean_jjas": 559,
+    "sd_jjas": 418,
+    "years_n": 8
+  },
+  "Samba": {
+    "mean_annual": 756,
+    "sd_annual": 457,
+    "mean_jjas": 439,
+    "sd_jjas": 233,
+    "years_n": 8
+  },
+  "Budgam": {
+    "mean_annual": 697,
+    "sd_annual": 584,
+    "mean_jjas": 227,
+    "sd_jjas": 177,
+    "years_n": 8
+  },
+  "Doda": {
+    "mean_annual": 842,
+    "sd_annual": 603,
+    "mean_jjas": 286,
+    "sd_jjas": 192,
+    "years_n": 8
+  },
+  "Ganderbal": {
+    "mean_annual": 555,
+    "sd_annual": 397,
+    "mean_jjas": 164,
+    "sd_jjas": 124,
+    "years_n": 8
+  },
+  "Kishtwar": {
+    "mean_annual": 629,
+    "sd_annual": 359,
+    "mean_jjas": 252,
+    "sd_jjas": 179,
+    "years_n": 8
+  },
+  "Kulgam": {
+    "mean_annual": 903,
+    "sd_annual": 738,
+    "mean_jjas": 312,
+    "sd_jjas": 240,
+    "years_n": 8
+  },
+  "Bandipora": {
+    "mean_annual": 461,
+    "sd_annual": 273,
+    "mean_jjas": 141,
+    "sd_jjas": 84,
+    "years_n": 8
+  },
+  "Baramulla": {
+    "mean_annual": 658,
+    "sd_annual": 443,
+    "mean_jjas": 193,
+    "sd_jjas": 149,
+    "years_n": 8
+  },
+  "Shopian": {
+    "mean_annual": 994,
+    "sd_annual": 1016,
+    "mean_jjas": 333,
+    "sd_jjas": 290,
+    "years_n": 8
+  },
+  "Srinagar": {
+    "mean_annual": 591,
+    "sd_annual": 487,
+    "mean_jjas": 181,
+    "sd_jjas": 140,
+    "years_n": 8,
+    "lat": 34.08,
+    "lng": 74.8
+  },
+  "Pulwama": {
+    "mean_annual": 616,
+    "sd_annual": 431,
+    "mean_jjas": 189,
+    "sd_jjas": 109,
+    "years_n": 8
+  },
+  "Rajouri": {
+    "mean_annual": 698,
+    "sd_annual": 509,
+    "mean_jjas": 374,
+    "sd_jjas": 250,
+    "years_n": 8
+  },
+  "Jammu": {
+    "mean_annual": 780,
+    "sd_annual": 440,
+    "mean_jjas": 523,
+    "sd_jjas": 272,
+    "years_n": 8
+  },
+  "Kathua": {
+    "mean_annual": 810,
+    "sd_annual": 497,
+    "mean_jjas": 485,
+    "sd_jjas": 269,
+    "years_n": 8
+  },
+  "Latehar": {
+    "mean_annual": 685,
+    "sd_annual": 421,
+    "mean_jjas": 521,
+    "sd_jjas": 309,
+    "years_n": 8
+  },
+  "Lohardaga": {
+    "mean_annual": 722,
+    "sd_annual": 392,
+    "mean_jjas": 528,
+    "sd_jjas": 264,
+    "years_n": 8
+  },
+  "Uttara Kannada": {
+    "mean_annual": 1232,
+    "sd_annual": 831,
+    "mean_jjas": 1016,
+    "sd_jjas": 717,
+    "years_n": 8
+  },
+  "Vijayapura": {
+    "mean_annual": 364,
+    "sd_annual": 226,
+    "mean_jjas": 253,
+    "sd_jjas": 157,
+    "years_n": 8
+  },
+  "Yadgir": {
+    "mean_annual": 412,
+    "sd_annual": 235,
+    "mean_jjas": 306,
+    "sd_jjas": 183,
+    "years_n": 8
+  },
+  "Alappuzha": {
+    "mean_annual": 1497,
+    "sd_annual": 746,
+    "mean_jjas": 831,
+    "sd_jjas": 475,
+    "years_n": 8
+  },
+  "Ernakulam": {
+    "mean_annual": 1637,
+    "sd_annual": 791,
+    "mean_jjas": 987,
+    "sd_jjas": 551,
+    "years_n": 8,
+    "lat": 9.93,
+    "lng": 76.27
+  },
+  "Kozhikode": {
+    "mean_annual": 1360,
+    "sd_annual": 741,
+    "mean_jjas": 878,
+    "sd_jjas": 545,
+    "years_n": 8
+  },
+  "Malappuram": {
+    "mean_annual": 1250,
+    "sd_annual": 666,
+    "mean_jjas": 800,
+    "sd_jjas": 467,
+    "years_n": 8
+  },
+  "Palakkad": {
+    "mean_annual": 1124,
+    "sd_annual": 575,
+    "mean_jjas": 690,
+    "sd_jjas": 412,
+    "years_n": 8
+  },
+  "Pathanamthitta": {
+    "mean_annual": 1309,
+    "sd_annual": 752,
+    "mean_jjas": 593,
+    "sd_jjas": 381,
+    "years_n": 8
+  },
+  "Thiruvananthapuram": {
+    "mean_annual": 994,
+    "sd_annual": 500,
+    "mean_jjas": 366,
+    "sd_jjas": 214,
+    "years_n": 8,
+    "lat": 8.52,
+    "lng": 76.94
+  },
+  "Thrissur": {
+    "mean_annual": 1333,
+    "sd_annual": 714,
+    "mean_jjas": 826,
+    "sd_jjas": 552,
+    "years_n": 8
+  },
+  "Ramanagara": {
+    "mean_annual": 557,
+    "sd_annual": 338,
+    "mean_jjas": 297,
+    "sd_jjas": 196,
+    "years_n": 8
+  },
+  "Shivamogga": {
+    "mean_annual": 914,
+    "sd_annual": 421,
+    "mean_jjas": 625,
+    "sd_jjas": 336,
+    "years_n": 8
+  },
+  "Mysuru": {
+    "mean_annual": 606,
+    "sd_annual": 379,
+    "mean_jjas": 325,
+    "sd_jjas": 227,
+    "years_n": 8,
+    "lat": 12.3,
+    "lng": 76.64
+  },
+  "Raichur": {
+    "mean_annual": 355,
+    "sd_annual": 236,
+    "mean_jjas": 258,
+    "sd_jjas": 186,
+    "years_n": 8
+  },
+  "Idukki": {
+    "mean_annual": 1206,
+    "sd_annual": 533,
+    "mean_jjas": 637,
+    "sd_jjas": 292,
+    "years_n": 8
+  },
+  "Jhajjar": {
+    "mean_annual": 341,
+    "sd_annual": 194,
+    "mean_jjas": 250,
+    "sd_jjas": 139,
+    "years_n": 8
+  },
+  "Jind": {
+    "mean_annual": 312,
+    "sd_annual": 188,
+    "mean_jjas": 210,
+    "sd_jjas": 126,
+    "years_n": 8
+  },
+  "Kaithal": {
+    "mean_annual": 397,
+    "sd_annual": 215,
+    "mean_jjas": 250,
+    "sd_jjas": 137,
+    "years_n": 8
+  },
+  "Karnal": {
+    "mean_annual": 359,
+    "sd_annual": 194,
+    "mean_jjas": 261,
+    "sd_jjas": 128,
+    "years_n": 8
+  },
+  "Mahendragarh": {
+    "mean_annual": 382,
+    "sd_annual": 223,
+    "mean_jjas": 280,
+    "sd_jjas": 163,
+    "years_n": 8
+  },
+  "Nuh": {
+    "mean_annual": 385,
+    "sd_annual": 218,
+    "mean_jjas": 307,
+    "sd_jjas": 177,
+    "years_n": 8
+  },
+  "Palwal": {
+    "mean_annual": 367,
+    "sd_annual": 218,
+    "mean_jjas": 276,
+    "sd_jjas": 213,
+    "years_n": 8
+  },
+  "Panchkula": {
+    "mean_annual": 778,
+    "sd_annual": 395,
+    "mean_jjas": 544,
+    "sd_jjas": 280,
+    "years_n": 8
+  },
+  "Kurukshetra": {
+    "mean_annual": 401,
+    "sd_annual": 205,
+    "mean_jjas": 274,
+    "sd_jjas": 115,
+    "years_n": 8
+  },
+  "Panipat": {
+    "mean_annual": 375,
+    "sd_annual": 216,
+    "mean_jjas": 288,
+    "sd_jjas": 170,
+    "years_n": 8
+  },
+  "Bhandara": {
+    "mean_annual": 635,
+    "sd_annual": 348,
+    "mean_jjas": 555,
+    "sd_jjas": 341,
+    "years_n": 8
+  },
+  "Narsinghpur": {
+    "mean_annual": 337,
+    "sd_annual": 202,
+    "mean_jjas": 291,
+    "sd_jjas": 201,
+    "years_n": 8
+  },
+  "Mumbai City": {
+    "mean_annual": 1604,
+    "sd_annual": 1595,
+    "mean_jjas": 1325,
+    "sd_jjas": 1345,
+    "years_n": 8,
+    "lat": 18.95,
     "lng": 72.83
+  },
+  "Ri-Bhoi": {
+    "mean_annual": 274,
+    "sd_annual": 113,
+    "mean_jjas": 150,
+    "sd_jjas": 98,
+    "years_n": 2
+  },
+  "Ahamadnagar": {
+    "mean_annual": 119,
+    "sd_annual": 85,
+    "mean_jjas": 89,
+    "sd_jjas": 69,
+    "years_n": 3
   }
 }

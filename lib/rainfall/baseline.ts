@@ -49,10 +49,27 @@ export function listDistricts(): string[] {
     .sort((a, b) => a.localeCompare(b));
 }
 
+// Common-name aliases — user types familiar name, we look up the IMD/NRSC name.
+const ALIASES: Record<string, string> = {
+  Mumbai: "Mumbai Suburban",
+  Bombay: "Mumbai Suburban",
+  Delhi: "New Delhi",
+  Bengaluru: "Bangalore Urban",
+  "Bengaluru Urban": "Bangalore Urban",
+  Bangalore: "Bangalore Urban",
+  Calcutta: "Kolkata",
+  Madras: "Chennai",
+  Mysuru: "Mysore",
+  Gurugram: "Gurgaon",
+};
+
 export function getBaseline(district: string): DistrictBaseline | null {
-  const b = raw[district];
-  if (!b || "kind" in b) return null;
-  return b as DistrictBaseline;
+  const lookup = (name: string): DistrictBaseline | null => {
+    const b = raw[name];
+    if (!b || typeof b !== "object" || !("mean_annual" in b)) return null;
+    return b as DistrictBaseline;
+  };
+  return lookup(district) ?? (ALIASES[district] ? lookup(ALIASES[district]) : null);
 }
 
 export function getMeta(): Record<string, unknown> | undefined {
