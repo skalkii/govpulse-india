@@ -1,6 +1,6 @@
 "use client";
 
-import { MapContainer, TileLayer, CircleMarker, Popup, useMap } from "react-leaflet";
+import { MapContainer, TileLayer, CircleMarker, Popup, ZoomControl, useMap } from "react-leaflet";
 import { useEffect, useMemo } from "react";
 import L from "leaflet";
 
@@ -45,12 +45,14 @@ export default function StationMap({ markers, height = 420 }: Props) {
         center={center}
         zoom={6}
         scrollWheelZoom={true}
+        zoomControl={false}
         style={{ height: "100%", width: "100%" }}
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
+        <ZoomControl position="bottomright" />
         <FitToMarkers markers={markers} />
         {markers.map((m) => (
           <CircleMarker
