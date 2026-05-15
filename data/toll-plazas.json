@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "kind": "starter",
+    "note": "Hand-curated set of NHAI toll plazas on the busiest national-highway corridors. Rates approximate the 2025 NHAI Fee Notification (round-trip pricing not modeled). Replace with `pnpm build-data:tolls` once an NHAI fee CSV is sourced.",
+    "source": "NHAI Fee Notification 2025",
+    "currency": "INR",
+    "vehicle_classes": ["car", "lcv", "bus_truck", "axle_3", "axle_4plus"],
+    "generated": "2026-05-15"
+  },
+  "plazas": [
+    { "id": "khrk", "name": "Kherki Daula", "state": "Haryana", "highway": "NH48", "lat": 28.387, "lng": 76.928, "rates": { "car": 130, "lcv": 215, "bus_truck": 450, "axle_3": 490, "axle_4plus": 705 } },
+    { "id": "shaj", "name": "Shahjahanpur", "state": "Rajasthan", "highway": "NH48", "lat": 28.026, "lng": 76.560, "rates": { "car": 140, "lcv": 230, "bus_truck": 480, "axle_3": 525, "axle_4plus": 755 } },
+    { "id": "manoharpur", "name": "Manoharpur", "state": "Rajasthan", "highway": "NH48", "lat": 27.207, "lng": 75.985, "rates": { "car": 105, "lcv": 175, "bus_truck": 365, "axle_3": 400, "axle_4plus": 575 } },
+    { "id": "thikariya", "name": "Thikariya", "state": "Rajasthan", "highway": "NH48", "lat": 26.792, "lng": 75.880, "rates": { "car": 95, "lcv": 160, "bus_truck": 335, "axle_3": 365, "axle_4plus": 525 } },
+    { "id": "shahpura_raj", "name": "Shahpura", "state": "Rajasthan", "highway": "NH48", "lat": 26.180, "lng": 75.330, "rates": { "car": 115, "lcv": 190, "bus_truck": 400, "axle_3": 435, "axle_4plus": 625 } },
+    { "id": "vadodara", "name": "Vadodara", "state": "Gujarat", "highway": "NH48", "lat": 22.300, "lng": 73.180, "rates": { "car": 100, "lcv": 165, "bus_truck": 345, "axle_3": 375, "axle_4plus": 540 } },
+    { "id": "bharuch", "name": "Bharuch", "state": "Gujarat", "highway": "NH48", "lat": 21.700, "lng": 72.990, "rates": { "car": 110, "lcv": 180, "bus_truck": 380, "axle_3": 415, "axle_4plus": 595 } },
+    { "id": "vasai", "name": "Vasai-Charoti", "state": "Maharashtra", "highway": "NH48", "lat": 19.900, "lng": 72.940, "rates": { "car": 125, "lcv": 205, "bus_truck": 430, "axle_3": 470, "axle_4plus": 675 } },
+    { "id": "khalapur", "name": "Khalapur", "state": "Maharashtra", "highway": "NH48", "lat": 18.812, "lng": 73.272, "rates": { "car": 320, "lcv": 510, "bus_truck": 720, "axle_3": 985, "axle_4plus": 1410 } },
+    { "id": "khambatki", "name": "Khambatki", "state": "Maharashtra", "highway": "NH48", "lat": 18.069, "lng": 74.167, "rates": { "car": 105, "lcv": 175, "bus_truck": 365, "axle_3": 400, "axle_4plus": 575 } },
+    { "id": "satara", "name": "Anewadi (Satara)", "state": "Maharashtra", "highway": "NH48", "lat": 17.730, "lng": 74.165, "rates": { "car": 90, "lcv": 150, "bus_truck": 315, "axle_3": 345, "axle_4plus": 495 } },
+    { "id": "kagal", "name": "Kagal-Kini", "state": "Maharashtra", "highway": "NH48", "lat": 16.620, "lng": 74.350, "rates": { "car": 100, "lcv": 165, "bus_truck": 345, "axle_3": 375, "axle_4plus": 540 } },
+    { "id": "tumkur", "name": "Hireholalu (Tumakuru)", "state": "Karnataka", "highway": "NH48", "lat": 13.560, "lng": 77.360, "rates": { "car": 85, "lcv": 140, "bus_truck": 295, "axle_3": 320, "axle_4plus": 465 } },
+    { "id": "nelamangala", "name": "Nelamangala", "state": "Karnataka", "highway": "NH48", "lat": 13.150, "lng": 77.450, "rates": { "car": 75, "lcv": 125, "bus_truck": 260, "axle_3": 285, "axle_4plus": 410 } },
+    { "id": "attibele", "name": "Attibele", "state": "Karnataka", "highway": "NH44", "lat": 12.787, "lng": 77.770, "rates": { "car": 95, "lcv": 160, "bus_truck": 335, "axle_3": 365, "axle_4plus": 525 } },
+    { "id": "krishnagiri", "name": "Karnankuppam (Krishnagiri)", "state": "Tamil Nadu", "highway": "NH44", "lat": 12.485, "lng": 78.170, "rates": { "car": 100, "lcv": 165, "bus_truck": 345, "axle_3": 375, "axle_4plus": 540 } },
+    { "id": "vellore", "name": "Vellore", "state": "Tamil Nadu", "highway": "NH48", "lat": 12.870, "lng": 79.130, "rates": { "car": 105, "lcv": 175, "bus_truck": 365, "axle_3": 400, "axle_4plus": 575 } },
+    { "id": "sriperumbudur", "name": "Sriperumbudur", "state": "Tamil Nadu", "highway": "NH48", "lat": 12.965, "lng": 79.940, "rates": { "car": 80, "lcv": 130, "bus_truck": 275, "axle_3": 300, "axle_4plus": 430 } },
+    { "id": "chilkur", "name": "Chilkur", "state": "Telangana", "highway": "NH44", "lat": 17.230, "lng": 78.350, "rates": { "car": 90, "lcv": 150, "bus_truck": 315, "axle_3": 345, "axle_4plus": 495 } },
+    { "id": "panvel", "name": "Panvel (Mumbai-Pune)", "state": "Maharashtra", "highway": "NH48", "lat": 18.990, "lng": 73.110, "rates": { "car": 75, "lcv": 125, "bus_truck": 260, "axle_3": 285, "axle_4plus": 410 } },
+    { "id": "thane", "name": "Vashi-Thane", "state": "Maharashtra", "highway": "NH48", "lat": 19.140, "lng": 72.990, "rates": { "car": 50, "lcv": 80, "bus_truck": 170, "axle_3": 185, "axle_4plus": 265 } },
+    { "id": "ghaziabad", "name": "Sikandrabad-Ghaziabad", "state": "Uttar Pradesh", "highway": "NH9", "lat": 28.552, "lng": 77.730, "rates": { "car": 130, "lcv": 215, "bus_truck": 450, "axle_3": 490, "axle_4plus": 705 } },
+    { "id": "agra", "name": "Mahuwan (Yamuna Expy)", "state": "Uttar Pradesh", "highway": "YEW", "lat": 27.560, "lng": 77.900, "rates": { "car": 415, "lcv": 660, "bus_truck": 1330, "axle_3": 1450, "axle_4plus": 2080 } },
+    { "id": "kanpur", "name": "Kanpur (Etawah-Kanpur)", "state": "Uttar Pradesh", "highway": "NH19", "lat": 26.790, "lng": 80.290, "rates": { "car": 145, "lcv": 240, "bus_truck": 500, "axle_3": 545, "axle_4plus": 780 } },
+    { "id": "lucknow_ag", "name": "Agra-Lucknow Expy (Etawah)", "state": "Uttar Pradesh", "highway": "ALE", "lat": 26.770, "lng": 79.020, "rates": { "car": 425, "lcv": 680, "bus_truck": 1370, "axle_3": 1490, "axle_4plus": 2140 } }
+  ]
+}
