@@ -1,6 +1,7 @@
 import { ToolHeader } from "@/components/ToolHeader";
 import { EmptyState } from "@/components/EmptyState";
 import { ResultCard } from "@/components/ResultCard";
+import { WhatsAppShare } from "@/components/WhatsAppShare";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import {
@@ -84,6 +85,8 @@ function StationsView({ state, stations }: { state: string; stations: RiverStati
     const c = classify(s).label;
     classCounts.set(c, (classCounts.get(c) ?? 0) + 1);
   }
+  const worstClass = [...classCounts.keys()].sort((a, b) => classRank(b) - classRank(a))[0];
+  const shareText = `${state} river health: ${stations.length} CPCB stations, worst ${worstClass}. Check yours: govpulse.in/rivers`;
 
   return (
     <div className="space-y-6">
@@ -98,6 +101,9 @@ function StationsView({ state, stations }: { state: string; stations: RiverStati
               {label}: <span className="font-medium">{n}</span>
             </span>
           ))}
+        </div>
+        <div className="flex">
+          <WhatsAppShare text={shareText} />
         </div>
       </ResultCard>
 
@@ -165,4 +171,16 @@ function classColorFor(label: string): string {
   if (label === "Class D") return "#a855f7";
   if (label === "Class E") return "#ef4444";
   return "#7f1d1d";
+}
+
+function classRank(label: string): number {
+  const order: Record<string, number> = {
+    "Class A": 1,
+    "Class B": 2,
+    "Class C": 3,
+    "Class D": 4,
+    "Class E": 5,
+    "Below E": 6,
+  };
+  return order[label] ?? 0;
 }
