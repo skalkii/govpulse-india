@@ -9,6 +9,7 @@
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
     "build-data:rainfall": "tsx scripts/build-rainfall-baseline.ts",
+    "build-data:rivers": "tsx scripts/build-rivers.ts",
     "build-data:solar": "tsx scripts/build-solar-ghi.ts",
     "build-data:pincode": "tsx scripts/build-pincode-lookup.ts"
   },
