@@ -22,9 +22,30 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "GovPulse India — Public data, made useful",
+  title: {
+    default: "GovPulse India — Public data, made useful",
+    template: "%s · GovPulse India",
+  },
   description:
     "Free civic-tech tools built on India's open government data. Air quality, river health, rainfall anomaly, and rooftop solar ROI.",
+  applicationName: "GovPulse India",
+  authors: [{ name: "GovPulse India" }],
+  keywords: ["India", "AQI", "rainfall", "solar", "open data", "data.gov.in", "CPCB", "IMD", "MNRE"],
+  openGraph: {
+    title: "GovPulse India",
+    description:
+      "Free civic-tech tools built on India's open government data.",
+    type: "website",
+    locale: "en_IN",
+  },
+  twitter: { card: "summary" },
+};
+
+export const viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f6efe6" },
+    { media: "(prefers-color-scheme: dark)", color: "#1a1411" },
+  ],
 };
 
 export default function RootLayout({
