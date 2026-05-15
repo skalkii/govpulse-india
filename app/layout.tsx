@@ -4,6 +4,8 @@ import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { LangSwitcher } from "@/components/LangSwitcher";
+import { getDict, getLocale } from "@/lib/i18n/server";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -48,26 +50,29 @@ export const viewport = {
   ],
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  const locale = await getLocale();
+  const t = await getDict();
   return (
     <html
-      lang="en"
+      lang={locale}
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-background text-foreground">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <header className="border-b">
-            <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3 sm:px-6">
+            <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
               <Link href="/" className="flex items-baseline gap-1.5 font-heading text-lg tracking-tight">
                 <span className="inline-block size-2 rounded-full bg-primary" aria-hidden />
                 <span>GovPulse</span>
-                <span className="text-muted-foreground italic text-base">India</span>
+                <span className="text-muted-foreground italic text-base">{t.brand.suffix}</span>
               </Link>
-              <nav className="flex items-center gap-3 text-sm text-muted-foreground">
-                <Link href="/about" className="hover:text-foreground">About</Link>
+              <nav className="flex items-center gap-2 text-sm text-muted-foreground sm:gap-3">
+                <Link href="/about" className="hidden hover:text-foreground sm:inline">{t.nav.about}</Link>
+                <LangSwitcher initial={locale} />
                 <ThemeToggle />
               </nav>
             </div>
@@ -77,7 +82,7 @@ export default function RootLayout({
           </main>
           <footer className="border-t">
             <div className="mx-auto max-w-5xl px-4 py-6 text-xs text-muted-foreground sm:px-6">
-              Data from CPCB, IMD, and MNRE via{" "}
+              {t.footer.attribution}{" "}
               <a
                 href="https://www.data.gov.in/"
                 target="_blank"
@@ -86,7 +91,7 @@ export default function RootLayout({
               >
                 data.gov.in
               </a>
-              . Informational use only — not for emergencies.
+              . {t.footer.disclaimer}
             </div>
           </footer>
         </ThemeProvider>

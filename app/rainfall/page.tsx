@@ -13,8 +13,9 @@ import {
   type DistrictBaseline,
   type Period,
 } from "@/lib/rainfall/baseline";
+import { getDict } from "@/lib/i18n/server";
 
-export const metadata = { title: "Rainfall Anomaly — GovPulse India" };
+export const metadata = { title: "Rainfall Anomaly" };
 
 interface PageProps {
   searchParams: Promise<{ district?: string; current?: string; period?: string }>;
@@ -33,13 +34,14 @@ export default async function RainfallPage({ searchParams }: PageProps) {
       : null;
   const districts = listDistricts();
   const meta = getMeta();
+  const t = await getDict();
 
   return (
     <>
       <ToolHeader
         icon="🌧️"
-        title="Rainfall Anomaly"
-        tagline="How this season's rainfall compares to a district's long-period average."
+        title={t.modules.rainfall.title}
+        tagline={t.modules.rainfall.tagline}
       />
 
       <form action="/rainfall" method="get" className="mb-6 grid gap-2 sm:grid-cols-[2fr_1fr_1fr_auto]">

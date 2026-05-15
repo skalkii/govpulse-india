@@ -1,43 +1,45 @@
 import { ToolCard } from "@/components/ToolCard";
+import { getDict } from "@/lib/i18n/server";
 
-const modules = [
-  {
-    href: "/aqi",
-    title: "AQI Now & Next 24h",
-    description: "Live air quality + simple forecast for any Indian city.",
-    icon: "🌬️",
-  },
-  {
-    href: "/rivers",
-    title: "River Health Check",
-    description: "Water quality at CPCB monitoring stations near you.",
-    icon: "🌊",
-  },
-  {
-    href: "/rainfall",
-    title: "Rainfall Anomaly",
-    description: "Is this monsoon unusual? Compare to district history.",
-    icon: "🌧️",
-  },
-  {
-    href: "/solar",
-    title: "Solar ROI Calculator",
-    description: "Rooftop solar payback period by pincode.",
-    icon: "☀️",
-  },
-];
+export default async function Home() {
+  const t = await getDict();
 
-export default function Home() {
+  const modules = [
+    {
+      href: "/aqi",
+      title: t.modules.aqi.title,
+      description: t.modules.aqi.description,
+      icon: "🌬️",
+    },
+    {
+      href: "/rivers",
+      title: t.modules.rivers.title,
+      description: t.modules.rivers.description,
+      icon: "🌊",
+    },
+    {
+      href: "/rainfall",
+      title: t.modules.rainfall.title,
+      description: t.modules.rainfall.description,
+      icon: "🌧️",
+    },
+    {
+      href: "/solar",
+      title: t.modules.solar.title,
+      description: t.modules.solar.description,
+      icon: "☀️",
+    },
+  ];
+
   return (
     <div className="space-y-14">
       <section className="space-y-4">
         <h1 className="font-heading text-4xl leading-[1.05] tracking-tight sm:text-6xl">
-          Public data,{" "}
-          <span className="italic text-primary">made useful</span>.
+          {t.landing.titlePrefix}{" "}
+          <span className="italic text-primary">{t.landing.titleAccent}</span>.
         </h1>
         <p className="max-w-2xl text-base text-muted-foreground sm:text-lg">
-          Free tools built on India&apos;s open government data. No login, no
-          tracking, no fluff — just answers.
+          {t.landing.tagline}
         </p>
       </section>
 

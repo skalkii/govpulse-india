@@ -6,8 +6,9 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { calculatePayback, type SolarResult } from "@/lib/solar/service";
+import { getDict } from "@/lib/i18n/server";
 
-export const metadata = { title: "Solar ROI Calculator — GovPulse India" };
+export const metadata = { title: "Solar ROI Calculator" };
 
 interface PageProps {
   searchParams: Promise<{ pincode?: string; sqft?: string; bill?: string }>;
@@ -23,13 +24,14 @@ export default async function SolarPage({ searchParams }: PageProps) {
         monthlyBillRs: Number(sp.bill),
       })
     : null;
+  const t = await getDict();
 
   return (
     <>
       <ToolHeader
         icon="☀️"
-        title="Solar ROI Calculator"
-        tagline="Rooftop solar payback estimate by pincode, roof area, and current bill."
+        title={t.modules.solar.title}
+        tagline={t.modules.solar.tagline}
       />
 
       <form action="/solar" method="get" className="mb-6 grid gap-3 sm:grid-cols-3">

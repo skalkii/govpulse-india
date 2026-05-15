@@ -10,8 +10,9 @@ import { forecast24h } from "@/lib/aqi/forecast";
 import { getCityAqi } from "@/lib/aqi/service";
 import type { AqiResult } from "@/lib/aqi/types";
 import citiesJson from "@/data/aqi-cities.json";
+import { getDict } from "@/lib/i18n/server";
 
-export const metadata = { title: "AQI Now & Next 24h — GovPulse India" };
+export const metadata = { title: "AQI Now & Next 24h" };
 
 const POPULAR = ["Delhi", "Mumbai", "Bengaluru", "Chennai", "Kolkata", "Hyderabad", "Pune", "Ahmedabad"];
 const ALL_CITIES = (citiesJson as { cities: string[] }).cities;
@@ -31,13 +32,14 @@ interface PageProps {
 export default async function AqiPage({ searchParams }: PageProps) {
   const { city } = await searchParams;
   const result = city ? await loadAqi(city) : null;
+  const t = await getDict();
 
   return (
     <>
       <ToolHeader
         icon="🌬️"
-        title="AQI Now & Next 24h"
-        tagline="Live air quality + a transparent rules-based 24h forecast for any Indian city."
+        title={t.modules.aqi.title}
+        tagline={t.modules.aqi.tagline}
       />
 
       <form action="/aqi" method="get" className="mb-6 flex flex-col gap-2 sm:flex-row">

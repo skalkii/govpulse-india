@@ -1,15 +1,17 @@
 import { ToolHeader } from "@/components/ToolHeader";
 import { EmptyState } from "@/components/EmptyState";
+import { getDict } from "@/lib/i18n/server";
 
-export const metadata = { title: "River Health Check — GovPulse India" };
+export const metadata = { title: "River Health Check" };
 
-export default function RiversPage() {
+export default async function RiversPage() {
+  const t = await getDict();
   return (
     <>
       <ToolHeader
         icon="🌊"
-        title="River Health Check"
-        tagline="CPCB station readings: dissolved oxygen, BOD, pH, fecal coliform."
+        title={t.modules.rivers.title}
+        tagline={t.modules.rivers.tagline}
       />
       <EmptyState title="Loading state picker + station list" />
     </>
