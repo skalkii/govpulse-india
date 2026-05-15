@@ -9,6 +9,7 @@ export interface DistrictBaseline {
   years_n: number;
   lat?: number;
   lng?: number;
+  years?: Record<string, { annual: number; jjas: number }>;
 }
 
 export interface DistrictWithCoords extends DistrictBaseline {

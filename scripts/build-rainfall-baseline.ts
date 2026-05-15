@@ -36,6 +36,8 @@ interface DistrictBaseline {
   years_n: number;
   lat?: number;
   lng?: number;
+  /** Per-year totals (mm). Keyed by year string. */
+  years?: Record<string, { annual: number; jjas: number }>;
 }
 
 interface ApiRow {
@@ -169,9 +171,11 @@ function compute(acc: Map<string, DistrictAccum>): Record<string, DistrictBaseli
   for (const [district, byYear] of acc) {
     const annuals: number[] = [];
     const jjass: number[] = [];
-    for (const { annual, jjas } of byYear.values()) {
+    const years: Record<string, { annual: number; jjas: number }> = {};
+    for (const [year, { annual, jjas }] of byYear) {
       annuals.push(annual);
       jjass.push(jjas);
+      years[String(year)] = { annual: Math.round(annual), jjas: Math.round(jjas) };
     }
     if (annuals.length < 2) continue;
     const a = meanSd(annuals);
@@ -182,6 +186,7 @@ function compute(acc: Map<string, DistrictAccum>): Record<string, DistrictBaseli
       mean_jjas: Math.round(j.mean),
       sd_jjas: Math.round(j.sd),
       years_n: annuals.length,
+      years,
     };
   }
   return out;

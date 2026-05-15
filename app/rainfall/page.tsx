@@ -16,6 +16,7 @@ import {
   type Period,
 } from "@/lib/rainfall/baseline";
 import { StationMapClient } from "@/components/StationMapClient";
+import { HistoryChart } from "@/components/HistoryChart";
 import { Combobox } from "@/components/Combobox";
 import { getDict } from "@/lib/i18n/server";
 import type { Dict } from "@/lib/i18n/dict";
@@ -180,6 +181,21 @@ function BaselineView({
           <Stat label={ui.cov} value={`${((sd / mean) * 100).toFixed(0)}%`} />
         </div>
       </ResultCard>
+
+      {baseline.years && Object.keys(baseline.years).length > 0 && (
+        <ResultCard title={`Last ${Object.keys(baseline.years).length} years`}>
+          <HistoryChart
+            bars={Object.entries(baseline.years)
+              .sort(([a], [b]) => Number(a) - Number(b))
+              .map(([year, v]) => ({
+                label: year.slice(-2),
+                value: period === "annual" ? v.annual : v.jjas,
+              }))}
+            baseline={period === "annual" ? baseline.mean_annual : baseline.mean_jjas}
+            baselineLabel={ui.meanRainfall}
+          />
+        </ResultCard>
+      )}
 
       {anomaly && (
         <ResultCard title={ui.thisSeason}>
