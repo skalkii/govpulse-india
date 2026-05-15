@@ -67,8 +67,25 @@ export default async function RiversPage({ searchParams }: PageProps) {
         <StationsView state={state!} stations={stations} t={t} view={view} />
       )}
 
-      <p className="mt-6 text-xs text-muted-foreground">
-        {String(meta.note ?? "")} Source: {String(meta.source ?? "CPCB")}.
+      <aside className="mt-8 rounded-xl border border-amber-500/30 bg-amber-500/5 p-4 text-xs text-muted-foreground">
+        <strong className="text-foreground">Educational baseline, not realtime:</strong>{" "}
+        station readings are frozen at recent CPCB annual report values. India
+        has no consolidated national real-time water quality API yet — only
+        per-river-per-year CSVs going back to 2008. Real river health changes
+        seasonally and by upstream load. Treat this as a starting reference
+        and cross-check at{" "}
+        <a
+          href="https://cpcb.nic.in/water-quality-data/"
+          target="_blank"
+          rel="noreferrer noopener"
+          className="underline hover:text-foreground"
+        >
+          CPCB
+        </a>
+        {" "}before any decision.
+      </aside>
+      <p className="mt-3 text-[11px] text-muted-foreground">
+        Source: {String(meta.source ?? "CPCB")}
       </p>
     </>
   );

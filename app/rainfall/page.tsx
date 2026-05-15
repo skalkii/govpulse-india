@@ -97,9 +97,26 @@ export default async function RainfallPage({ searchParams }: PageProps) {
         />
       )}
 
+      <aside className="mt-8 rounded-xl border border-amber-500/30 bg-amber-500/5 p-4 text-xs text-muted-foreground">
+        <strong className="text-foreground">Methodology note:</strong> baselines
+        are 8-year means from the NRSC VIC land-surface model (via data.gov.in),
+        not IMD raingauge averages. Absolute mm values run ~20-30% lower than
+        IMD&apos;s 50-year long-period averages — use the <em>anomaly percentage</em>{" "}
+        as the takeaway, not the raw number. You must source this season&apos;s
+        actual rainfall from{" "}
+        <a
+          href="https://www.imdpune.gov.in/cmpg/Realtime/Rainfall/Statewise/Districtwise/Districtwise.html"
+          target="_blank"
+          rel="noreferrer noopener"
+          className="underline hover:text-foreground"
+        >
+          IMD Pune
+        </a>
+        .
+      </aside>
       {meta && (
-        <p className="mt-6 text-xs text-muted-foreground">
-          {String(meta.note ?? "")} Source: {String(meta.source ?? "IMD")}.
+        <p className="mt-3 text-[11px] text-muted-foreground">
+          Source: {String(meta.source ?? "IMD")} · {Object.keys(meta).includes("districts") ? `${meta.districts} districts` : ""}
         </p>
       )}
     </>
