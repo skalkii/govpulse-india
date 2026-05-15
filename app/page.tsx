@@ -12,12 +12,6 @@ export default async function Home() {
       icon: "🌬️",
     },
     {
-      href: "/rivers",
-      title: t.modules.rivers.title,
-      description: t.modules.rivers.description,
-      icon: "🌊",
-    },
-    {
       href: "/rainfall",
       title: t.modules.rainfall.title,
       description: t.modules.rainfall.description,
@@ -28,6 +22,12 @@ export default async function Home() {
       title: t.modules.solar.title,
       description: t.modules.solar.description,
       icon: "☀️",
+    },
+    {
+      href: "/rivers",
+      title: t.modules.rivers.title,
+      description: t.modules.rivers.description,
+      icon: "🌊",
     },
   ];
 
