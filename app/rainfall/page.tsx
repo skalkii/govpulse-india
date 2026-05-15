@@ -14,6 +14,7 @@ import {
   type Period,
 } from "@/lib/rainfall/baseline";
 import { getDict } from "@/lib/i18n/server";
+import type { Dict } from "@/lib/i18n/dict";
 
 export const metadata = { title: "Rainfall Anomaly" };
 
@@ -35,6 +36,7 @@ export default async function RainfallPage({ searchParams }: PageProps) {
   const districts = listDistricts();
   const meta = getMeta();
   const t = await getDict();
+  const ui = t.modules.rainfall.ui;
 
   return (
     <>
@@ -51,7 +53,7 @@ export default async function RainfallPage({ searchParams }: PageProps) {
           defaultValue={district ?? ""}
           required
           autoComplete="off"
-          placeholder={`Type a district (${districts.length} available)`}
+          placeholder={`${ui.districtPlaceholder} (${districts.length})`}
         />
         <datalist id="rainfall-districts">
           {districts.map((d) => (
@@ -63,8 +65,8 @@ export default async function RainfallPage({ searchParams }: PageProps) {
           defaultValue={period}
           className="flex h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-xs"
         >
-          <option value="jjas">Monsoon (Jun-Sep)</option>
-          <option value="annual">Annual</option>
+          <option value="jjas">{ui.monsoon}</option>
+          <option value="annual">{ui.annual}</option>
         </select>
         <Input
           name="current"
@@ -73,24 +75,23 @@ export default async function RainfallPage({ searchParams }: PageProps) {
           min="0"
           step="1"
           defaultValue={currentRaw ?? ""}
-          placeholder="Current mm (optional)"
+          placeholder={ui.currentMm}
         />
-        <Button type="submit">Compare</Button>
+        <Button type="submit">{ui.compare}</Button>
       </form>
 
       {!district && (
         <EmptyState
           icon="🌧️"
-          title="Pick a district to see its baseline"
-          hint="Then add this season's rainfall total to see the anomaly."
+          title={ui.pickDistrict}
+          hint={ui.pickHint}
         />
       )}
 
       {district && !baseline && (
         <EmptyState
           icon="⚠️"
-          title={`No baseline for "${district}"`}
-          hint="Run pnpm build-data:rainfall against an IMD CSV to expand coverage."
+          title={`${ui.pickDistrict} — "${district}"`}
         />
       )}
 
@@ -100,12 +101,13 @@ export default async function RainfallPage({ searchParams }: PageProps) {
           baseline={baseline}
           period={period}
           anomaly={anomaly}
+          t={t}
         />
       )}
 
       {meta && (
         <p className="mt-6 text-xs text-muted-foreground">
-          Baselines: {String(meta.note ?? "")} Source: {String(meta.source ?? "IMD")}.
+          {String(meta.note ?? "")} Source: {String(meta.source ?? "IMD")}.
         </p>
       )}
     </>
@@ -117,32 +119,36 @@ function BaselineView({
   baseline,
   period,
   anomaly,
+  t,
 }: {
   district: string;
   baseline: DistrictBaseline;
   period: Period;
   anomaly: Anomaly | null;
+  t: Dict;
 }) {
+  const ui = t.modules.rainfall.ui;
   const mean = period === "annual" ? baseline.mean_annual : baseline.mean_jjas;
   const sd = period === "annual" ? baseline.sd_annual : baseline.sd_jjas;
-  const periodLabel = period === "annual" ? "Annual" : "Monsoon (JJAS)";
+  const periodLabel = period === "annual" ? ui.annual : ui.monsoon;
+  const verdictText = anomaly ? ui.verdicts[anomaly.verdict] : "";
   const shareText = anomaly
-    ? `${district} rainfall is ${Math.abs(anomaly.pct).toFixed(0)}% ${anomaly.pct >= 0 ? "above" : "below"} normal — check yours: govpulse.in/rainfall`
+    ? `${district}: ${anomaly.pct >= 0 ? "+" : ""}${anomaly.pct.toFixed(0)}% ${verdictText} — govpulse.in/rainfall`
     : "";
 
   return (
     <div className="space-y-6">
-      <ResultCard title={`${district} — ${periodLabel} baseline`} source="IMD long-period averages">
+      <ResultCard title={`${district} — ${periodLabel} ${ui.baseline}`} source="IMD long-period averages">
         <div className="grid grid-cols-2 gap-4 text-sm">
-          <Stat label="Mean rainfall" value={`${mean} mm`} />
-          <Stat label="Std deviation" value={`±${sd} mm`} />
-          <Stat label="Sample years" value={`${baseline.years_n}`} />
-          <Stat label="Coefficient of variation" value={`${((sd / mean) * 100).toFixed(0)}%`} />
+          <Stat label={ui.meanRainfall} value={`${mean} mm`} />
+          <Stat label={ui.stdDeviation} value={`±${sd} mm`} />
+          <Stat label={ui.sampleYears} value={`${baseline.years_n}`} />
+          <Stat label={ui.cov} value={`${((sd / mean) * 100).toFixed(0)}%`} />
         </div>
       </ResultCard>
 
-      {anomaly ? (
-        <ResultCard title="This season">
+      {anomaly && (
+        <ResultCard title={ui.thisSeason}>
           <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-stretch sm:gap-6">
             <div
               className="flex min-w-[10rem] flex-col items-center justify-center rounded-2xl px-6 py-4 text-white shadow-md"
@@ -153,43 +159,26 @@ function BaselineView({
                 {anomaly.pct.toFixed(0)}%
               </div>
               <div className="mt-1 text-xs font-medium tracking-wide uppercase">
-                vs normal
+                {ui.vsNormal}
               </div>
             </div>
             <div className="flex-1 space-y-1 text-sm">
-              <div className="text-lg font-semibold capitalize">{anomaly.verdict}</div>
+              <div className="text-lg font-semibold capitalize">{verdictText}</div>
               <div className="text-muted-foreground">
-                Current: <span className="font-medium text-foreground">{anomaly.current} mm</span>
+                <span className="font-medium text-foreground">{anomaly.current} mm</span>
                 {" · "}
-                Normal: <span className="font-medium text-foreground">{anomaly.mean} mm</span>
+                <span className="font-medium text-foreground">{anomaly.mean} mm</span> ({ui.meanRainfall.toLowerCase()})
               </div>
               <div className="text-muted-foreground">
-                Z-score: <span className="font-medium text-foreground">{anomaly.z.toFixed(2)}</span>
+                Z: <span className="font-medium text-foreground">{anomaly.z.toFixed(2)}</span>
                 {" · "}
                 σ: <span className="font-medium text-foreground">{anomaly.sd} mm</span>
               </div>
             </div>
           </div>
           <div className="flex">
-            <WhatsAppShare text={shareText} />
+            <WhatsAppShare text={shareText} label={t.actions.share} />
           </div>
-        </ResultCard>
-      ) : (
-        <ResultCard title="Add this season's rainfall">
-          <p className="text-sm text-muted-foreground">
-            Enter the {periodLabel.toLowerCase()} rainfall total in millimetres
-            above to see whether this season is above or below normal. Source
-            it from{" "}
-            <a
-              href="https://www.imdpune.gov.in/cmpg/Realtime/Rainfall/Statewise/Districtwise/Districtwise.html"
-              target="_blank"
-              rel="noreferrer noopener"
-              className="underline"
-            >
-              IMD Pune district rainfall
-            </a>
-            .
-          </p>
         </ResultCard>
       )}
     </div>

@@ -13,6 +13,7 @@ import {
   type RiverStation,
 } from "@/lib/rivers/service";
 import { getDict } from "@/lib/i18n/server";
+import type { Dict } from "@/lib/i18n/dict";
 
 export const metadata = { title: "River Health Check" };
 
@@ -26,6 +27,7 @@ export default async function RiversPage({ searchParams }: PageProps) {
   const states = listStates();
   const stations = state ? stationsByState(state) : [];
   const t = await getDict();
+  const ui = t.modules.rivers.ui;
   const meta = getMeta();
 
   return (
@@ -44,33 +46,32 @@ export default async function RiversPage({ searchParams }: PageProps) {
           required
           autoComplete="off"
           className="flex-1"
-          placeholder={`Type a state (${states.length} available)`}
+          placeholder={`${ui.statePlaceholder} (${states.length})`}
         />
         <datalist id="rivers-states">
           {states.map((s) => (
             <option key={s} value={s} />
           ))}
         </datalist>
-        <Button type="submit">Show stations</Button>
+        <Button type="submit">{ui.showStations}</Button>
       </form>
 
       {!state && (
         <EmptyState
           icon="🌊"
-          title="Pick a state to see CPCB monitoring stations"
-          hint="Each station rated against CPCB designated best-use classes."
+          title={ui.pickState}
+          hint={ui.pickHint}
         />
       )}
 
       {state && stations.length === 0 && (
         <EmptyState
           icon="⚠️"
-          title={`No bundled stations for "${state}"`}
-          hint="Run pnpm build-data:rivers against a CPCB CSV to expand."
+          title={`${ui.noStations} "${state}"`}
         />
       )}
 
-      {stations.length > 0 && <StationsView state={state!} stations={stations} />}
+      {stations.length > 0 && <StationsView state={state!} stations={stations} t={t} />}
 
       <p className="mt-6 text-xs text-muted-foreground">
         {String(meta.note ?? "")} Source: {String(meta.source ?? "CPCB")}.
@@ -79,7 +80,8 @@ export default async function RiversPage({ searchParams }: PageProps) {
   );
 }
 
-function StationsView({ state, stations }: { state: string; stations: RiverStation[] }) {
+function StationsView({ state, stations, t }: { state: string; stations: RiverStation[]; t: Dict }) {
+  const ui = t.modules.rivers.ui;
   const classCounts = new Map<string, number>();
   for (const s of stations) {
     const c = classify(s).label;
@@ -103,7 +105,7 @@ function StationsView({ state, stations }: { state: string; stations: RiverStati
           ))}
         </div>
         <div className="flex">
-          <WhatsAppShare text={shareText} />
+          <WhatsAppShare text={shareText} label={t.actions.share} />
         </div>
       </ResultCard>
 
@@ -135,10 +137,10 @@ function StationsView({ state, stations }: { state: string; stations: RiverStati
               </div>
 
               <div className="mt-3 text-xs text-muted-foreground">
-                <span className="font-medium text-foreground">Headline issue:</span> {issue}
+                <span className="font-medium text-foreground">{ui.headlineIssue}:</span> {issue}
               </div>
               <div className="mt-1 text-xs text-muted-foreground">
-                Suitable for: <span className="font-medium text-foreground">{c.bestUse}</span>
+                {ui.suitableFor}: <span className="font-medium text-foreground">{c.bestUse}</span>
               </div>
               <a
                 href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${s.station} ${s.river} river`)}`}
@@ -146,7 +148,7 @@ function StationsView({ state, stations }: { state: string; stations: RiverStati
                 rel="noreferrer noopener"
                 className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-primary hover:underline"
               >
-                Open in Google Maps
+                {ui.openInMaps}
                 <span aria-hidden>↗</span>
               </a>
             </div>

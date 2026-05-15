@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { calculatePayback, type SolarResult } from "@/lib/solar/service";
 import { getDict } from "@/lib/i18n/server";
+import type { Dict } from "@/lib/i18n/dict";
 
 export const metadata = { title: "Solar ROI Calculator" };
 
@@ -25,6 +26,7 @@ export default async function SolarPage({ searchParams }: PageProps) {
       })
     : null;
   const t = await getDict();
+  const ui = t.modules.solar.ui;
 
   return (
     <>
@@ -35,27 +37,27 @@ export default async function SolarPage({ searchParams }: PageProps) {
       />
 
       <form action="/solar" method="get" className="mb-6 grid gap-3 sm:grid-cols-3">
-        <Field label="Pincode" name="pincode" defaultValue={sp.pincode} placeholder="e.g. 560001" pattern="\d{6}" required />
-        <Field label="Roof area (sq ft)" name="sqft" type="number" min="50" defaultValue={sp.sqft} placeholder="e.g. 500" required />
-        <Field label="Monthly bill (₹)" name="bill" type="number" min="100" defaultValue={sp.bill} placeholder="e.g. 3000" required />
+        <Field label={ui.pincode} name="pincode" defaultValue={sp.pincode} placeholder="560001" pattern="\d{6}" required />
+        <Field label={ui.roofSqft} name="sqft" type="number" min="50" defaultValue={sp.sqft} placeholder="500" required />
+        <Field label={ui.monthlyBill} name="bill" type="number" min="100" defaultValue={sp.bill} placeholder="3000" required />
         <div className="sm:col-span-3">
-          <Button type="submit">Calculate payback</Button>
+          <Button type="submit">{ui.calculate}</Button>
         </div>
       </form>
 
       {!submitted && (
         <EmptyState
           icon="☀️"
-          title="Fill the form to see your payback"
-          hint="Estimates only — get a professional installer quote before committing."
+          title={ui.fillForm}
+          hint={ui.fillHint}
         />
       )}
 
       {result && "error" in result && (
-        <EmptyState icon="⚠️" title="Couldn't compute" hint={result.error} />
+        <EmptyState icon="⚠️" title={ui.couldNotCompute} hint={result.error} />
       )}
 
-      {result && !("error" in result) && <SolarView result={result} />}
+      {result && !("error" in result) && <SolarView result={result} t={t} />}
     </>
   );
 }
@@ -78,35 +80,33 @@ function Field(props: {
   );
 }
 
-function SolarView({ result }: { result: SolarResult }) {
-  const shareText = `Rooftop solar payback in ${result.district}: ~${result.paybackYears} yrs (${result.capacityKw} kW, ${result.coverPct}% bill offset). Check yours: govpulse.in/solar`;
+function SolarView({ result, t }: { result: SolarResult; t: Dict }) {
+  const ui = t.modules.solar.ui;
+  const shareText = `${result.district}: ${result.capacityKw} kW, ${result.paybackYears} ${ui.years} ${ui.payback.toLowerCase()}, ${result.coverPct}% ${ui.billOffset.toLowerCase()} — govpulse.in/solar`;
   const fmtRs = (n: number) =>
     new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR", maximumFractionDigits: 0 }).format(n);
 
   return (
     <div className="space-y-6">
-      <ResultCard
-        title={`${result.district} — your rooftop estimate`}
-        source={result.source}
-      >
+      <ResultCard title={result.district} source={result.source}>
         <div className="grid gap-4 sm:grid-cols-3">
-          <Headline label="Payback" value={`${result.paybackYears} yrs`} accent="#10b981" />
-          <Headline label="Bill offset" value={`${result.coverPct}%`} accent="#3b82f6" />
-          <Headline label="25-yr net savings" value={fmtRs(result.lifetimeSavingsRs)} accent="#f59e0b" />
+          <Headline label={ui.payback} value={`${result.paybackYears} ${ui.years}`} accent="#10b981" />
+          <Headline label={ui.billOffset} value={`${result.coverPct}%`} accent="#3b82f6" />
+          <Headline label={ui.netSavings25} value={fmtRs(result.lifetimeSavingsRs)} accent="#f59e0b" />
         </div>
         <div className="flex">
-          <WhatsAppShare text={shareText} />
+          <WhatsAppShare text={shareText} label={t.actions.share} />
         </div>
       </ResultCard>
 
-      <ResultCard title="System details">
+      <ResultCard>
         <div className="grid grid-cols-2 gap-4 text-sm sm:grid-cols-3">
-          <Stat label="Capacity" value={`${result.capacityKw} kW`} />
-          <Stat label="Local GHI" value={`${result.ghi} kWh/m²/day`} />
-          <Stat label="Annual generation" value={`${result.annualGenerationKwh.toLocaleString("en-IN")} kWh`} />
-          <Stat label="Install cost" value={fmtRs(result.installCostRs)} />
-          <Stat label="Annual savings" value={fmtRs(result.annualSavingsRs)} />
-          <Stat label="Monthly savings" value={fmtRs(result.monthlySavingsRs)} />
+          <Stat label={ui.capacity} value={`${result.capacityKw} kW`} />
+          <Stat label={ui.localGhi} value={`${result.ghi} kWh/m²/day`} />
+          <Stat label={ui.annualGen} value={`${result.annualGenerationKwh.toLocaleString("en-IN")} kWh`} />
+          <Stat label={ui.installCost} value={fmtRs(result.installCostRs)} />
+          <Stat label={ui.annualSavings} value={fmtRs(result.annualSavingsRs)} />
+          <Stat label={ui.monthlySavings} value={fmtRs(result.monthlySavingsRs)} />
         </div>
         <p className="text-xs text-muted-foreground">
           Assumptions: 100 sq ft/kW, 75% system efficiency, ₹60k/kW installed

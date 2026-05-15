@@ -13,6 +13,7 @@ import { getCityAqi } from "@/lib/aqi/service";
 import type { AqiResult } from "@/lib/aqi/types";
 import citiesJson from "@/data/aqi-cities.json";
 import { getDict } from "@/lib/i18n/server";
+import type { Dict } from "@/lib/i18n/dict";
 
 export const metadata = { title: "AQI Now & Next 24h" };
 
@@ -34,6 +35,7 @@ interface PageProps {
 export default async function AqiPage({ searchParams }: PageProps) {
   const { city } = await searchParams;
   const t = await getDict();
+  const ui = t.modules.aqi.ui;
 
   return (
     <>
@@ -48,7 +50,7 @@ export default async function AqiPage({ searchParams }: PageProps) {
           name="city"
           list="aqi-cities"
           defaultValue={city ?? ""}
-          placeholder={`Type a city (${ALL_CITIES.length} CPCB-monitored)`}
+          placeholder={`${ui.cityPlaceholder} (${ALL_CITIES.length})`}
           className="flex-1"
           required
           autoComplete="off"
@@ -58,15 +60,15 @@ export default async function AqiPage({ searchParams }: PageProps) {
             <option key={c} value={c} />
           ))}
         </datalist>
-        <Button type="submit">Check AQI</Button>
+        <Button type="submit">{ui.check}</Button>
       </form>
 
       {!city ? (
         <>
           <EmptyState
             icon="🌬️"
-            title="Pick a city to see live AQI"
-            hint="CPCB monitoring stations refresh hourly."
+            title={ui.pickCity}
+            hint={ui.pickHint}
           />
           <div className="mt-4 flex flex-wrap gap-2">
             {POPULAR.map((c) => (
@@ -80,25 +82,26 @@ export default async function AqiPage({ searchParams }: PageProps) {
         </>
       ) : (
         <Suspense key={city} fallback={<AqiSkeleton city={city} />}>
-          <AqiResultBlock city={city} />
+          <AqiResultBlock city={city} t={t} />
         </Suspense>
       )}
     </>
   );
 }
 
-async function AqiResultBlock({ city }: { city: string }) {
+async function AqiResultBlock({ city, t }: { city: string; t: Dict }) {
   const result = await loadAqi(city);
+  const ui = t.modules.aqi.ui;
   if ("error" in result) {
-    return <EmptyState icon="⚠️" title="Couldn't load AQI" hint={result.error} />;
+    return <EmptyState icon="⚠️" title={ui.couldNotLoad} hint={result.error} />;
   }
-  return <AqiView result={result} />;
+  return <AqiView result={result} t={t} />;
 }
 
 function AqiSkeleton({ city }: { city: string }) {
   return (
     <div className="space-y-6">
-      <ResultCard title={`${city} — fetching live readings…`}>
+      <ResultCard title={`${city}`}>
         <div className="flex items-center gap-6">
           <Skeleton className="size-28 rounded-2xl" />
           <div className="flex-1 space-y-2">
@@ -108,14 +111,14 @@ function AqiSkeleton({ city }: { city: string }) {
           </div>
         </div>
       </ResultCard>
-      <ResultCard title="Next 24 hours">
+      <ResultCard>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
           {Array.from({ length: 4 }).map((_, i) => (
             <Skeleton key={i} className="h-20" />
           ))}
         </div>
       </ResultCard>
-      <ResultCard title="Stations">
+      <ResultCard>
         <div className="space-y-2">
           {Array.from({ length: 5 }).map((_, i) => (
             <Skeleton key={i} className="h-10" />
@@ -126,15 +129,16 @@ function AqiSkeleton({ city }: { city: string }) {
   );
 }
 
-function AqiView({ result }: { result: AqiResult }) {
+function AqiView({ result, t }: { result: AqiResult; t: Dict }) {
   const cat = categorize(result.aqi);
   const fc = result.forecast.length ? result.forecast : forecast24h(result.aqi);
-  const shareText = `${result.city} AQI is ${result.aqi} (${cat.category}) — check yours: govpulse.in/aqi`;
+  const ui = t.modules.aqi.ui;
+  const shareText = `${result.city} AQI ${result.aqi} (${cat.category}) — govpulse.in/aqi`;
 
   return (
     <div className="space-y-6">
       <ResultCard
-        title={`${result.city} — right now`}
+        title={`${result.city} — ${ui.rightNow}`}
         source={result.source}
         updatedAt={new Date(result.updatedAt).toLocaleString("en-IN")}
       >
@@ -151,19 +155,19 @@ function AqiView({ result }: { result: AqiResult }) {
             <p className="mt-1 text-sm text-muted-foreground">{cat.advice}</p>
             {result.dominantPollutant && (
               <p className="mt-2 text-xs text-muted-foreground">
-                Dominant pollutant: <span className="font-medium text-foreground">{result.dominantPollutant}</span>
+                {ui.dominant}: <span className="font-medium text-foreground">{result.dominantPollutant}</span>
                 {" · "}
-                Averaged across {result.stations.length} station{result.stations.length === 1 ? "" : "s"}
+                {ui.averagedAcross} {result.stations.length}
               </p>
             )}
           </div>
         </div>
         <div className="flex">
-          <WhatsAppShare text={shareText} />
+          <WhatsAppShare text={shareText} label={t.actions.share} />
         </div>
       </ResultCard>
 
-      <ResultCard title="Next 24 hours">
+      <ResultCard title={ui.next24h}>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
           {fc.map((b) => (
             <div
@@ -177,14 +181,10 @@ function AqiView({ result }: { result: AqiResult }) {
             </div>
           ))}
         </div>
-        <p className="text-xs text-muted-foreground">
-          Forecast applies a fixed diurnal multiplier (peaks ~7am and ~9pm) to the
-          current observation. Not a model — auditable rules. Use it as a rough
-          guide, not a prediction.
-        </p>
+        <p className="text-xs text-muted-foreground">{ui.forecastNote}</p>
       </ResultCard>
 
-      <ResultCard title={`Stations (${result.stations.length})`}>
+      <ResultCard title={`${ui.stations} (${result.stations.length})`}>
         <ul className="divide-y text-sm">
           {result.stations.map((s) => {
             const sCat = categorize(s.aqi);
@@ -193,7 +193,7 @@ function AqiView({ result }: { result: AqiResult }) {
                 <div className="min-w-0 flex-1">
                   <div className="truncate font-medium">{s.station}</div>
                   <div className="text-xs text-muted-foreground">
-                    Worst: {s.dominantPollutant}
+                    {ui.worst}: {s.dominantPollutant}
                   </div>
                 </div>
                 <span
