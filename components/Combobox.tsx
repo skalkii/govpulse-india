@@ -117,7 +117,7 @@ export function Combobox({
           ref={listRef}
           id={listId}
           role="listbox"
-          className="absolute left-0 right-0 top-full z-50 mt-1 max-h-64 overflow-y-auto overscroll-contain rounded-lg border border-border bg-popover py-1 text-sm shadow-lg"
+          className="absolute left-0 right-0 top-full z-[1000] mt-1 max-h-64 overflow-y-auto overscroll-contain rounded-lg border border-border bg-popover py-1 text-sm shadow-lg"
         >
           {filtered.length === 0 && (
             <li className="px-3 py-2 text-xs text-muted-foreground">No matches</li>
