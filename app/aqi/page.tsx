@@ -235,7 +235,7 @@ function AqiView({ result, t, view }: { result: AqiResult; t: Dict; view: "list"
                 </p>
               );
             }
-            return <StationMapClient markers={markers} />;
+            return <StationMapClient markers={markers} cluster />;
           })()
         ) : (
           <ul className="divide-y text-sm">
