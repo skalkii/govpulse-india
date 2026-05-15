@@ -44,7 +44,7 @@ export default function StationMap({ markers, height = 420 }: Props) {
       <MapContainer
         center={center}
         zoom={6}
-        scrollWheelZoom={false}
+        scrollWheelZoom={true}
         style={{ height: "100%", width: "100%" }}
       >
         <TileLayer
