@@ -138,15 +138,15 @@ function AqiView({ result }: { result: AqiResult }) {
         source={result.source}
         updatedAt={new Date(result.updatedAt).toLocaleString("en-IN")}
       >
-        <div className="flex items-center gap-6">
+        <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-6">
           <div
-            className="flex size-28 flex-col items-center justify-center rounded-2xl text-white shadow-md"
+            className="flex size-24 shrink-0 flex-col items-center justify-center rounded-2xl text-white shadow-md sm:size-28"
             style={{ backgroundColor: cat.color }}
           >
-            <div className="text-4xl font-bold leading-none">{result.aqi}</div>
+            <div className="text-3xl font-bold leading-none sm:text-4xl">{result.aqi}</div>
             <div className="mt-1 text-xs font-medium tracking-wide uppercase">AQI</div>
           </div>
-          <div>
+          <div className="min-w-0">
             <div className="text-xl font-semibold">{cat.category}</div>
             <p className="mt-1 text-sm text-muted-foreground">{cat.advice}</p>
             {result.dominantPollutant && (
@@ -189,21 +189,19 @@ function AqiView({ result }: { result: AqiResult }) {
           {result.stations.map((s) => {
             const sCat = categorize(s.aqi);
             return (
-              <li key={s.station} className="flex items-center justify-between py-2">
-                <div>
-                  <div className="font-medium">{s.station}</div>
+              <li key={s.station} className="flex items-center justify-between gap-3 py-2">
+                <div className="min-w-0 flex-1">
+                  <div className="truncate font-medium">{s.station}</div>
                   <div className="text-xs text-muted-foreground">
                     Worst: {s.dominantPollutant}
                   </div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <span
-                    className="inline-block min-w-[3rem] rounded px-2 py-1 text-center text-sm font-semibold text-white"
-                    style={{ backgroundColor: sCat.color }}
-                  >
-                    {s.aqi}
-                  </span>
-                </div>
+                <span
+                  className="inline-block shrink-0 min-w-[3rem] rounded px-2 py-1 text-center text-sm font-semibold text-white"
+                  style={{ backgroundColor: sCat.color }}
+                >
+                  {s.aqi}
+                </span>
               </li>
             );
           })}

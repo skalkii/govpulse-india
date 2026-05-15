@@ -34,7 +34,7 @@ export default async function Home() {
   return (
     <div className="space-y-14">
       <section className="space-y-4">
-        <h1 className="font-heading text-4xl leading-[1.05] tracking-tight sm:text-6xl">
+        <h1 className="font-heading text-[2.25rem] leading-[1.05] tracking-tight sm:text-6xl">
           {t.landing.titlePrefix}{" "}
           <span className="italic text-primary">{t.landing.titleAccent}</span>.
         </h1>

@@ -114,8 +114,8 @@ function StationsView({ state, stations }: { state: string; stations: RiverStati
           return (
             <div key={s.id} className="rounded-xl border bg-card p-4 shadow-sm">
               <div className="flex items-start justify-between gap-3">
-                <div className="min-w-0">
-                  <div className="font-semibold leading-tight">{s.station}</div>
+                <div className="min-w-0 flex-1">
+                  <div className="font-semibold leading-tight break-words">{s.station}</div>
                   <div className="text-xs text-muted-foreground">{s.river}</div>
                 </div>
                 <span
@@ -127,7 +127,7 @@ function StationsView({ state, stations }: { state: string; stations: RiverStati
                 </span>
               </div>
 
-              <div className="mt-3 grid grid-cols-4 gap-1 text-center text-xs">
+              <div className="mt-3 grid grid-cols-4 gap-1.5 text-center text-xs">
                 <Param label="DO" value={s.do.toFixed(1)} unit="mg/L" />
                 <Param label="BOD" value={s.bod.toFixed(1)} unit="mg/L" />
                 <Param label="pH" value={s.ph.toFixed(1)} unit="" />
