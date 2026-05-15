@@ -5,8 +5,6 @@ export const metadata = { title: "About — GovPulse India" };
 const sources = [
   { label: "CPCB (air, water)", href: "https://cpcb.nic.in/" },
   { label: "IMD (rainfall)", href: "https://www.imdpune.gov.in/" },
-  { label: "NHAI (tolls)", href: "https://tis.nhai.gov.in/" },
-  { label: "MoRTH (black-spots)", href: "https://morth.nic.in/" },
   { label: "MNRE (solar)", href: "https://mnre.gov.in/" },
   { label: "data.gov.in catalog", href: "https://www.data.gov.in/" },
 ];
@@ -25,7 +23,7 @@ export default function AboutPage() {
         into one-click answers.
       </p>
       <p>
-        Six tools, one app, no database, no login. Built and run for ₹0/month.
+        One app, no database, no login. Built and run for ₹0/month.
       </p>
       <h2>Data sources</h2>
       <ul>

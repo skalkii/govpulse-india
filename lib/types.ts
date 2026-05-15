@@ -1,12 +1,6 @@
 // Shared, module-agnostic types. Module-specific types live next to their route.
 
-export type ToolSlug =
-  | "aqi"
-  | "rivers"
-  | "rainfall"
-  | "tolls"
-  | "black-spots"
-  | "solar";
+export type ToolSlug = "aqi" | "rivers" | "rainfall" | "solar";
 
 export interface ApiError {
   error: string;

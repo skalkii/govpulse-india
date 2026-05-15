@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "GovPulse India — Public data, made useful",
   description:
-    "Six free civic-tech tools built on India's open government data. Air quality, rivers, rainfall, tolls, accident black-spots, and rooftop solar ROI.",
+    "Free civic-tech tools built on India's open government data. Air quality, river health, rainfall anomaly, and rooftop solar ROI.",
 };
 
 export default function RootLayout({
