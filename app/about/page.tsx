@@ -1,6 +1,7 @@
 import Link from "next/link";
+import { getDict } from "@/lib/i18n/server";
 
-export const metadata = { title: "About — GovPulse India" };
+export const metadata = { title: "About" };
 
 const sources = [
   { label: "CPCB (air, water)", href: "https://cpcb.nic.in/" },
@@ -9,23 +10,14 @@ const sources = [
   { label: "data.gov.in catalog", href: "https://www.data.gov.in/" },
 ];
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const t = await getDict();
   return (
     <article className="prose prose-neutral max-w-2xl dark:prose-invert">
-      <h1>About GovPulse India</h1>
-      <p>
-        India publishes a lot of useful public data through{" "}
-        <a href="https://www.data.gov.in/" target="_blank" rel="noreferrer noopener">
-          data.gov.in
-        </a>{" "}
-        and individual ministry portals. Most of it sits in spreadsheets,
-        unwieldy dashboards, or PDFs. GovPulse turns the highest-value slices
-        into one-click answers.
-      </p>
-      <p>
-        One app, no database, no login. Built and run for ₹0/month.
-      </p>
-      <h2>Data sources</h2>
+      <h1>{t.about.heading}</h1>
+      <p>{t.about.intro}</p>
+      <p>{t.about.footnote}</p>
+      <h2>{t.about.sourcesHeading}</h2>
       <ul>
         {sources.map((s) => (
           <li key={s.href}>
@@ -33,15 +25,10 @@ export default function AboutPage() {
           </li>
         ))}
       </ul>
-      <h2>Disclaimer</h2>
+      <h2>{t.about.disclaimerHeading}</h2>
+      <p>{t.about.disclaimerBody}</p>
       <p>
-        Estimates and informational summaries only. Don&apos;t use these tools
-        for emergency decisions, regulatory filings, or professional advice.
-        Cross-check against the original government source linked on each
-        result.
-      </p>
-      <p>
-        <Link href="/">← Back to all tools</Link>
+        <Link href="/">{t.about.backLink}</Link>
       </p>
     </article>
   );
