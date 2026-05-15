@@ -1,7 +1,9 @@
+import { Suspense } from "react";
 import { ToolHeader } from "@/components/ToolHeader";
 import { EmptyState } from "@/components/EmptyState";
 import { ResultCard } from "@/components/ResultCard";
 import { WhatsAppShare } from "@/components/WhatsAppShare";
+import { Skeleton } from "@/components/Skeleton";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -31,7 +33,6 @@ interface PageProps {
 
 export default async function AqiPage({ searchParams }: PageProps) {
   const { city } = await searchParams;
-  const result = city ? await loadAqi(city) : null;
   const t = await getDict();
 
   return (
@@ -60,7 +61,7 @@ export default async function AqiPage({ searchParams }: PageProps) {
         <Button type="submit">Check AQI</Button>
       </form>
 
-      {!city && (
+      {!city ? (
         <>
           <EmptyState
             icon="🌬️"
@@ -77,14 +78,51 @@ export default async function AqiPage({ searchParams }: PageProps) {
             ))}
           </div>
         </>
+      ) : (
+        <Suspense key={city} fallback={<AqiSkeleton city={city} />}>
+          <AqiResultBlock city={city} />
+        </Suspense>
       )}
-
-      {result && "error" in result && (
-        <EmptyState icon="⚠️" title="Couldn't load AQI" hint={result.error} />
-      )}
-
-      {result && !("error" in result) && <AqiView result={result} />}
     </>
+  );
+}
+
+async function AqiResultBlock({ city }: { city: string }) {
+  const result = await loadAqi(city);
+  if ("error" in result) {
+    return <EmptyState icon="⚠️" title="Couldn't load AQI" hint={result.error} />;
+  }
+  return <AqiView result={result} />;
+}
+
+function AqiSkeleton({ city }: { city: string }) {
+  return (
+    <div className="space-y-6">
+      <ResultCard title={`${city} — fetching live readings…`}>
+        <div className="flex items-center gap-6">
+          <Skeleton className="size-28 rounded-2xl" />
+          <div className="flex-1 space-y-2">
+            <Skeleton className="h-6 w-32" />
+            <Skeleton className="h-4 w-64" />
+            <Skeleton className="h-3 w-48" />
+          </div>
+        </div>
+      </ResultCard>
+      <ResultCard title="Next 24 hours">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+          {Array.from({ length: 4 }).map((_, i) => (
+            <Skeleton key={i} className="h-20" />
+          ))}
+        </div>
+      </ResultCard>
+      <ResultCard title="Stations">
+        <div className="space-y-2">
+          {Array.from({ length: 5 }).map((_, i) => (
+            <Skeleton key={i} className="h-10" />
+          ))}
+        </div>
+      </ResultCard>
+    </div>
   );
 }
 
