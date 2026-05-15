@@ -4,7 +4,7 @@ import { EmptyState } from "@/components/EmptyState";
 import { ResultCard } from "@/components/ResultCard";
 import { WhatsAppShare } from "@/components/WhatsAppShare";
 import { StationMapClient } from "@/components/StationMapClient";
-import { Input } from "@/components/ui/input";
+import { Combobox } from "@/components/Combobox";
 import { Button } from "@/components/ui/button";
 import {
   allStations,
@@ -43,20 +43,14 @@ export default async function RiversPage({ searchParams }: PageProps) {
       />
 
       <form action="/rivers" method="get" className="mb-6 flex flex-col gap-2 sm:flex-row">
-        <Input
+        <Combobox
           name="state"
-          list="rivers-states"
+          options={states}
           defaultValue={state ?? ""}
-          required
-          autoComplete="off"
-          className="flex-1"
           placeholder={`${ui.statePlaceholder} (${states.length})`}
+          required
+          className="flex-1"
         />
-        <datalist id="rivers-states">
-          {states.map((s) => (
-            <option key={s} value={s} />
-          ))}
-        </datalist>
         <Button type="submit">{ui.showStations}</Button>
       </form>
 

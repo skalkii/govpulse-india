@@ -16,6 +16,7 @@ import {
   type Period,
 } from "@/lib/rainfall/baseline";
 import { StationMapClient } from "@/components/StationMapClient";
+import { Combobox } from "@/components/Combobox";
 import { getDict } from "@/lib/i18n/server";
 import type { Dict } from "@/lib/i18n/dict";
 
@@ -50,19 +51,13 @@ export default async function RainfallPage({ searchParams }: PageProps) {
       />
 
       <form action="/rainfall" method="get" className="mb-6 grid gap-2 sm:grid-cols-[2fr_1fr_1fr_auto]">
-        <Input
+        <Combobox
           name="district"
-          list="rainfall-districts"
+          options={districts}
           defaultValue={district ?? ""}
-          required
-          autoComplete="off"
           placeholder={`${ui.districtPlaceholder} (${districts.length})`}
+          required
         />
-        <datalist id="rainfall-districts">
-          {districts.map((d) => (
-            <option key={d} value={d} />
-          ))}
-        </datalist>
         <select
           name="period"
           defaultValue={period}

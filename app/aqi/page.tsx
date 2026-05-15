@@ -6,7 +6,7 @@ import { ResultCard } from "@/components/ResultCard";
 import { WhatsAppShare } from "@/components/WhatsAppShare";
 import { StationMapClient } from "@/components/StationMapClient";
 import { Skeleton } from "@/components/Skeleton";
-import { Input } from "@/components/ui/input";
+import { Combobox } from "@/components/Combobox";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { categorize } from "@/lib/aqi/breakpoints";
@@ -49,20 +49,14 @@ export default async function AqiPage({ searchParams }: PageProps) {
       />
 
       <form action="/aqi" method="get" className="mb-6 flex flex-col gap-2 sm:flex-row">
-        <Input
+        <Combobox
           name="city"
-          list="aqi-cities"
+          options={ALL_CITIES}
           defaultValue={city ?? ""}
           placeholder={`${ui.cityPlaceholder} (${ALL_CITIES.length})`}
-          className="flex-1"
           required
-          autoComplete="off"
+          className="flex-1"
         />
-        <datalist id="aqi-cities">
-          {ALL_CITIES.map((c) => (
-            <option key={c} value={c} />
-          ))}
-        </datalist>
         <Button type="submit">{ui.check}</Button>
       </form>
 
