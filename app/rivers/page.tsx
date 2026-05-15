@@ -140,6 +140,15 @@ function StationsView({ state, stations }: { state: string; stations: RiverStati
               <div className="mt-1 text-xs text-muted-foreground">
                 Suitable for: <span className="font-medium text-foreground">{c.bestUse}</span>
               </div>
+              <a
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${s.station} ${s.river} river`)}`}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-primary hover:underline"
+              >
+                Open in Google Maps
+                <span aria-hidden>↗</span>
+              </a>
             </div>
           );
         })}
