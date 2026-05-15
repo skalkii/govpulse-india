@@ -89,21 +89,25 @@ function CitySelect({
   defaultValue?: string;
   cities: string[];
 }) {
+  const listId = `cities-${name}`;
   return (
     <div className="space-y-1">
       <Label htmlFor={name}>{label}</Label>
-      <select
+      <input
         id={name}
         name={name}
+        list={listId}
         defaultValue={defaultValue ?? ""}
         required
-        className="flex h-9 w-full rounded-md border border-input bg-background px-3 py-1 text-sm shadow-xs"
-      >
-        <option value="" disabled>Pick a city…</option>
+        autoComplete="off"
+        placeholder="Type a city…"
+        className="flex h-9 w-full rounded-md border border-input bg-background px-3 py-1 text-sm shadow-xs focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
+      />
+      <datalist id={listId}>
         {cities.map((c) => (
-          <option key={c} value={c}>{c}</option>
+          <option key={c} value={c} />
         ))}
-      </select>
+      </datalist>
     </div>
   );
 }

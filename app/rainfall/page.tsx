@@ -43,17 +43,19 @@ export default async function RainfallPage({ searchParams }: PageProps) {
       />
 
       <form action="/rainfall" method="get" className="mb-6 grid gap-2 sm:grid-cols-[2fr_1fr_1fr_auto]">
-        <select
+        <Input
           name="district"
+          list="rainfall-districts"
           defaultValue={district ?? ""}
           required
-          className="flex h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-xs focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
-        >
-          <option value="" disabled>Pick a district…</option>
+          autoComplete="off"
+          placeholder={`Type a district (${districts.length} available)`}
+        />
+        <datalist id="rainfall-districts">
           {districts.map((d) => (
-            <option key={d} value={d}>{d}</option>
+            <option key={d} value={d} />
           ))}
-        </select>
+        </datalist>
         <select
           name="period"
           defaultValue={period}

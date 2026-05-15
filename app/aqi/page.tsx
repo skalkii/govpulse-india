@@ -9,10 +9,12 @@ import { categorize } from "@/lib/aqi/breakpoints";
 import { forecast24h } from "@/lib/aqi/forecast";
 import { getCityAqi } from "@/lib/aqi/service";
 import type { AqiResult } from "@/lib/aqi/types";
+import citiesJson from "@/data/aqi-cities.json";
 
 export const metadata = { title: "AQI Now & Next 24h — GovPulse India" };
 
 const POPULAR = ["Delhi", "Mumbai", "Bengaluru", "Chennai", "Kolkata", "Hyderabad", "Pune", "Ahmedabad"];
+const ALL_CITIES = (citiesJson as { cities: string[] }).cities;
 
 async function loadAqi(city: string): Promise<AqiResult | { error: string }> {
   try {
@@ -41,12 +43,18 @@ export default async function AqiPage({ searchParams }: PageProps) {
       <form action="/aqi" method="get" className="mb-6 flex flex-col gap-2 sm:flex-row">
         <Input
           name="city"
+          list="aqi-cities"
           defaultValue={city ?? ""}
-          placeholder="Enter a city (e.g. Delhi)"
+          placeholder={`Type a city (${ALL_CITIES.length} CPCB-monitored)`}
           className="flex-1"
           required
           autoComplete="off"
         />
+        <datalist id="aqi-cities">
+          {ALL_CITIES.map((c) => (
+            <option key={c} value={c} />
+          ))}
+        </datalist>
         <Button type="submit">Check AQI</Button>
       </form>
 
