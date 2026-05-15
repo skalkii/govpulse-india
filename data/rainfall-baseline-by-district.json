@@ -5,30 +5,238 @@
     "source": "IMD long-period averages, 1971-2020 normal period",
     "generated": "2026-05-15"
   },
-  "Mumbai": { "mean_annual": 2167, "sd_annual": 390, "mean_jjas": 2123, "sd_jjas": 382, "years_n": 50 },
-  "Bengaluru Urban": { "mean_annual": 924, "sd_annual": 166, "mean_jjas": 559, "sd_jjas": 100, "years_n": 50 },
-  "Delhi": { "mean_annual": 774, "sd_annual": 139, "mean_jjas": 648, "sd_jjas": 117, "years_n": 50 },
-  "Chennai": { "mean_annual": 1400, "sd_annual": 252, "mean_jjas": 350, "sd_jjas": 63, "years_n": 50 },
-  "Kolkata": { "mean_annual": 1675, "sd_annual": 302, "mean_jjas": 1350, "sd_jjas": 243, "years_n": 50 },
-  "Hyderabad": { "mean_annual": 800, "sd_annual": 144, "mean_jjas": 620, "sd_jjas": 112, "years_n": 50 },
-  "Pune": { "mean_annual": 722, "sd_annual": 130, "mean_jjas": 580, "sd_jjas": 104, "years_n": 50 },
-  "Ahmedabad": { "mean_annual": 800, "sd_annual": 144, "mean_jjas": 780, "sd_jjas": 140, "years_n": 50 },
-  "Jaipur": { "mean_annual": 530, "sd_annual": 95, "mean_jjas": 450, "sd_jjas": 81, "years_n": 50 },
-  "Lucknow": { "mean_annual": 950, "sd_annual": 171, "mean_jjas": 870, "sd_jjas": 157, "years_n": 50 },
-  "Patna": { "mean_annual": 1100, "sd_annual": 198, "mean_jjas": 990, "sd_jjas": 178, "years_n": 50 },
-  "Bhopal": { "mean_annual": 1200, "sd_annual": 216, "mean_jjas": 1050, "sd_jjas": 189, "years_n": 50 },
-  "Indore": { "mean_annual": 950, "sd_annual": 171, "mean_jjas": 890, "sd_jjas": 160, "years_n": 50 },
-  "Ernakulam": { "mean_annual": 3000, "sd_annual": 540, "mean_jjas": 2200, "sd_jjas": 396, "years_n": 50 },
-  "Thiruvananthapuram": { "mean_annual": 1830, "sd_annual": 329, "mean_jjas": 780, "sd_jjas": 140, "years_n": 50 },
-  "Coimbatore": { "mean_annual": 700, "sd_annual": 126, "mean_jjas": 250, "sd_jjas": 45, "years_n": 50 },
-  "Mysuru": { "mean_annual": 800, "sd_annual": 144, "mean_jjas": 570, "sd_jjas": 103, "years_n": 50 },
-  "Visakhapatnam": { "mean_annual": 1100, "sd_annual": 198, "mean_jjas": 600, "sd_jjas": 108, "years_n": 50 },
-  "Bhubaneswar": { "mean_annual": 1500, "sd_annual": 270, "mean_jjas": 1180, "sd_jjas": 212, "years_n": 50 },
-  "Kamrup Metropolitan": { "mean_annual": 1700, "sd_annual": 306, "mean_jjas": 1400, "sd_jjas": 252, "years_n": 50 },
-  "Dehradun": { "mean_annual": 2200, "sd_annual": 396, "mean_jjas": 1800, "sd_jjas": 324, "years_n": 50 },
-  "Shimla": { "mean_annual": 1300, "sd_annual": 234, "mean_jjas": 720, "sd_jjas": 130, "years_n": 50 },
-  "Srinagar": { "mean_annual": 720, "sd_annual": 130, "mean_jjas": 220, "sd_jjas": 40, "years_n": 50 },
-  "Chandigarh": { "mean_annual": 1100, "sd_annual": 198, "mean_jjas": 870, "sd_jjas": 157, "years_n": 50 },
-  "Nagpur": { "mean_annual": 1200, "sd_annual": 216, "mean_jjas": 1000, "sd_jjas": 180, "years_n": 50 },
-  "Surat": { "mean_annual": 1200, "sd_annual": 216, "mean_jjas": 1100, "sd_jjas": 198, "years_n": 50 }
+  "Mumbai": {
+    "mean_annual": 2167,
+    "sd_annual": 390,
+    "mean_jjas": 2123,
+    "sd_jjas": 382,
+    "years_n": 50,
+    "lat": 19.08,
+    "lng": 72.88
+  },
+  "Bengaluru Urban": {
+    "mean_annual": 924,
+    "sd_annual": 166,
+    "mean_jjas": 559,
+    "sd_jjas": 100,
+    "years_n": 50,
+    "lat": 12.97,
+    "lng": 77.59
+  },
+  "Delhi": {
+    "mean_annual": 774,
+    "sd_annual": 139,
+    "mean_jjas": 648,
+    "sd_jjas": 117,
+    "years_n": 50,
+    "lat": 28.61,
+    "lng": 77.23
+  },
+  "Chennai": {
+    "mean_annual": 1400,
+    "sd_annual": 252,
+    "mean_jjas": 350,
+    "sd_jjas": 63,
+    "years_n": 50,
+    "lat": 13.08,
+    "lng": 80.27
+  },
+  "Kolkata": {
+    "mean_annual": 1675,
+    "sd_annual": 302,
+    "mean_jjas": 1350,
+    "sd_jjas": 243,
+    "years_n": 50,
+    "lat": 22.57,
+    "lng": 88.36
+  },
+  "Hyderabad": {
+    "mean_annual": 800,
+    "sd_annual": 144,
+    "mean_jjas": 620,
+    "sd_jjas": 112,
+    "years_n": 50,
+    "lat": 17.39,
+    "lng": 78.49
+  },
+  "Pune": {
+    "mean_annual": 722,
+    "sd_annual": 130,
+    "mean_jjas": 580,
+    "sd_jjas": 104,
+    "years_n": 50,
+    "lat": 18.52,
+    "lng": 73.86
+  },
+  "Ahmedabad": {
+    "mean_annual": 800,
+    "sd_annual": 144,
+    "mean_jjas": 780,
+    "sd_jjas": 140,
+    "years_n": 50,
+    "lat": 23.02,
+    "lng": 72.57
+  },
+  "Jaipur": {
+    "mean_annual": 530,
+    "sd_annual": 95,
+    "mean_jjas": 450,
+    "sd_jjas": 81,
+    "years_n": 50,
+    "lat": 26.91,
+    "lng": 75.79
+  },
+  "Lucknow": {
+    "mean_annual": 950,
+    "sd_annual": 171,
+    "mean_jjas": 870,
+    "sd_jjas": 157,
+    "years_n": 50,
+    "lat": 26.85,
+    "lng": 80.95
+  },
+  "Patna": {
+    "mean_annual": 1100,
+    "sd_annual": 198,
+    "mean_jjas": 990,
+    "sd_jjas": 178,
+    "years_n": 50,
+    "lat": 25.61,
+    "lng": 85.14
+  },
+  "Bhopal": {
+    "mean_annual": 1200,
+    "sd_annual": 216,
+    "mean_jjas": 1050,
+    "sd_jjas": 189,
+    "years_n": 50,
+    "lat": 23.26,
+    "lng": 77.41
+  },
+  "Indore": {
+    "mean_annual": 950,
+    "sd_annual": 171,
+    "mean_jjas": 890,
+    "sd_jjas": 160,
+    "years_n": 50,
+    "lat": 22.72,
+    "lng": 75.86
+  },
+  "Ernakulam": {
+    "mean_annual": 3000,
+    "sd_annual": 540,
+    "mean_jjas": 2200,
+    "sd_jjas": 396,
+    "years_n": 50,
+    "lat": 9.93,
+    "lng": 76.27
+  },
+  "Thiruvananthapuram": {
+    "mean_annual": 1830,
+    "sd_annual": 329,
+    "mean_jjas": 780,
+    "sd_jjas": 140,
+    "years_n": 50,
+    "lat": 8.52,
+    "lng": 76.94
+  },
+  "Coimbatore": {
+    "mean_annual": 700,
+    "sd_annual": 126,
+    "mean_jjas": 250,
+    "sd_jjas": 45,
+    "years_n": 50,
+    "lat": 11.02,
+    "lng": 76.96
+  },
+  "Mysuru": {
+    "mean_annual": 800,
+    "sd_annual": 144,
+    "mean_jjas": 570,
+    "sd_jjas": 103,
+    "years_n": 50,
+    "lat": 12.3,
+    "lng": 76.64
+  },
+  "Visakhapatnam": {
+    "mean_annual": 1100,
+    "sd_annual": 198,
+    "mean_jjas": 600,
+    "sd_jjas": 108,
+    "years_n": 50,
+    "lat": 17.69,
+    "lng": 83.22
+  },
+  "Bhubaneswar": {
+    "mean_annual": 1500,
+    "sd_annual": 270,
+    "mean_jjas": 1180,
+    "sd_jjas": 212,
+    "years_n": 50,
+    "lat": 20.3,
+    "lng": 85.83
+  },
+  "Kamrup Metropolitan": {
+    "mean_annual": 1700,
+    "sd_annual": 306,
+    "mean_jjas": 1400,
+    "sd_jjas": 252,
+    "years_n": 50,
+    "lat": 26.18,
+    "lng": 91.65
+  },
+  "Dehradun": {
+    "mean_annual": 2200,
+    "sd_annual": 396,
+    "mean_jjas": 1800,
+    "sd_jjas": 324,
+    "years_n": 50,
+    "lat": 30.32,
+    "lng": 78.03
+  },
+  "Shimla": {
+    "mean_annual": 1300,
+    "sd_annual": 234,
+    "mean_jjas": 720,
+    "sd_jjas": 130,
+    "years_n": 50,
+    "lat": 31.1,
+    "lng": 77.17
+  },
+  "Srinagar": {
+    "mean_annual": 720,
+    "sd_annual": 130,
+    "mean_jjas": 220,
+    "sd_jjas": 40,
+    "years_n": 50,
+    "lat": 34.08,
+    "lng": 74.8
+  },
+  "Chandigarh": {
+    "mean_annual": 1100,
+    "sd_annual": 198,
+    "mean_jjas": 870,
+    "sd_jjas": 157,
+    "years_n": 50,
+    "lat": 30.73,
+    "lng": 76.78
+  },
+  "Nagpur": {
+    "mean_annual": 1200,
+    "sd_annual": 216,
+    "mean_jjas": 1000,
+    "sd_jjas": 180,
+    "years_n": 50,
+    "lat": 21.15,
+    "lng": 79.09
+  },
+  "Surat": {
+    "mean_annual": 1200,
+    "sd_annual": 216,
+    "mean_jjas": 1100,
+    "sd_jjas": 198,
+    "years_n": 50,
+    "lat": 21.17,
+    "lng": 72.83
+  }
 }

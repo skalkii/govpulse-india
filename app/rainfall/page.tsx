@@ -9,10 +9,13 @@ import {
   getBaseline,
   getMeta,
   listDistricts,
+  listDistrictsWithCoords,
+  rainfallColor,
   type Anomaly,
   type DistrictBaseline,
   type Period,
 } from "@/lib/rainfall/baseline";
+import { StationMapClient } from "@/components/StationMapClient";
 import { getDict } from "@/lib/i18n/server";
 import type { Dict } from "@/lib/i18n/dict";
 
@@ -63,7 +66,7 @@ export default async function RainfallPage({ searchParams }: PageProps) {
         <select
           name="period"
           defaultValue={period}
-          className="flex h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-xs"
+          className="flex h-9 cursor-pointer rounded-md border border-input bg-background px-3 py-1 text-sm text-foreground shadow-xs hover:border-foreground/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/50"
         >
           <option value="jjas">{ui.monsoon}</option>
           <option value="annual">{ui.annual}</option>
@@ -80,13 +83,7 @@ export default async function RainfallPage({ searchParams }: PageProps) {
         <Button type="submit">{ui.compare}</Button>
       </form>
 
-      {!district && (
-        <EmptyState
-          icon="🌧️"
-          title={ui.pickDistrict}
-          hint={ui.pickHint}
-        />
-      )}
+      {!district && <RainfallOverviewMap period={period} />}
 
       {district && !baseline && (
         <EmptyState
@@ -111,6 +108,31 @@ export default async function RainfallPage({ searchParams }: PageProps) {
         </p>
       )}
     </>
+  );
+}
+
+function RainfallOverviewMap({ period }: { period: Period }) {
+  const districts = listDistrictsWithCoords();
+  const markers = districts.map((d) => {
+    const mean = period === "annual" ? d.mean_annual : d.mean_jjas;
+    return {
+      id: d.district,
+      lat: d.lat!,
+      lng: d.lng!,
+      label: d.district,
+      sub: period === "annual" ? "Annual mean" : "Monsoon mean (JJAS)",
+      value: `${mean} mm`,
+      color: rainfallColor(mean),
+    };
+  });
+  return (
+    <div className="space-y-3">
+      <p className="text-sm text-muted-foreground">
+        {districts.length} bundled districts shown by long-period mean rainfall.
+        Click a marker for details, or pick a district above to compare against this season.
+      </p>
+      <StationMapClient markers={markers} height={520} />
+    </div>
   );
 }
 

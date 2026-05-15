@@ -36,7 +36,7 @@ interface PageProps {
 
 export default async function AqiPage({ searchParams }: PageProps) {
   const { city, view } = await searchParams;
-  const v: "list" | "map" = view === "map" ? "map" : "list";
+  const v: "list" | "map" = view === "list" ? "list" : "map";
   const t = await getDict();
   const ui = t.modules.aqi.ui;
 

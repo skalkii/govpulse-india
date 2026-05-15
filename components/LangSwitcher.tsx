@@ -27,10 +27,10 @@ export function LangSwitcher({ initial }: { initial: Locale }) {
   }, [locale]);
 
   return (
-    <label className="inline-flex items-center gap-1.5 rounded-full border border-border bg-background px-2 py-1 text-sm text-muted-foreground hover:text-foreground">
-      <Globe className="size-3.5" aria-hidden />
-      <span className="sr-only">Language</span>
+    <div className="relative inline-flex items-center rounded-full border border-border bg-background pl-2 pr-1 text-sm hover:border-foreground/20">
+      <Globe className="pointer-events-none size-3.5 text-muted-foreground" aria-hidden />
       <select
+        aria-label="Language"
         value={locale}
         onChange={(e) => {
           const next = e.target.value as Locale;
@@ -38,12 +38,21 @@ export function LangSwitcher({ initial }: { initial: Locale }) {
           setLocale(next);
           window.location.reload();
         }}
-        className="appearance-none bg-transparent pr-1 text-sm focus:outline-none"
+        className="cursor-pointer appearance-none border-0 bg-transparent py-1 pl-1.5 pr-5 text-sm text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-ring/50"
+        style={{
+          backgroundImage:
+            "linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%)",
+          backgroundPosition: "calc(100% - 9px) 50%, calc(100% - 5px) 50%",
+          backgroundSize: "4px 4px, 4px 4px",
+          backgroundRepeat: "no-repeat",
+        }}
       >
         {LOCALES.map((l) => (
-          <option key={l} value={l}>{LOCALE_LABELS[l]}</option>
+          <option key={l} value={l}>
+            {LOCALE_LABELS[l]}
+          </option>
         ))}
       </select>
-    </label>
+    </div>
   );
 }

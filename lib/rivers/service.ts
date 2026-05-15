@@ -63,6 +63,10 @@ export function stationsByState(state: string): RiverStation[] {
     .sort((a, b) => a.river.localeCompare(b.river) || a.station.localeCompare(b.station));
 }
 
+export function allStations(): RiverStation[] {
+  return data.stations;
+}
+
 export function getMeta(): Record<string, unknown> {
   return data._meta;
 }

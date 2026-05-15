@@ -7,6 +7,7 @@ import { StationMapClient } from "@/components/StationMapClient";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import {
+  allStations,
   classify,
   getMeta,
   listStates,
@@ -26,7 +27,7 @@ interface PageProps {
 export default async function RiversPage({ searchParams }: PageProps) {
   const sp = await searchParams;
   const state = sp.state?.trim();
-  const view: "list" | "map" = sp.view === "map" ? "map" : "list";
+  const view: "list" | "map" = sp.view === "list" ? "list" : "map";
   const states = listStates();
   const stations = state ? stationsByState(state) : [];
   const t = await getDict();
@@ -59,13 +60,7 @@ export default async function RiversPage({ searchParams }: PageProps) {
         <Button type="submit">{ui.showStations}</Button>
       </form>
 
-      {!state && (
-        <EmptyState
-          icon="🌊"
-          title={ui.pickState}
-          hint={ui.pickHint}
-        />
-      )}
+      {!state && <RiversOverviewMap />}
 
       {state && stations.length === 0 && (
         <EmptyState
@@ -82,6 +77,31 @@ export default async function RiversPage({ searchParams }: PageProps) {
         {String(meta.note ?? "")} Source: {String(meta.source ?? "CPCB")}.
       </p>
     </>
+  );
+}
+
+function RiversOverviewMap() {
+  const all = allStations();
+  const markers = all.map((s) => {
+    const c = classify(s);
+    return {
+      id: s.id,
+      lat: s.lat,
+      lng: s.lng,
+      label: s.station,
+      sub: `${s.river} · ${s.state}`,
+      value: c.label,
+      color: c.color,
+    };
+  });
+  return (
+    <div className="space-y-3">
+      <p className="text-sm text-muted-foreground">
+        {all.length} CPCB stations across India, colored by water-quality class.
+        Click a marker for details, or pick a state above for the full breakdown.
+      </p>
+      <StationMapClient markers={markers} height={520} />
+    </div>
   );
 }
 

@@ -7,6 +7,33 @@ export interface DistrictBaseline {
   mean_jjas: number;
   sd_jjas: number;
   years_n: number;
+  lat?: number;
+  lng?: number;
+}
+
+export interface DistrictWithCoords extends DistrictBaseline {
+  district: string;
+}
+
+export function listDistrictsWithCoords(): DistrictWithCoords[] {
+  const out: DistrictWithCoords[] = [];
+  for (const k of Object.keys(raw)) {
+    if (k === "_meta") continue;
+    const b = raw[k];
+    if (!b || typeof b !== "object" || !("mean_annual" in b)) continue;
+    const baseline = b as DistrictBaseline;
+    if (baseline.lat === undefined || baseline.lng === undefined) continue;
+    out.push({ district: k, ...baseline });
+  }
+  return out;
+}
+
+export function rainfallColor(meanMm: number): string {
+  if (meanMm >= 2000) return "#1e40af";
+  if (meanMm >= 1500) return "#3b82f6";
+  if (meanMm >= 1000) return "#60a5fa";
+  if (meanMm >= 700) return "#fbbf24";
+  return "#f59e0b";
 }
 
 interface RawBaseline {
