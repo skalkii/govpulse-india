@@ -8,6 +8,8 @@ export interface StationReading {
   dominantPollutant: Pollutant;
   pollutants: Array<{ pollutant: Pollutant; concentration: number; subIndex: number }>;
   lastUpdate: string;
+  lat?: number;
+  lng?: number;
 }
 
 export interface AqiResult {

@@ -1,8 +1,10 @@
 import { Suspense } from "react";
+import Link from "next/link";
 import { ToolHeader } from "@/components/ToolHeader";
 import { EmptyState } from "@/components/EmptyState";
 import { ResultCard } from "@/components/ResultCard";
 import { WhatsAppShare } from "@/components/WhatsAppShare";
+import { StationMapClient } from "@/components/StationMapClient";
 import { Skeleton } from "@/components/Skeleton";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -29,11 +31,12 @@ async function loadAqi(city: string): Promise<AqiResult | { error: string }> {
 }
 
 interface PageProps {
-  searchParams: Promise<{ city?: string }>;
+  searchParams: Promise<{ city?: string; view?: string }>;
 }
 
 export default async function AqiPage({ searchParams }: PageProps) {
-  const { city } = await searchParams;
+  const { city, view } = await searchParams;
+  const v: "list" | "map" = view === "map" ? "map" : "list";
   const t = await getDict();
   const ui = t.modules.aqi.ui;
 
@@ -81,21 +84,45 @@ export default async function AqiPage({ searchParams }: PageProps) {
           </div>
         </>
       ) : (
-        <Suspense key={city} fallback={<AqiSkeleton city={city} />}>
-          <AqiResultBlock city={city} t={t} />
+        <Suspense key={city + v} fallback={<AqiSkeleton city={city} />}>
+          <AqiResultBlock city={city} t={t} view={v} />
         </Suspense>
       )}
     </>
   );
 }
 
-async function AqiResultBlock({ city, t }: { city: string; t: Dict }) {
+async function AqiResultBlock({ city, t, view }: { city: string; t: Dict; view: "list" | "map" }) {
   const result = await loadAqi(city);
   const ui = t.modules.aqi.ui;
   if ("error" in result) {
     return <EmptyState icon="⚠️" title={ui.couldNotLoad} hint={result.error} />;
   }
-  return <AqiView result={result} t={t} />;
+  return <AqiView result={result} t={t} view={view} />;
+}
+
+function ViewSwitch({
+  city,
+  active,
+  listLabel,
+  mapLabel,
+}: {
+  city: string;
+  active: "list" | "map";
+  listLabel: string;
+  mapLabel: string;
+}) {
+  const base = `/aqi?city=${encodeURIComponent(city)}`;
+  const cls = (on: boolean) =>
+    `rounded-full px-3 py-1 text-xs font-medium transition-colors ${
+      on ? "bg-foreground text-background" : "text-muted-foreground hover:text-foreground"
+    }`;
+  return (
+    <div className="mb-3 inline-flex items-center rounded-full border border-border bg-background p-0.5">
+      <Link href={`${base}&view=list`} className={cls(active === "list")}>{listLabel}</Link>
+      <Link href={`${base}&view=map`} className={cls(active === "map")}>{mapLabel}</Link>
+    </div>
+  );
 }
 
 function AqiSkeleton({ city }: { city: string }) {
@@ -129,7 +156,7 @@ function AqiSkeleton({ city }: { city: string }) {
   );
 }
 
-function AqiView({ result, t }: { result: AqiResult; t: Dict }) {
+function AqiView({ result, t, view }: { result: AqiResult; t: Dict; view: "list" | "map" }) {
   const cat = categorize(result.aqi);
   const fc = result.forecast.length ? result.forecast : forecast24h(result.aqi);
   const ui = t.modules.aqi.ui;
@@ -185,27 +212,60 @@ function AqiView({ result, t }: { result: AqiResult; t: Dict }) {
       </ResultCard>
 
       <ResultCard title={`${ui.stations} (${result.stations.length})`}>
-        <ul className="divide-y text-sm">
-          {result.stations.map((s) => {
-            const sCat = categorize(s.aqi);
-            return (
-              <li key={s.station} className="flex items-center justify-between gap-3 py-2">
-                <div className="min-w-0 flex-1">
-                  <div className="truncate font-medium">{s.station}</div>
-                  <div className="text-xs text-muted-foreground">
-                    {ui.worst}: {s.dominantPollutant}
+        <ViewSwitch
+          city={result.city}
+          active={view}
+          listLabel={ui.listView}
+          mapLabel={ui.mapView}
+        />
+        {view === "map" ? (
+          (() => {
+            const markers = result.stations
+              .filter((s) => s.lat !== undefined && s.lng !== undefined)
+              .map((s) => {
+                const sCat = categorize(s.aqi);
+                return {
+                  id: s.station,
+                  lat: s.lat!,
+                  lng: s.lng!,
+                  label: s.station,
+                  sub: `${ui.worst}: ${s.dominantPollutant}`,
+                  value: String(s.aqi),
+                  color: sCat.color,
+                };
+              });
+            if (markers.length === 0) {
+              return (
+                <p className="text-sm text-muted-foreground">
+                  No station coordinates returned for this city.
+                </p>
+              );
+            }
+            return <StationMapClient markers={markers} />;
+          })()
+        ) : (
+          <ul className="divide-y text-sm">
+            {result.stations.map((s) => {
+              const sCat = categorize(s.aqi);
+              return (
+                <li key={s.station} className="flex items-center justify-between gap-3 py-2">
+                  <div className="min-w-0 flex-1">
+                    <div className="truncate font-medium">{s.station}</div>
+                    <div className="text-xs text-muted-foreground">
+                      {ui.worst}: {s.dominantPollutant}
+                    </div>
                   </div>
-                </div>
-                <span
-                  className="inline-block shrink-0 min-w-[3rem] rounded px-2 py-1 text-center text-sm font-semibold text-white"
-                  style={{ backgroundColor: sCat.color }}
-                >
-                  {s.aqi}
-                </span>
-              </li>
-            );
-          })}
-        </ul>
+                  <span
+                    className="inline-block shrink-0 min-w-[3rem] rounded px-2 py-1 text-center text-sm font-semibold text-white"
+                    style={{ backgroundColor: sCat.color }}
+                  >
+                    {s.aqi}
+                  </span>
+                </li>
+              );
+            })}
+          </ul>
+        )}
       </ResultCard>
     </div>
   );

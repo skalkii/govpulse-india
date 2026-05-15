@@ -20,6 +20,8 @@ interface CpcbRow {
   pollutant_id?: string;
   pollutant_avg?: string | number;
   avg_value?: string | number;
+  latitude?: string | number;
+  longitude?: string | number;
 }
 
 function parseConc(v: string | number | undefined): number | null {
@@ -70,6 +72,8 @@ function aggregateStations(rows: CpcbRow[]): StationReading[] {
       (a, b) => b.subIndex - a.subIndex
     );
     const top = ranked[0];
+    const lat = parseConc(readings[0].latitude);
+    const lng = parseConc(readings[0].longitude);
     out.push({
       station,
       state: readings[0].state ?? "",
@@ -77,6 +81,8 @@ function aggregateStations(rows: CpcbRow[]): StationReading[] {
       dominantPollutant: top.pollutant,
       pollutants: pollutants.sort((a, b) => b.subIndex - a.subIndex),
       lastUpdate: readings[0].last_update ?? "",
+      lat: lat !== null ? lat : undefined,
+      lng: lng !== null ? lng : undefined,
     });
   }
   return out;

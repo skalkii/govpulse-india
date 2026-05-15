@@ -1,7 +1,9 @@
+import Link from "next/link";
 import { ToolHeader } from "@/components/ToolHeader";
 import { EmptyState } from "@/components/EmptyState";
 import { ResultCard } from "@/components/ResultCard";
 import { WhatsAppShare } from "@/components/WhatsAppShare";
+import { StationMapClient } from "@/components/StationMapClient";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import {
@@ -18,12 +20,13 @@ import type { Dict } from "@/lib/i18n/dict";
 export const metadata = { title: "River Health Check" };
 
 interface PageProps {
-  searchParams: Promise<{ state?: string }>;
+  searchParams: Promise<{ state?: string; view?: string }>;
 }
 
 export default async function RiversPage({ searchParams }: PageProps) {
   const sp = await searchParams;
   const state = sp.state?.trim();
+  const view: "list" | "map" = sp.view === "map" ? "map" : "list";
   const states = listStates();
   const stations = state ? stationsByState(state) : [];
   const t = await getDict();
@@ -71,7 +74,9 @@ export default async function RiversPage({ searchParams }: PageProps) {
         />
       )}
 
-      {stations.length > 0 && <StationsView state={state!} stations={stations} t={t} />}
+      {stations.length > 0 && (
+        <StationsView state={state!} stations={stations} t={t} view={view} />
+      )}
 
       <p className="mt-6 text-xs text-muted-foreground">
         {String(meta.note ?? "")} Source: {String(meta.source ?? "CPCB")}.
@@ -80,7 +85,17 @@ export default async function RiversPage({ searchParams }: PageProps) {
   );
 }
 
-function StationsView({ state, stations, t }: { state: string; stations: RiverStation[]; t: Dict }) {
+function StationsView({
+  state,
+  stations,
+  t,
+  view,
+}: {
+  state: string;
+  stations: RiverStation[];
+  t: Dict;
+  view: "list" | "map";
+}) {
   const ui = t.modules.rivers.ui;
   const classCounts = new Map<string, number>();
   for (const s of stations) {
@@ -104,11 +119,30 @@ function StationsView({ state, stations, t }: { state: string; stations: RiverSt
             </span>
           ))}
         </div>
-        <div className="flex">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <ViewSwitch state={state} active={view} listLabel={ui.listView} mapLabel={ui.mapView} />
           <WhatsAppShare text={shareText} label={t.actions.share} />
         </div>
       </ResultCard>
 
+      {view === "map" && (
+        <StationMapClient
+          markers={stations.map((s) => {
+            const c = classify(s);
+            return {
+              id: s.id,
+              lat: s.lat,
+              lng: s.lng,
+              label: s.station,
+              sub: s.river,
+              value: c.label,
+              color: c.color,
+            };
+          })}
+        />
+      )}
+
+      {view === "list" && (
       <div className="grid gap-3 sm:grid-cols-2">
         {stations.map((s) => {
           const c = classify(s);
@@ -155,6 +189,31 @@ function StationsView({ state, stations, t }: { state: string; stations: RiverSt
           );
         })}
       </div>
+      )}
+    </div>
+  );
+}
+
+function ViewSwitch({
+  state,
+  active,
+  listLabel,
+  mapLabel,
+}: {
+  state: string;
+  active: "list" | "map";
+  listLabel: string;
+  mapLabel: string;
+}) {
+  const base = `/rivers?state=${encodeURIComponent(state)}`;
+  const cls = (on: boolean) =>
+    `rounded-full px-3 py-1 text-xs font-medium transition-colors ${
+      on ? "bg-foreground text-background" : "text-muted-foreground hover:text-foreground"
+    }`;
+  return (
+    <div className="inline-flex items-center rounded-full border border-border bg-background p-0.5">
+      <Link href={`${base}&view=list`} className={cls(active === "list")}>{listLabel}</Link>
+      <Link href={`${base}&view=map`} className={cls(active === "map")}>{mapLabel}</Link>
     </div>
   );
 }

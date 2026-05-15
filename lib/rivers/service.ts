@@ -10,6 +10,8 @@ export interface RiverStation {
   bod: number;  // mg/L biochemical oxygen demand
   ph: number;
   fc: number;   // MPN/100mL fecal coliform
+  lat: number;
+  lng: number;
 }
 
 interface StationsFile {

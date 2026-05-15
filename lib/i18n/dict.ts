@@ -27,6 +27,8 @@ export interface Dict {
         dominant: string;
         averagedAcross: string;
         couldNotLoad: string;
+        listView: string;
+        mapView: string;
       };
     };
     rivers: {
@@ -42,6 +44,8 @@ export interface Dict {
         headlineIssue: string;
         suitableFor: string;
         openInMaps: string;
+        listView: string;
+        mapView: string;
       };
     };
     rainfall: {
@@ -142,6 +146,8 @@ const en: Dict = {
         dominant: "Dominant pollutant",
         averagedAcross: "Averaged across",
         couldNotLoad: "Couldn't load AQI",
+        listView: "List",
+        mapView: "Map",
       },
     },
     rivers: {
@@ -157,6 +163,8 @@ const en: Dict = {
         headlineIssue: "Headline issue",
         suitableFor: "Suitable for",
         openInMaps: "Open in Google Maps",
+        listView: "List",
+        mapView: "Map",
       },
     },
     rainfall: {
@@ -261,6 +269,8 @@ const hi: Dict = {
         dominant: "मुख्य प्रदूषक",
         averagedAcross: "औसत स्टेशनों में",
         couldNotLoad: "AQI लोड नहीं हुआ",
+        listView: "सूची",
+        mapView: "नक्शा",
       },
     },
     rivers: {
@@ -276,6 +286,8 @@ const hi: Dict = {
         headlineIssue: "मुख्य समस्या",
         suitableFor: "उपयुक्त है",
         openInMaps: "Google Maps में खोलें",
+        listView: "सूची",
+        mapView: "नक्शा",
       },
     },
     rainfall: {
@@ -380,6 +392,8 @@ const kn: Dict = {
         dominant: "ಮುಖ್ಯ ಮಾಲಿನ್ಯಕಾರಕ",
         averagedAcross: "ಸರಾಸರಿ ಕೇಂದ್ರಗಳಲ್ಲಿ",
         couldNotLoad: "AQI ಲೋಡ್ ಆಗಲಿಲ್ಲ",
+        listView: "ಪಟ್ಟಿ",
+        mapView: "ನಕ್ಷೆ",
       },
     },
     rivers: {
@@ -395,6 +409,8 @@ const kn: Dict = {
         headlineIssue: "ಮುಖ್ಯ ಸಮಸ್ಯೆ",
         suitableFor: "ಸೂಕ್ತ",
         openInMaps: "Google Maps ನಲ್ಲಿ ತೆರೆಯಿರಿ",
+        listView: "ಪಟ್ಟಿ",
+        mapView: "ನಕ್ಷೆ",
       },
     },
     rainfall: {
@@ -499,6 +515,8 @@ const mr: Dict = {
         dominant: "मुख्य प्रदूषक",
         averagedAcross: "सरासरी स्टेशन्समध्ये",
         couldNotLoad: "AQI लोड झाले नाही",
+        listView: "यादी",
+        mapView: "नकाशा",
       },
     },
     rivers: {
@@ -514,6 +532,8 @@ const mr: Dict = {
         headlineIssue: "मुख्य समस्या",
         suitableFor: "योग्य",
         openInMaps: "Google Maps मध्ये उघडा",
+        listView: "यादी",
+        mapView: "नकाशा",
       },
     },
     rainfall: {
@@ -618,6 +638,8 @@ const ne: Dict = {
         dominant: "मुख्य प्रदूषक",
         averagedAcross: "औसत केन्द्रहरूमा",
         couldNotLoad: "AQI लोड भएन",
+        listView: "सूची",
+        mapView: "नक्सा",
       },
     },
     rivers: {
@@ -633,6 +655,8 @@ const ne: Dict = {
         headlineIssue: "मुख्य समस्या",
         suitableFor: "उपयुक्त",
         openInMaps: "Google Maps मा खोल्नुहोस्",
+        listView: "सूची",
+        mapView: "नक्सा",
       },
     },
     rainfall: {
